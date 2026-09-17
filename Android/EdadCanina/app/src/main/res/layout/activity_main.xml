@@ -33,6 +33,7 @@
     -->
 
     <ImageView
+        android:id="@+id/imagen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
@@ -45,7 +46,7 @@
 
         android:gravity="center"
         android:padding="24dp"
-        android:text="¿Que edad tienes?"
+        android:text="@string/que_edad_tienes"
         android:textColor="@color/verde_personalizado"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -57,7 +58,7 @@
         android:layout_marginHorizontal="24dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="Introduce tu edad"
+        android:hint="@string/introduce_tu_edad"
         android:inputType="number" />
 
     <Button
@@ -67,7 +68,7 @@
         android:layout_marginHorizontal="24dp"
         android:layout_marginVertical="16dp"
         android:backgroundTint="@color/verde_personalizado"
-        android:text="Calcular"
+        android:text="@string/calcular"
         android:textSize="20sp" />
 
     <TextView
@@ -78,7 +79,7 @@
         android:gravity="center"
         android:padding="24dp"
 
-        tools:text="Si fueras un perro tendias 47 años"
+        tools:text="@string/si_fueras_un_perro_tendrias_47_a_os"
         android:textColor="@color/verde_personalizado"
         android:textSize="24sp"
         android:textStyle="bold" />
