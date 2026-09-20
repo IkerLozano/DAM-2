@@ -19,8 +19,8 @@ class miVentana(QMainWindow):
         self.texto.setMaxLength(10) #el max de caracter que va a poder introducir
         self.texto.setPlaceholderText("Introduce tu nombre") #texto que sale por defecto 
 
-        #texto.textChanged.connect(self.textoCambiado) #cuando cambie el texto se ejecuta la funcion
-        self.texto.returnPressed.connect(self.introPulsado) #cunado pulsemos el intro
+        self.texto.textChanged.connect(self.textoCambiado) #cuando cambie el texto se ejecuta la funcion
+        #self.texto.returnPressed.connect(self.introPulsado) #cunado pulsemos el intro
 
     
         self.setCentralWidget(self.texto)
