@@ -8,7 +8,7 @@ class miVentana(QMainWindow):
 
         self.setWindowTitle("Mi ventana")
 
-        #-----18/09/26-----
+
 
         label = QLabel()
         input = QLineEdit()
@@ -26,11 +26,7 @@ class miVentana(QMainWindow):
 
         self.setCentralWidget(contenedor)
 
-        
-
-
-    def tercero(self, pulsado):
-        self.boton.setText(["No pulsado", "Pulsado"][pulsado]) #lista con los valores para nuestro boton        
+    
 
 
 app = QApplication([])
