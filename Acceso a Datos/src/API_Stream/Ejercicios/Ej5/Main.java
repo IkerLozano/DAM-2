@@ -21,11 +21,11 @@ public class Main {
 
         System.out.println(empleados.stream().collect(Collectors.groupingBy(Empleado::getDepartamento)));
 
-        System.out.println(empleados.stream().collect(Collectors.groupingBy(Empleado::getDepartamento, Collectors.counting())));
+        System.out.println(empleados.stream().collect(Collectors.groupingBy(Empleado::getDepartamento, Collectors.counting()))); //dice que se pone mucho en los examenes
 
         System.out.println(empleados.stream().filter(n -> n.getDepartamento().equals("AI")).toList());
 
-        System.out.println(empleados.stream().filter(n -> n.getNombre().equals("Iker")).map(Empleado::getDepartamento).toList());
+        System.out.println(empleados.stream().filter(n -> n.getNombre().equals("Iker")).map(Empleado::getDepartamento).toList()); //aqui map() seria como un select
 
     }
 }

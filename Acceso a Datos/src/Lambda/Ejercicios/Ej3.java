@@ -11,7 +11,7 @@ public class Ej3 {
 
         List<Integer> nuemros = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9));
 
-        Function<Integer, Integer> function = n -> n * 3;
+        Function<Integer, Integer> function = n -> n * n *n;
 
         System.out.println(nuemros.stream().map(function).toList());
 
