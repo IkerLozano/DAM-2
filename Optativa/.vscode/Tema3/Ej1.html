@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 1</title>
+</head>
+<body>
+    
+    <script>
+        var lista = []
+        var cont = 0
+        var sum = 0
+
+        do{
+
+            var num = parseInt(prompt("Dime un numero"))
+
+            if (num != 0  && Number.isInteger(num)){
+
+                lista.push(num)
+
+                cont++
+                sum = sum+num
+            }
+           
+
+        }while(num !== 0)
+
+        lista.pop() //quito el ultimpo elemto que sera el 0
+
+        var resultado = sum/cont
+        console.log(resultado)
+
+        //!== significa "estrictamente no igual" o "diferente a" 
+
+    </script>
+
+</body>
+</html>
