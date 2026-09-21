@@ -2,14 +2,14 @@ package API_Stream.map_y_FlatMap;
 
 import java.util.List;
 
-public class Personas {
+public class Persona {
 
     private String nombre;
     private List<String> viajes;
     private int edad;
 
     //constructor
-    public Personas(String nombre, int edad, List<String> viajes) {
+    public Persona(String nombre, int edad, List<String> viajes) {
         this.nombre = nombre;
         this.edad = edad;
         this.viajes = viajes;
