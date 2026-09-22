@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Mi aplicación</string>
+    <string name="que_edad_tienes">How old are you?</string>
+    <string name="introduce_tu_edad">Enter your age</string>
+    <string name="calcular">Calculate</string>
+    <string name="mensajePersonalizado">If you were a dog you would be %d years old</string>
+
+</resources>

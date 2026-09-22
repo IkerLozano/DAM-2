@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mi aplicacion</string>
+    <string name="que_edad_tienes">¿Que edad tienes?</string>
+    <string name="introduce_tu_edad">Introduce tu edad</string>
+    <string name="calcular">Calcular</string>
+    <string name="mensajePersonalizado">Si fueras un perro tendrias %d años</string>
+</resources>
