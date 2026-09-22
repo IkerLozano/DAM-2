@@ -1,0 +1,26 @@
+org.iesch.edadcanina
+color black
+color verde_personalizado
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable perro
+id Respuesta
+id botonCalcular
+id imagen
+id main
+id textoPregunta
+id textoRespuesta
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_background
+mipmap ic_launcher_round
+string app_name
+string calcular
+string introduce_tu_edad
+string que_edad_tienes
+string si_fueras_un_perro_tendrias_47_a_os
+style Base_Theme_EdadCanina
+style Theme_EdadCanina
+xml backup_rules
+xml data_extraction_rules
