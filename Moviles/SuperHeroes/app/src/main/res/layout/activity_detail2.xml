@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity2">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/heroName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="IronMan"
+        android:textSize="24sp"
+        android:textStyle="bold"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/alter_ego_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Alter Ego"
+        android:textSize="18dp"
+
+        android:textColor="@color/ddark_grey"
+        app:layout_constraintStart_toStartOf="@+id/heroName"
+        app:layout_constraintTop_toBottomOf="@+id/heroName" />
+
+    <TextView
+        android:id="@+id/alterEgo_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/alter_ego_text"
+        app:layout_constraintTop_toBottomOf="@+id/alter_ego_text"
+        tools:text="Tony Strak" />
+
+
+    <TextView
+        android:id="@+id/biotext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Bio"
+
+        android:textColor="@color/ddark_grey"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/alterEgo_result"
+        app:layout_constraintTop_toBottomOf="@+id/alterEgo_result" />
+
+    <TextView
+        android:id="@+id/Bioresult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/biotext"
+        app:layout_constraintTop_toBottomOf="@+id/biotext"
+        tools:text="Genia, millonario cilantropo, playboy" />
+
+    <TextView
+        android:id="@+id/biotext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:text="Power"
+        android:textColor="@color/ddark_grey"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bioresult" />
+
+    <RatingBar
+        android:id="@+id/ratingBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:progressTint="@color/amarillo"
+        android:isIndicator="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/biotext2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
