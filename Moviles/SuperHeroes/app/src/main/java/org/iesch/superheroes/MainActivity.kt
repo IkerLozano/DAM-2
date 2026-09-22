@@ -11,6 +11,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import org.iesch.superheroes.Model.SuperHeroe
 import org.iesch.superheroes.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -45,9 +46,11 @@ class MainActivity : AppCompatActivity() {
             val bio = binding.bioEdit.text.toString() //por si metenumeros o lo que sea alo pasamos a String
             val power = binding.power.rating //por si metenumeros o lo que sea alo pasamos a String
 
+            //2. me creo el objero superheroe
+            //val superHeroe = SuperHeroe(superHeroName, alterEgo, bio, power)
+
 
             //que quiero hacer cuando pulso el boton "Guardar"
-
             irADetailActivity(superHeroName, alterEgo, bio, power)
 
 

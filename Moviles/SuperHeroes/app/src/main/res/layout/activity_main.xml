@@ -9,6 +9,7 @@
 
     <ImageView
         android:id="@+id/hero_imagen"
+        android:src="@android:drawable/ic_menu_camera"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
@@ -70,7 +71,7 @@
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:hint="Name"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
