@@ -8,34 +8,19 @@ class miVentana(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Mi ventana")
+        self.setWindowTitle("Ventana")
+
+        barra = QSlider(Qt.Orientation.Horizontal) #lo de dentro es para cambiar la orientacion de la barra
+        barra.setRange(-10, 10) #ponemos el ranto
+
+        barra.valueChanged.connect(self.valores)
 
 
-    
-       
-        spinBox = QSlider(Qt.Orientation.Horizontal)
-        spinBox.setRange(-10, 10)
+        self.setCentralWidget(barra)
 
-        spinBox.valueChanged.connect(self.valorCambiado)
-        #spinBox.sliderMoved.connect(self.textoCambiado)
-        
-
-
-    
-        self.setCentralWidget(spinBox)
-
-
-
-    def valorCambiado(self, estado):
+    def valores(self, estado):
         print(estado)
 
-
-    def textoCambiado(self, estado):
-            print(estado)
-
-
-
-         
 
 
 app = QApplication([])
@@ -44,7 +29,4 @@ ventana = miVentana()
 ventana.show()
 
 
-app.exec()
-
-
-
+app .exec()

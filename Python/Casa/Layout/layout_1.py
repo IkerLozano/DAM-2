@@ -2,9 +2,10 @@ from PyQt6.QtWidgets import QApplication, QHBoxLayout, QWidget, QMainWindow, QPu
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QPixmap
 
+
 #En este archivo se encarga de crear la ventana y colocar esos widgets.
 
-from color import Color #Del archivo color.py, tráeme la clase Color
+from colores import colores #Del archivo colores.py, tráeme la clase colores
 
 
 class miVentana(QMainWindow):
@@ -15,34 +16,27 @@ class miVentana(QMainWindow):
         self.setWindowTitle("Mi ventana")
 
 
-        plantilla = QHBoxLayout()
+        plantilla = QHBoxLayout() #creo el layout
 
         #va a crear una caja horizontal con tantos cuadros color como le digamos
-        plantilla.addWidget(Color("red"))
-        plantilla.addWidget(Color("blue"))
-        plantilla.addWidget(Color("yellow"))
-        plantilla.addWidget(Color("green"))
+        plantilla.addWidget(colores("red"))
+        plantilla.addWidget(colores("blue"))
+        plantilla.addWidget(colores("yellow"))
+        plantilla.addWidget(colores("green"))
+
 
         widget = QWidget() #crea un widget vacío que podemos utilizar como contenedor de otros elementos.
-        widget.setLayout(plantilla) #metemos el layout que hemos creado (plantilla) dentro de windget
-
-
-
-
+        widget.setLayout(plantilla)#metemos el layout que hemos creado (plantilla) dentro de windget
+       
         self.setCentralWidget(widget)
+
+        
       
 
 
       
         
     
-
-    
-        
-
-
-    
-   
 
    
 
