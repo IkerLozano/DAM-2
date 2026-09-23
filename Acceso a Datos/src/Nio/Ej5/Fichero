@@ -1,0 +1,15 @@
+Productos{id=1, nombre='Teclado', precio=35.99, descuento=true, tipo=A}
+Productos{id=2, nombre='Raton', precio=19.99, descuento=false, tipo=B}
+Productos{id=3, nombre='Monitor', precio=189.5, descuento=true, tipo=A}
+Productos{id=4, nombre='Auriculares', precio=59.99, descuento=false, tipo=C}
+Productos{id=5, nombre='Webcam', precio=45.75, descuento=true, tipo=B}
+Productos{id=1, nombre='Teclado', precio=35.99, descuento=true, tipo=A}
+Productos{id=2, nombre='Raton', precio=19.99, descuento=false, tipo=B}
+Productos{id=3, nombre='Monitor', precio=189.5, descuento=true, tipo=A}
+Productos{id=4, nombre='Auriculares', precio=59.99, descuento=false, tipo=C}
+Productos{id=5, nombre='Webcam', precio=45.75, descuento=true, tipo=B}
+Productos{id=1, nombre='Teclado', precio=35.99, descuento=true, tipo=A}
+Productos{id=2, nombre='Raton', precio=19.99, descuento=false, tipo=B}
+Productos{id=3, nombre='Monitor', precio=189.5, descuento=true, tipo=A}
+Productos{id=4, nombre='Auriculares', precio=59.99, descuento=false, tipo=C}
+Productos{id=5, nombre='Webcam', precio=45.75, descuento=true, tipo=B}

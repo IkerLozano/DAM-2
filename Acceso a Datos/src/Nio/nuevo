@@ -1,0 +1,49 @@
+Java es un lenguaje de programación orientado a objetos que se utiliza para desarrollar diferentes tipos de aplicaciones. Es un lenguaje muy extendido en el mundo del desarrollo de software y se caracteriza por permitir que un mismo programa pueda ejecutarse en diferentes sistemas gracias a la máquina virtual de Java, conocida como JVM.
+
+Durante el aprendizaje de Java es importante comprender los conceptos básicos de la programación, como las variables, los tipos de datos, las condiciones, los bucles, los métodos y las clases. Estos conceptos forman la base necesaria para crear programas más complejos y organizar correctamente el código. Una vez que se dominan estos fundamentos, es posible trabajar con estructuras de datos, colecciones, excepciones, interfaces y programación funcional.
+
+La programación orientada a objetos permite representar elementos del mundo real mediante clases y objetos. Una clase define las características y comportamientos que tendrán sus objetos. Por ejemplo, podemos crear una clase llamada Empleado que tenga atributos como nombre, departamento y salario. A partir de esta clase se pueden crear diferentes empleados, cada uno con sus propios datos.
+
+Los atributos representan la información que pertenece a un objeto, mientras que los métodos representan las acciones que puede realizar. Los constructores permiten inicializar los objetos cuando se crean. Además, los modificadores de acceso ayudan a proteger los datos de una clase y a controlar desde dónde se pueden utilizar.
+
+En Java también existen las colecciones, que permiten almacenar y organizar varios elementos. Algunas de las colecciones más utilizadas son las listas, los conjuntos y los mapas. Una lista permite guardar elementos manteniendo un orden y puede contener valores repetidos. Un conjunto se utiliza cuando no queremos almacenar elementos duplicados. Un mapa almacena información en forma de clave y valor, de manera que cada clave permite localizar un valor asociado.
+
+Los Streams de Java permiten procesar los elementos de una colección de una forma cómoda y ordenada. Con los Streams podemos filtrar elementos, transformarlos, ordenarlos, agruparlos y obtener resultados. Algunos de sus métodos más importantes son filter, map, forEach, reduce y collect.
+
+El método filter permite seleccionar únicamente los elementos que cumplen una condición. Por ejemplo, si tenemos una lista de empleados, podemos filtrar aquellos que pertenecen al departamento de Java. El método map permite transformar los elementos y obtener una información concreta, como los nombres de los empleados. Por otro lado, collect permite recoger los resultados y organizarlos en una lista, un conjunto o un mapa.
+
+Los archivos son importantes porque permiten guardar información para utilizarla posteriormente. Cuando un programa termina su ejecución, los datos almacenados únicamente en variables pueden desaparecer. Si queremos conservar esa información, podemos guardarla en un archivo. De esta manera, el programa podrá leerla más adelante.
+
+Java proporciona diferentes herramientas para trabajar con archivos y directorios. Una de ellas es la API Java NIO.2, que se incorporó en Java 7 como una mejora del sistema de entrada y salida. Esta API facilita el trabajo con rutas, archivos y carpetas, y ofrece métodos para crear, leer, escribir, copiar, mover y borrar archivos.
+
+La clase Path representa la ruta de un archivo o directorio. Una ruta puede ser absoluta o relativa. Una ruta absoluta indica la ubicación completa de un archivo dentro del sistema, mientras que una ruta relativa depende de la ubicación desde la que se ejecuta el programa.
+
+Por ejemplo, una ruta absoluta en Windows podría ser C:\\Users\\Iker\\Desktop\\Clase\\datos.txt. Una ruta relativa podría ser datos.txt o documentos\\datos.txt. Utilizar rutas correctamente es importante para evitar errores cuando el programa intenta localizar un archivo.
+
+La clase Files proporciona diferentes métodos para trabajar con las rutas representadas por Path. Con el método exists podemos comprobar si un archivo existe. Con createFile podemos crear un archivo nuevo. Con delete podemos borrar un archivo y con copy podemos crear una copia en otra ubicación. También podemos utilizar move para cambiar un archivo de carpeta o modificar su ubicación.
+
+La lectura y la escritura de archivos pueden realizarse mediante diferentes tipos de flujos. Los flujos de bytes trabajan con datos básicos y son apropiados para archivos como imágenes, vídeos o archivos binarios. Los flujos de caracteres están orientados al trabajo con texto, como palabras, frases y documentos de texto.
+
+Cuando trabajamos con archivos de texto, es importante utilizar una codificación adecuada. La codificación determina cómo se representan los caracteres mediante bytes. UTF-8 es una codificación muy utilizada porque permite representar una gran cantidad de caracteres y es compatible con muchos idiomas.
+
+Los búferes permiten almacenar temporalmente datos durante las operaciones de lectura y escritura. Las clases BufferedReader y BufferedWriter se utilizan para leer y escribir texto de una forma eficiente. Un lector puede obtener información de un archivo, mientras que un escritor permite guardar información en él.
+
+Al trabajar con archivos debemos tener en cuenta que pueden producirse errores. Por ejemplo, el archivo puede no existir, la ruta puede ser incorrecta o el programa puede no tener permisos suficientes para acceder a él. Por esta razón, muchas operaciones de entrada y salida pueden producir excepciones que deben tratarse correctamente.
+
+Las excepciones permiten controlar situaciones inesperadas durante la ejecución del programa. En Java podemos utilizar bloques try y catch para intentar ejecutar una operación y capturar los errores que puedan producirse. También podemos utilizar finally cuando necesitamos ejecutar determinadas instrucciones independientemente de si se produce una excepción.
+
+La organización del código es una parte fundamental del desarrollo de aplicaciones. Un programa bien organizado es más fácil de leer, mantener y modificar. Para ello, podemos dividir el código en diferentes clases y métodos, utilizar nombres descriptivos y evitar repetir instrucciones innecesariamente.
+
+En el desarrollo de aplicaciones también es importante realizar pruebas. Las pruebas permiten comprobar que el programa funciona como esperamos y ayudan a detectar errores. Podemos probar diferentes situaciones, como listas vacías, archivos inexistentes, datos repetidos o valores incorrectos.
+
+Aprender programación requiere practicar de forma constante. Los errores forman parte del proceso de aprendizaje y permiten comprender mejor cómo funciona el lenguaje. Es recomendable leer los mensajes de error, analizar el código paso a paso y realizar pequeños cambios para comprobar sus efectos.
+
+Java ofrece muchas herramientas para desarrollar aplicaciones de escritorio, aplicaciones web, aplicaciones móviles y otros tipos de programas. Comprender sus fundamentos permite avanzar progresivamente hacia conceptos más complejos, como las bases de datos, la programación concurrente, las interfaces gráficas y el desarrollo de aplicaciones multiplataforma.
+
+El objetivo de aprender a programar no consiste únicamente en memorizar métodos, sino en comprender qué problema queremos resolver y elegir las herramientas adecuadas para solucionarlo. Cuando conocemos el funcionamiento de las clases y los métodos, podemos combinarlos para crear programas útiles, organizados y fáciles de mantener.
+gfdfg?
+'?
+
+'
+'
+'
