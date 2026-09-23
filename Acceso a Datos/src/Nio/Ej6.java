@@ -29,9 +29,7 @@ public class Ej6 {
 
 
 
-
         //Hacerlo con Files
-
         Path rutaFile = Path.of("C://Users//Iker//Desktop");
 
         Stream<Path> contenido2 = Files.list(rutaFile);
@@ -40,8 +38,7 @@ public class Ej6 {
 
 
         //El ejercicio 7
-        //hay que usar el metodo walk(), para que nosmuestre tamb subcarpetas, pq file solo muestra el contenido de una carpeta
-
+        //hay que usar el metodo walk(), para que nos muestre tamb subcarpetas, pq file solo muestra el contenido de una carpeta
 
         Files.walk(rutaFile, 3).filter(n -> n.toString().endsWith(".txt")).forEach(System.out::println);
 

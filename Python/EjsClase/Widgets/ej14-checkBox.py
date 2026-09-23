@@ -22,7 +22,9 @@ class miVentana(QMainWindow):
         formato.setBold(True) #negrita
         casilla.setFont(formato) #todo el formato que hemos puesto se lo aplicamos
 
-        casilla.stateChanged.connect(self.muestraEstado) #cuando haya un cambio en lacasilla se dispara est señal
+        #casilla.stateChanged.connect(self.muestraEstado) #cuando haya un cambio en lacasilla se dispara est señal
+
+        casilla.stateChanged.connect(self.mensaje)
 
     
 
@@ -31,6 +33,10 @@ class miVentana(QMainWindow):
 
     def muestraEstado(self, estado): #2 es marcado y 0 no marcado tamb puede estar parcialmente marcado (1)
         print(estado)
+
+
+    def mensaje(self, estado):
+        print(["Boton no Pulsado", "", "Boton pulsado"][estado])
 
          
 
