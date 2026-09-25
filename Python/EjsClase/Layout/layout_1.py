@@ -15,7 +15,7 @@ class miVentana(QMainWindow):
         self.setWindowTitle("Mi ventana")
 
 
-        plantilla = QHBoxLayout()
+        plantilla = QVBoxLayout()
 
         #va a crear una caja horizontal con tantos cuadros color como le digamos
         plantilla.addWidget(Color("red"))
