@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrys</title>
+</head>
+<body>
+
+
+    <script>
+
+
+        // Array definido 1 a 1
+        let miVector=[]; // let miVector=new Array(); es equivalente
+        miVector[0]=22;
+        miVector[1]=12;
+        miVector[2]=33;
+        console.log(miVector[1]);
+        console.log(miVector + " --> "+miVector.length ); // array y tamanyo
+
+        
+        //Array definido en una línea
+        let otroArray=[1,2,"Pascual"]; // Valores dentro del array 
+        console.log(otroArray[2]);
+
+        //copir los arrays
+        let miArray = { ...otroArray };
+        console.log(miArray)
+       
+
+        // Array bidimensional 5x4 declarado sin rellenar
+        // Para saber mas de map, mirar seccion de funciones flecha
+        let matrizBi = new Array(5).fill().map(x => new Array(4));
+        // Otro array bidimensional 3x5, relleno de ceros
+        let otraMatrizBi = [...Array(3)].map(x=>Array(5).fill(0))
+
+
+        prompt("hola")
+
+    </script>
+    
+</body>
+</html>
