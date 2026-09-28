@@ -23,7 +23,7 @@ public class Main {
                 new Cancion("Summer of 69", "Bryan Adams")
         ));
 
-
+        System.out.println("-----1------");
         //Busca las canciones de “Bon Jovi” usando programación tradicional (bucles)
         for (Cancion c: canciones){
             if (c.getCantante().equals("Bon Jovi")){
@@ -34,17 +34,17 @@ public class Main {
 
 
         //Busca las canciones de “Bon Jovi” usando programación funcional.
-        System.out.println("-----------");
+        System.out.println("-----2------");
         canciones.stream().filter(c -> c.getCantante().equals("Bon Jovi")).forEach(c -> System.out.println(c));
 
 
         //Busca las canciones de "Bon Jovi" usando programación funcional y las canciones encontradas deben acabar en nueva lista.
-        System.out.println("-----------");
+        System.out.println("------3-----");
         System.out.println(canciones.stream().filter(c -> c.getCantante().equals("Bon Jovi")).toList());
 
 
         //Cuenta el número de canciones que tiene “Bon Jovi” en la lista.
-        System.out.println("-----------");
+        System.out.println("-----4------");
         System.out.println(canciones.stream()
                 .filter(c -> c.getCantante().equals("Bon Jovi"))
                 .collect(Collectors.groupingBy(Cancion::getCantante, Collectors.counting())));
@@ -56,13 +56,13 @@ public class Main {
 
 
         //Realiza una agrupación por cantante y muestra el número de canciones que tiene cada cantante
-        System.out.println("------------");
+        System.out.println("------5------");
         System.out.println(canciones.stream().collect(Collectors.groupingBy(Cancion::getCantante, Collectors.counting())));
 
 
 
         //Queremos imprimir la información de todas las canciones, pero sin dicho duplicado
-        System.out.println("--------------");
+        System.out.println("-------6-------");
         canciones.stream().distinct().forEach(c -> System.out.println(c));
         //hay que generar el equals y el hasCode en la clase Cancion
     }

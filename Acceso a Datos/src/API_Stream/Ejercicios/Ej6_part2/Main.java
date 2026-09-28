@@ -26,7 +26,7 @@ public class Main {
 
 
         //Encontrar a la persona con más coches.
-        //System.out.println(personas.stream().collect(Collectors.groupingBy(Persona::getNombre, Collectors.counting())));
+        System.out.println(personas.stream().collect(Collectors.groupingBy(Persona::getNombre, Collectors.counting())));
 
 
     }
