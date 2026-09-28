@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 10</title>
+</head>
+
+    <script>
+
+
+        let nombre = prompt("Tu nombre:")
+        let edad = prompt("Tu edad:")
+        let diaS = prompt("Dia de la semna que viejas (en letra)")
+        diaS = diaS.toUpperCase()
+
+
+        let billete = 12.5
+        let billeteIVA = billete *1.21
+        let billeteF
+        let billeteF_IVA
+
+ 
+
+        if( ((edad >=18 && edad <=26) || edad >60) && (diaS == "MIERCOLES" || diaS == "VIERNES")){
+            billeteF = billete * (1-5/100) * (1-15/100)
+            billeteF_IVA = billeteIVA * (1-5/100) * (1-15/100)
+
+            document.write("Se le aplicara  un descuento del 15% por tener una edad entre 18 y 26 o mayor de 60 y un descuento del 5% por viajer el miercoles o el viernes" + "<br/>")
+            document.write("Billete sin IVA con desuento --> " + billeteF + "€" + "<br/>")
+            document.write("Billete con IVA con desuento --> " + billeteF_IVA + "€")
+
+        }else if(diaS == "MIERCOLES" || diaS == "VIERNES"){
+            billeteF = billete - (billete*5/100)
+            billeteF_IVA = billeteIVA - (billeteIVA*5/100)
+
+            document.write("Se le aplicra un descuento del 5% por viajer el miercoles o el viernes" + "<br/>")
+            document.write("Billete sin IVA con desuento --> " + billeteF + "€" + "<br/>")
+            document.write("Billete con IVA con desuento --> " + billeteF_IVA + "€")
+        }else if ((edad >=18 && edad <=26) || edad >60 ){
+            billeteF = billete - (billete*15/100)
+            billeteF_IVA = billeteIVA - (billeteIVA*15/100)
+
+            document.write("Se le aplicra un descuento del 15% por tener una edad entre 18 y 26 o mayor de 60" + "<br/>")
+            document.write("Billete sin IVA con desuento --> " + billeteF + "€" + "<br/>")
+            document.write("Billete con IVA con desuento --> " + billeteF_IVA + "€")
+        }else{
+            document.write("NO Se le aplicara ningun descuento" + "<br/>")
+            document.write("Billete sin IVA sin desuento --> " + billete + "€" + "<br/>")
+            document.write("Billete con IVA sin desuento --> " + billeteIVA + "€")
+
+        }
+
+
+    </script>
+
+<body>
+    
+</body>
+</html>

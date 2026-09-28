@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 11</title>
+</head>
+
+
+    <script>
+
+        let entrada
+
+        do{
+
+            entrada = prompt("Dime un numero entero")
+            num = Number(entrada) //lo paso a num pq el prompt convierte todo a texto
+
+        }while(isNaN(num)) //esto para mientras se cunpla la condicion
+
+        /*
+
+            isNaN() sirve para comprobar si un valor NO es un número válido.
+            isNaN(25)       // false
+            isNaN(12.5)     // false
+            isNaN("hola")   // true
+            isNaN(NaN)      // true
+
+        */
+
+
+
+        let cont = 0
+
+        for(let i = 0; i>0; i++){
+            cont ++
+        }
+
+        document.write("El numero tenia " + cont + " cifras")
+
+    </script>
+
+<body>
+    
+</body>
+</html>
