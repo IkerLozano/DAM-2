@@ -1,4 +1,4 @@
-package Nio;
+package Nio.Ej2;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -18,8 +18,8 @@ public class Ej2 {
         System.out.println("Como quieres que se llame el archivo copia");
         String NombreCopia = sc.nextLine();
 
-        Path origen = Path.of("src/Nio/" + NombreOrigen);
-        Path destino = Path.of("src/Nio/" + NombreCopia);
+        Path origen = Path.of("src/Nio/Ej2" + NombreOrigen);
+        Path destino = Path.of("src/Nio/Ej2" + NombreCopia);
 
         if (Files.exists(origen)){ //compruebo que el nombre del archivo que quiere copiar exista
             Files.copy(origen, destino, StandardCopyOption.REPLACE_EXISTING); //en caso de que el archvo exista la borra y lo crea otra vez

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas</title>
+</head>
+<body>
+
+
+    <script>
+
+        let x = 3;
+        let y = 2;
+
+        console.log("x+y")
+        console.log(eval("x+y"))
+
+        
+        
+
+        // 1. toLowerCase()
+        // Convierte la cadena a minúsculas
+        let cadena = "Hola MUNDO";
+        console.log(cadena.toLowerCase()); // "hola mundo"
+
+
+        // 3. concat(cadena)
+        // Une una cadena al final de otra
+        let nombre = "Hola";
+        console.log(nombre.concat(" Pascual")); // "Hola Pascual"
+
+
+        // 4. charAt(posicion)
+        // Devuelve el carácter que hay en una posición
+        let texto = "Pascual";
+        console.log(texto.charAt(0)); // "P"
+        console.log(texto.charAt(3)); // "c"
+
+
+        // 5. indexOf(texto)
+        // Devuelve la primera posición donde aparece el texto
+        let frase = "Hola Pascual";
+        console.log(frase.indexOf("Pascual")); // 5
+        console.log(frase.indexOf("a"));       // 3
+
+
+        // 6. lastIndexOf(texto)
+        // Devuelve la última posición donde aparece el texto
+        console.log(frase.lastIndexOf("a")); // 9
+
+
+        // 7. replace(texto1, texto2)
+        // Sustituye un texto por otro
+        let mensaje = "Hola Juan";
+        console.log(mensaje.replace("Juan", "Pascual")); // "Hola Pascual"
+
+
+        // 8. split(separador)
+        // Divide la cadena y crea un array
+        let datos = "Pascual:Perez:123456";
+        console.log(datos.split(":")); // ["Pascual", "Perez", "123456"]
+
+
+        // 9. substring(inicio, fin)
+        // Devuelve una parte de la cadena
+        let palabra = "Pascual";
+        console.log(palabra.substring(0, 4)); // "Pasc"
+
+
+
+
+
+
+
+        // OBJETO PREDEFINIDO DATE
+
+        // 1. Crear una fecha con la fecha y hora actual
+        let fechaActual = new Date();
+        console.log(fechaActual); // Fecha y hora actuales
+
+
+        // 2. Crear una fecha mediante una cadena
+        let fecha1 = new Date("October 13, 2014 11:13:00");
+        console.log(fecha1); // Mon Oct 13 2014 11:13:00
+
+
+        // 3. Crear una fecha indicando año, mes, día, hora, minutos, segundos y milisegundos
+        let fecha2 = new Date(99, 5, 24, 11, 33, 30, 0);
+        console.log(fecha2); // Thu Jun 24 1999 11:33:30
+
+
+        // 4. Crear una fecha indicando año, mes y día
+        let fecha3 = new Date(99, 5, 24);
+        console.log(fecha3); // Thu Jun 24 1999 00:00:00
+
+
+        // GET / SET DEL MES
+        let fecha = new Date(2026, 8, 28, 10, 30, 0); //año, mes, día, hora, minutos, segundos
+        console.log(fecha.getMonth()); // 8 → septiembre
+        fecha.setMonth(11);
+        console.log(fecha.getMonth()); // 11 → diciembre
+
+
+        // GET / SET DEL DÍA DEL MES
+        console.log(fecha.getDate()); // 28
+        fecha.setDate(15);
+        console.log(fecha.getDate()); // 15
+
+
+        // FECHA COMO TEXTO
+        console.log(fecha.toDateString()); // Tue Dec 15 2026
+
+
+        // FECHA EN GMT
+        console.log(fecha.toGMTString()); // Fecha en formato GMT
+
+
+        // FECHA EN UTC
+        console.log(fecha.toUTCString()); // Fecha en formato UTC
+
+
+
+    </script>
+    
+</body>
+</html>
