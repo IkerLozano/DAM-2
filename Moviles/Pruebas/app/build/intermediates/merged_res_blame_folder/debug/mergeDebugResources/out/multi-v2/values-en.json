@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.pruebas.app-mergeDebugResources-38:/values-en/values-en.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\dam2\\Desktop\\Clase\\DAM-2\\Moviles\\Pruebs\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "from": {
+                        "startLines": "3,6,5,7,4",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "59,235,173,283,111",
+                        "endColumns": "50,46,60,92,60",
+                        "endOffsets": "105,277,229,371,167"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,106,153,214,307",
+                        "endColumns": "50,46,60,92,60",
+                        "endOffsets": "101,148,209,302,363"
+                    }
+                }
+            ]
+        }
+    ]
+}

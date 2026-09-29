@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+        <ImageView
+            android:id="@+id/foto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/foto"
+            android:adjustViewBounds="true"
+            />
+
+        <TextView
+            android:id="@+id/textoSludo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="@string/introduce_tu_edad"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:padding="24dp"
+            android:textColor="@color/personalizado"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/edad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/introduce_tu_edad"
+            android:inputType="number"
+            />
+
+
+        <Button
+            android:id="@+id/boton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="24dp"
+            android:text="@string/calcular"
+            android:textSize="24sp"
+            android:backgroundTint="@color/personalizado"
+            />
+
+
+        <TextView
+            android:id="@+id/textoResp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@string/mensajePersonalizado"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/personalizado"
+            android:layout_marginTop="15dp"
+            android:textStyle="bold"
+            /> <!---con tools el mensaje no saldra por defecto-->
+
+
+</LinearLayout>

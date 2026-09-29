@@ -1,0 +1,27 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color personalizado
+color white
+drawable foto
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id boton
+id edad
+id foto
+id main
+id textoResp
+id textoSludo
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
+string app_name
+string calcular
+string introduce_tu_edad
+string mensajePersonalizado
+string que_edad_tienes
+style Base.Theme.Pruebas
+style Theme.Pruebas
+xml backup_rules
+xml data_extraction_rules

@@ -14,9 +14,10 @@
         do{
 
             entrada = prompt("Dime un numero entero")
+
             num = Number(entrada) //lo paso a num pq el prompt convierte todo a texto
 
-        }while(isNaN(num)) //esto para mientras se cunpla la condicion
+        }while(!Number.isInteger(num) || entrada == "") //esto para mientras se cunpla la condicion
 
         /*
 
@@ -29,14 +30,12 @@
         */
 
 
+        var numString = String(num)
 
-        let cont = 0
+        
+        document.write(numString.length)
 
-        for(let i = 0; i>0; i++){
-            cont ++
-        }
-
-        document.write("El numero tenia " + cont + " cifras")
+      
 
     </script>
 
