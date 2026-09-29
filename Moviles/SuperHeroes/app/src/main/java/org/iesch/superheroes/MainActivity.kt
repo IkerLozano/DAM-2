@@ -59,6 +59,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //2. sirve para enviar los datos de la primera pantalla a la segunda Activity (DetailActivity2)
     fun irADetailActivity(superHeroName: String, alterEgo: String, bio: String, power: Float) {
 
         //creamos el objeto Intent

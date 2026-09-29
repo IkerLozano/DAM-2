@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //2. los botones tienen la propiedad setOnClickListener al pulsarlo
-        boton.setOnClickListener {  //odo lo de aqui dentro se ejecutara cuando se pulse el boton
+        boton.setOnClickListener {  //todo lo de aqui dentro se ejecutara cuando se pulse el boton
 
             val edadString = textInfo.text.toString() //con el .text() cogemos el texto del TextView, y lo pasamos a Strinf para abajo comprobar si esta vacio ese TextView
 
