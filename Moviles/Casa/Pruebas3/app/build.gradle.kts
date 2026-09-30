@@ -1,18 +1,15 @@
 plugins {
     alias(libs.plugins.android.application)
-    // 0 - Añadimos PArcelizable plugin
-    //id("kotlin-parcelize")
-    id("org.jetbrains.kotlin.plugin.parcelize")
 }
 
 android {
-    namespace = "org.iesch.superheroes"
+    namespace = "com.example.pruebas3"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "org.iesch.superheroes"
+        applicationId = "com.example.pruebas3"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -28,9 +25,6 @@ android {
             }
         }
     }
-    buildFeatures {
-        viewBinding = true
-    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -40,8 +34,10 @@ android {
 dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.cardview)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.gridlayout)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/imagenRedonda"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Hola Iker"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.244"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.526" />
+
+
+    <!--AÑADIMOS GRID -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="409dp"
+        android:layout_height="633dp"
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        <!--
+            app:columnCount="2" - cuantas columnas tendra cada fila
+        -->
+
+
+        <!-- TARJETA 1 - IZQUIERDA -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardIzq"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="#2196F3"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:strokeWidth="0dp"
+            app:layout_columnWeight="1"
+            app:layout_row="0"
+            app:layout_column="0">
+
+
+            <!-- Contenido de la tarjeta 1 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="8dp"
+                    android:alpha="0.30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_accessibility_new_24" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Superheroes"
+                    android:textColor="#F8F8F8"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintStart_toStartOf="@+id/imageView2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--
+                 android:alpha="0.30" - para la transparencia de la imagen
+             -->
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- TARJETA 2 - Derecha -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDer"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_margin="6dp"
+            app:cardBackgroundColor="#F44336"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_row="0"
+            app:strokeWidth="0dp">
+
+
+            <!-- Contenido de la tarjeta 1 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="84dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="8dp"
+                    android:alpha="0.30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_admin_panel_settings_24" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Poderes"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!--
+            app:cardElevation="20dp" - sombra
+            app:layout_columnWeight="1" - es l espacio que va a tener cada card, cuanto mas peso mas espcio
+            android:layout_margin="6dp" - esapcio entre la carta
+            app:strokeWidth="0dp" - el borde de cada card, pero le tenemos que poner color
+            app:layout_column/row="1" - en que fila y col estara colocada
+            app:cardCornerRadius="12dp" - redondear las cards
+
+            el margen de 50 no va a actuar pq ya tenemso el columnWeight diciendole cuando ocupar
+         -->
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

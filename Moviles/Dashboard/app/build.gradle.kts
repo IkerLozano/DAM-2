@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "org.iesch.myapplication"
+    namespace = "org.iesch.dashboard"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "org.iesch.myapplication"
+        applicationId = "org.iesch.dashboard"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
