@@ -12,7 +12,7 @@ public class Ej5 {
         String texto = "Ayer A fui con Marcos y Laura al instituto. Allí nos encontramos con Pedro, que venía de Valencia. Después fuimos a comer a un Restaurante cerca de la Plaza Mayor. Por la tarde, Marta y Sergio jugaron al Fútbol en el Parque.";
 
 
-        Pattern patron = Pattern.compile("[A-Z]{1}[a-záéíóú]{0,}");
+        Pattern patron = Pattern.compile("\\b[A-Z]{1}[a-záéíóú]{0,}\\b");
 
         Matcher matcher = patron.matcher(texto);
 
