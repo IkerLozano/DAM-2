@@ -39,9 +39,7 @@ public class Pruebas {
                 "java",
                 "-cp",
                 clase,
-                "Tema1.Suma",
-                "5",
-                "10"
+                "Tema1.Suma"
         );
 
         Process p4 = pb4.start();
