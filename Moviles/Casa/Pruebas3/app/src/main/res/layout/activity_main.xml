@@ -59,10 +59,10 @@
             app:cardBackgroundColor="#2196F3"
             app:cardCornerRadius="12dp"
             app:cardElevation="5dp"
-            app:strokeWidth="0dp"
+            app:layout_column="0"
             app:layout_columnWeight="1"
             app:layout_row="0"
-            app:layout_column="0">
+            app:strokeWidth="0dp">
 
 
             <!-- Contenido de la tarjeta 1 -->
@@ -148,6 +148,55 @@
 
 
         </androidx.cardview.widget.CardView>
+
+
+        <!-- TARJETA 3 - Abajo -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAbjo"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_margin="6dp"
+            app:cardBackgroundColor="#388E3C"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:layout_columnSpan="2"
+            app:layout_columnWeight="1"
+            app:layout_row="0"
+            app:strokeWidth="0dp">
+
+
+            <!-- Contenido de la tarjeta 3 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="84dp"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="8dp"
+                    android:alpha="0.30"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/outline_ambulance_24" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Pascual"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="63dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
 
         <!--
             app:cardElevation="20dp" - sombra
