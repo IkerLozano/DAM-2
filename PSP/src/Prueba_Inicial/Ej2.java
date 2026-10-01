@@ -1,3 +1,5 @@
+package Prueba_Inicial;
+
 import java.util.Random;
 import java.util.Scanner;
 

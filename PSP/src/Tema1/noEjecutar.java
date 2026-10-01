@@ -1,6 +1,6 @@
 package Tema1;
 
-public class pruebaHilos implements Runnable {
+public class noEjecutar implements Runnable {
 
     static int cont = 0;
 
@@ -13,10 +13,12 @@ public class pruebaHilos implements Runnable {
             throw new RuntimeException(e);
         }
     }
+
+
     public static void main(String args[]) {
 
         for (int i = 0; i <100000000 ; i++) {
-            new Thread(new pruebaHilos()).start();
+            new Thread(new noEjecutar()).start();
         }
 
     }

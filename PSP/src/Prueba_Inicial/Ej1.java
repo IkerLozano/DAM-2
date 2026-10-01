@@ -1,3 +1,5 @@
+package Prueba_Inicial;
+
 import java.util.Scanner;
 
 public class Ej1 {
