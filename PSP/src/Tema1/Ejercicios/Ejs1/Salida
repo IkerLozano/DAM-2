@@ -1,0 +1,34 @@
+Microsoft Windows [Versi¢n 10.0.26200.9457]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>echo Esto es salida normal
+Esto es salida normal
+
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>echo Esto es un error 1>&2
+
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>ping www.dam2chomon.org
+La solicitud de ping no pudo encontrar el host www.dam2chomon.org. Compruebe el nombre y
+vuelva a intentarlo.
+
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>ping www.google.es
+
+Haciendo ping a www.google.es [216.58.205.67] con 32 bytes de datos:
+Respuesta desde 216.58.205.67: bytes=32 tiempo=11ms TTL=120
+Respuesta desde 216.58.205.67: bytes=32 tiempo=12ms TTL=120
+Respuesta desde 216.58.205.67: bytes=32 tiempo=13ms TTL=120
+Respuesta desde 216.58.205.67: bytes=32 tiempo=11ms TTL=120
+
+Estad¡sticas de ping para 216.58.205.67:
+    Paquetes: enviados = 4, recibidos = 4, perdidos = 0
+    (0% perdidos),
+Tiempos aproximados de ida y vuelta en milisegundos:
+    M¡nimo = 11ms, M ximo = 13ms, Media = 11ms
+
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>pring www.iesch.org
+
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>
