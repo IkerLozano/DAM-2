@@ -5,36 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ej 1</title>
 </head>
-<body>
-    
+
+
     <script>
-        var lista = []
-        var cont = 0
-        var sum = 0
+
+
+        let array = []
+        let sum = 0
+        let cont = 0
+        let media = 0
+        let num;
 
         do{
 
-            var num = parseInt(prompt("Dime un numero"))
-
-            if (num != 0  && Number.isInteger(num)){
-
-                lista.push(num)
-
-                cont++
+            num = Number(prompt("Dime un numero"))
+            
+            if(Number.isNaN(num)){
+                continue;
+            }else{
+                array.push(num)
                 sum = sum+num
+                cont = cont+1
             }
-           
+            
+        }while(num!=0)
 
-        }while(num !== 0)
+        array.pop() //para sacar el 0
+        cont = cont - 1 //para que en la catidad de nuemros del arry no me cuente el 0
 
-        lista.pop() //quito el ultimpo elemto que sera el 0
 
-        var resultado = sum/cont
-        console.log(resultado)
-
-        //!== significa "estrictamente no igual" o "diferente a" 
+        media = sum/cont
+        
+        document.write("La media es " + media)
 
     </script>
 
+<body>
+    
 </body>
 </html>

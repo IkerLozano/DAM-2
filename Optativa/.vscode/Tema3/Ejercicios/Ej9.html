@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJ 9</title>
+</head>
+
+
+    <script>
+
+
+        let frase = prompt("Dime una frase")
+
+        let array = []
+        
+        array = frase.split(" ")
+
+        
+        for (let i = 0; i < array.length; i++) {
+            let primea = array[i].charAt(0).toUpperCase()
+            let demas = array[i].substring(1).toLowerCase()  //cuando no se pone el segunfo numero es de ese num hasta el final
+            document.write(primea + demas + " ")       
+        }
+        
+
+       
+
+
+    </script>
+
+<body>
+    
+</body>
+</html>

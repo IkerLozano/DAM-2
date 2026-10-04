@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 3</title>
+</head>
+
+
+    <script>
+
+
+        let array = [4,0,3,4,7,10,3,5,8,1,8,8,0,2,3,1,2,5,7,3,2,5,1]
+
+        let arrayNuevo = [...new Set(array)] //elimino los duplicados
+
+        arrayNuevo.sort((a, b) => a-b) //ordenar
+
+        
+        document.write(array) 
+        document.write("<br/>" + arrayNuevo)  
+
+        
+
+    </script>
+
+<body>
+    
+</body>
+</html>

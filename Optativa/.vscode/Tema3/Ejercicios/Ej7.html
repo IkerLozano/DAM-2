@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 7</title>
+</head>
+
+    <script>
+
+        let texto = prompt("Dime un texto")
+        texto = texto.toLowerCase().replaceAll(" ", "")
+
+        let array = []
+        
+        for (let i = 0; i < texto.length; i++) {
+            array.push(texto.charAt(i)) //obtengo la letra del index i y la meto al array
+            
+        }
+
+
+        let textoVuelta = array.reverse().join("")
+        
+
+        if(texto == textoVuelta){
+            document.write("Es polindroma")
+        }else{
+            document.write("No es polindroma")
+        }
+    
+            
+            
+        
+
+    </script>
+
+
+<body>
+    
+</body>
+</html>

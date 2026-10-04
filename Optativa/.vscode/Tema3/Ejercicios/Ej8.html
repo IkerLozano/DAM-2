@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 8</title>
+</head>
+
+
+    <script>
+
+        let nombre = prompt("Dime tu nombre y apellido")
+
+        let espacio = nombre.indexOf(" ") //obtengo el index del primer epacio
+        
+        let apellidos = nombre.substring(espacio, nombre.length) //junto desde el eapcio hasta el final
+        let nombreSolo = nombre.substring(0, espacio) //junto desde el primer craacter hasta el primer espacio
+
+        document.write(apellidos + ", " + nombreSolo)
+
+
+    </script>
+
+<body>
+    
+</body>
+</html>

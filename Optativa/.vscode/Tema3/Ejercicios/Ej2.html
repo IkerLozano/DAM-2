@@ -1,41 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ej 2</title>
 </head>
 
-<body>
-
 
     <script>
 
-       var dni = prompt("Dime los numeros de tu DNI")
-       var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E','T'];
 
-       var dniSinLetra = dni.slice(0,8)
+        var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T']; 
 
-        var letraDni = dni.charAt(9)
+        let dni = prompt("Dime tu DNI")
 
-       
-         var modulo = dniSinLetra % 23
+        let nuemros = dni.substring(0,8)
+        let letra = dni.substring(8,9)
+
+        //document.write("Numeros :" + nuemros + "<br/>")
+        //document.write("letra:" + letra)
+        //18468452G
+
+        let resto = nuemros%23
         
-         if(letras[modulo] == letraDni){
-            
-         }
-       
+        let result = letras[resto]
 
-
-       console.log(sum)
-        
-
-
-
+        if(result == letra){
+            document.write("El DNI es correcto")
+        }else{
+            document.write("El DNI no es correcto")
+        }
 
     </script>
 
+<body>
+    
 </body>
-
 </html>
