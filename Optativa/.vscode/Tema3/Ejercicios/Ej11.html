@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 11</title>
+</head>
+
+
+    <script>
+
+
+        document.write("Tiempo" +" <br/>")
+
+
+        let inicio
+        let duracion 
+
+        function empezar () {
+            inicio = Date.now()//timepo de inicio
+        }
+
+
+        
+        function acabar () {
+            duracion = Date.now() - inicio //timepo de final
+            console.log(duracion/1000)
+
+        }
+        
+        
+      
+
+
+    </script>
+
+<body>
+
+
+
+    <button onclick=empezar()>Empezar a contar </button>
+    <button onclick=acabar()>Finalizar</button>
+    
+</body>
+</html>
