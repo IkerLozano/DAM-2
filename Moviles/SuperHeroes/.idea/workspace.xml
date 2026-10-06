@@ -27,14 +27,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51236c93-16f2-4bc4-aa50-5006a155765e" name="Cambios" comment="">
-      <change beforePath="$PROJECT_DIR$/../Casa/Pruebas2/app/src/main/java/com/example/pruebas2/DetailActivity2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Casa/Pruebas2/app/src/main/java/com/example/pruebas2/DetailActivity2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Casa/Pruebas2/app/src/main/java/com/example/pruebas2/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Casa/Pruebas2/app/src/main/java/com/example/pruebas2/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Casa/Pruebas2/app/src/main/res/layout/activity_detail2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EdadCanina/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EdadCanina/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../EdadCanina/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EdadCanina/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Prueba1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Prueba1/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Prueba1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Prueba1/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Prueba1/app/src/main/java/org/iesch/prueba1/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Prueba1/app/src/main/java/org/iesch/prueba1/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Prueba1/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Prueba1/app/src/main/res/layout/home_activity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Prueba1/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1/app/src/main/java/org/iesch/prueba1/edad_canina_activity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Prueba1/app/src/main/java/org/iesch/prueba1/edad_canina_activity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1/app/src/main/java/org/iesch/prueba1/home_activity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Prueba1/app/src/main/java/org/iesch/prueba1/home_activity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1/app/src/main/res/layout/home_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Prueba1/app/src/main/res/layout/home_activity.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Prueba1/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Prueba1/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>

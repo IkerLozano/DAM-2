@@ -3,5 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="verde_personalizado">#05680E</color>
+    <color name="amarillo_personalizado">#FFEB3B</color>
+    <color name="gris_personalizado">#333030</color>
 
 </resources>

@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Mi aplicación</string>
+
+    <string name="app_name">Test 1</string>
+
+    <!--FRASES EDAD CANINA-->
     <string name="que_edad_tienes">How old are you?</string>
     <string name="introduce_tu_edad">Enter your age</string>
     <string name="calcular">Calculate</string>
     <string name="mensajePersonalizado">If you were a dog you would be %d years old</string>
+
+    <!--FRASES SUPERHEROES DETAIL-->
+    <string name="alter_ego">Alter Ego</string>
+    <string name="bio">Bio</string>
+    <string name="power">Power</string>
+
+
+    <!--FRASES SUPERHEROES MAIN-->
+    <string name="Nombre_superheroe">Superhero Name</string>
+    <string name="Alter_ego2">Alter Ego</string>
+    <string name="Bio2">Bio</string>
+    <string name="Power2">Power</string>
+    <string name="Guardar">Save</string>
+
+    <!--FRASES LOGIN-->
+    <string name="Bienvenidos_a_la_app_Iesch">Welcome to the IESCH app</string>
+    <string name="Logearse">Log in</string>
+    <string name="Nombre">Name</string>
+    <string name="Contraseña">Password</string>
+
+
+    <!--FRASES HOME-->
+    <string name="Buenos_dias">Good morning</string>
+    <string name="mensajePersonalizado2">Hello %s</string>
+    <string name="Edad_Canina">Canine Age</string>
+    <string name="SuperHerores">Superheroes</string>
+    <string name="bandeja_entrada">Inbox</string>
+    <string name="Opciones">Options</string>
+    <string name="Favoritos">Favorites</string>
+    <string name="Cerrar_sesion">Log out</string>
+    <string name="Desde">From</string>
+    <string name="Descuento">Discount</string>
 
 </resources>
