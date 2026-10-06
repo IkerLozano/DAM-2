@@ -18,7 +18,7 @@ id btn_guardar
 id heroImage
 id heroName_tv
 id hero_name_edit
-id imagenHeroe
+id imagenHeroeDetail
 id main
 id power
 id ratingResult

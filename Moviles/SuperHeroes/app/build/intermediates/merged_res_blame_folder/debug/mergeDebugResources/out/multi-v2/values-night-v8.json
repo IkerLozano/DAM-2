@@ -4,14 +4,14 @@
             "outputFile": "org.iesch.superheroes.app-mergeDebugResources-38:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dam2\\Desktop\\PMDM2627\\Android\\SuperHeroes\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\Iker\\Desktop\\Clase\\DAM-2\\Moviles\\SuperHeroes\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "102",
+                        "startOffsets": "100",
                         "endLines": "5",
                         "endColumns": "12",
-                        "endOffsets": "323"
+                        "endOffsets": "318"
                     },
                     "to": {
                         "startLines": "2",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\dam2\\.gradle\\caches\\9.6.0\\transforms\\3739ac272d78cfec90dab50b5e005d3e\\transformed\\appcompat-1.8.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Iker\\.gradle\\caches\\9.6.0\\transforms\\3739ac272d78cfec90dab50b5e005d3e\\transformed\\appcompat-1.8.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -40,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\dam2\\.gradle\\caches\\9.6.0\\transforms\\c69a82cb8d9dbb19eafa02b02eb81fe1\\transformed\\material-1.14.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Iker\\.gradle\\caches\\9.6.0\\transforms\\c69a82cb8d9dbb19eafa02b02eb81fe1\\transformed\\material-1.14.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

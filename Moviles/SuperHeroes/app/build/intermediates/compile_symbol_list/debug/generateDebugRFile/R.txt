@@ -16,7 +16,7 @@ int id btn_guardar 0x0
 int id heroImage 0x0
 int id heroName_tv 0x0
 int id hero_name_edit 0x0
-int id imagenHeroe 0x0
+int id imagenHeroeDetail 0x0
 int id main 0x0
 int id power 0x0
 int id ratingResult 0x0

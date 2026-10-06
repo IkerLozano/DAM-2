@@ -1,10 +1,10 @@
-#Thu Sep 24 19:21:57 CEST 2026
-base.0=C\:\\Users\\dam2\\Desktop\\PMDM2627\\Android\\SuperHeroes\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\dam2\\Desktop\\PMDM2627\\Android\\SuperHeroes\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\dam2\\Desktop\\PMDM2627\\Android\\SuperHeroes\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
-base.3=C\:\\Users\\dam2\\Desktop\\PMDM2627\\Android\\SuperHeroes\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
-base.4=C\:\\Users\\dam2\\Desktop\\PMDM2627\\Android\\SuperHeroes\\app\\build\\intermediates\\global_synthetics_dex\\debug\\generateDebugGlobalSynthetics\\classes.dex
-base.5=C\:\\Users\\dam2\\Desktop\\PMDM2627\\Android\\SuperHeroes\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Tue Oct 06 02:32:22 CEST 2026
+base.0=C\:\\Users\\Iker\\Desktop\\Clase\\DAM-2\\Moviles\\SuperHeroes\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\Iker\\Desktop\\Clase\\DAM-2\\Moviles\\SuperHeroes\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\Iker\\Desktop\\Clase\\DAM-2\\Moviles\\SuperHeroes\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
+base.3=C\:\\Users\\Iker\\Desktop\\Clase\\DAM-2\\Moviles\\SuperHeroes\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
+base.4=C\:\\Users\\Iker\\Desktop\\Clase\\DAM-2\\Moviles\\SuperHeroes\\app\\build\\intermediates\\global_synthetics_dex\\debug\\generateDebugGlobalSynthetics\\classes.dex
+base.5=C\:\\Users\\Iker\\Desktop\\Clase\\DAM-2\\Moviles\\SuperHeroes\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=10/classes.dex

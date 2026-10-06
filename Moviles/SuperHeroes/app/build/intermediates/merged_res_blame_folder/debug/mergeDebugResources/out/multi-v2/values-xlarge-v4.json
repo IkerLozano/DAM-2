@@ -4,7 +4,7 @@
             "outputFile": "org.iesch.superheroes.app-mergeDebugResources-38:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dam2\\.gradle\\caches\\9.6.0\\transforms\\3739ac272d78cfec90dab50b5e005d3e\\transformed\\appcompat-1.8.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "C:\\Users\\Iker\\.gradle\\caches\\9.6.0\\transforms\\3739ac272d78cfec90dab50b5e005d3e\\transformed\\appcompat-1.8.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
