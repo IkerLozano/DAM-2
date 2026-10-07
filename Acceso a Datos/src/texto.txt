@@ -1,0 +1,164 @@
+db.blog_post.aggregate([
+	{$project:
+		{numeroComentarios: {$size: "$comments"}}
+	}, 
+	{
+	$sort: {numeroComentarios -1}
+	},
+	{
+	$limit: 1
+	
+	}
+])
+
+
+
+###ej17
+db.blog_post.aggregate([
+	{$group
+	{
+	
+	}}
+
+])
+
+
+
+###18
+db.blog_post.aggregate([
+	{$group:
+		{
+			_id: "$creador",
+			numeroPost: {$count: {}}
+		}
+	}
+
+])
+
+
+
+###ej19
+
+db.blog_db.aggregate([
+	{
+		$unwind: "$comments"
+	}
+
+])
+
+
+
+db.blog_db.aggregate([
+	{
+		$unwind: "$comments"
+	},
+	{
+		$project:{
+			post_creador: "$creador",
+			contenido: "$contenido",
+			comentario_creador: "$comments.creador",
+			comentario_texto: "$comments.comen"
+		
+		}
+	}
+
+])
+
+
+###20
+db.blog_db.aggregate([
+	{
+		$unwind: "$comments"
+	},
+	{
+		$group: {
+			_id: "$comments.creador",
+			numeroComentarios: {$count:{}}
+		}
+	},
+	{
+		$sort: {numeroComentarios: -1}
+	}
+
+])
+
+
+###21
+db.blog_db.aggregate([
+	{
+		$unwind: "$comments"
+	},
+	{
+		$sort: {"comments.likes": -1}
+	}
+
+])
+
+
+
+###22
+db.blog_db.aggregate([
+	{
+		$group:{
+			_id: "$tags",
+			total_likes: {$sum: "$likes"}
+		}
+	}
+
+])
+
+
+###23
+db.blog_db.aggregate([
+	{
+		$project: {
+			mes: {$month: "$fecha"},
+			anio: {$year: "$fecha"}
+		}
+	},
+	{
+		$group: {
+			_id: {anio: "$anio", mes: "$mes"},
+			cantidad:{$count: {}}
+		},
+		{
+			$sort: {"_id.anio":1, "id.mes":1}
+		}
+	}
+	
+	
+	
+###24 no entra esto
+	
+	
+### 25 no entra esto
+	
+	
+###26
+db.blog_db.updateOne(
+	{_id:8},
+	{$push:{
+		comments:{
+		id_comment: 2,
+		creador: 'Pascual',
+		comentario: 'gitano mierda',
+		fecha: new Date(),
+		likes: 0}}
+	}	
+)
+
+
+
+###27
+
+db.blog_db.updateOne(
+	{_id: 1}, 
+	{}
+)
+
+###28 - complicao
+db.blog_db.updateOne(
+{
+)
+
+

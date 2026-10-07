@@ -44,6 +44,22 @@ class miVentana(QMainWindow):
 
         self.setStatusBar(QStatusBar(self))
 
+        menu = self.menuBar()
+        menu_archivo = menu.addMenu("&Archivo")
+        menu_editar = menu.addMenu("&Editar") #cuando pulsemos alt se subraya la letra A
+        menu_insertar = menu.addMenu("&Insertar")
+        
+        menu_archivo.addAction(boton) #metemos dentro de nuestro menu una accion (por eso es addAction)
+        menu_archivo.addAction(boton2)
+
+        menu_archivo.addSeparator()
+
+        menu_mas = menu_archivo.addMenu("Mas")
+
+        menu_mas.addAction(boton)
+        menu_mas.addAction(boton2)
+    
+
 
         self.setCentralWidget(etiqueta)
 
