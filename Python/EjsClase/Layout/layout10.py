@@ -25,7 +25,7 @@ class miVentana(QMainWindow):
         plantilla.addWidget(Color("green")) #2
         plantilla.addWidget(Color("blue")) #3
 
-        plantilla.setCurrentIndex(0)
+        plantilla.setCurrentIndex(2)
     
         
 
