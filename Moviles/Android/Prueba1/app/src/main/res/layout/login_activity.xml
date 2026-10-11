@@ -73,6 +73,7 @@
         android:backgroundTint="@null"
         android:text="@string/Logearse"
         android:textColor="#FFFFFF"
+        app:backgroundTint="@null"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

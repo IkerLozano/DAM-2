@@ -45,5 +45,12 @@ class home_activity : AppCompatActivity() {
         }
 
 
+        //cuando pulse el boton de la pregunta me lleva a su app
+        binding.imagePreguntas.setOnClickListener {
+            startActivity(Intent(this, preguntas_activity::class.java))
+        }
+
+
+
     }
 }

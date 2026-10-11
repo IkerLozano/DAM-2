@@ -95,7 +95,7 @@
                             android:layout_height="50dp"
                             app:layout_constraintBottom_toBottomOf="@+id/imageView2Cart"
                             app:layout_constraintEnd_toEndOf="@+id/imageView2Cart"
-                            app:layout_constraintHorizontal_bias="0.652"
+                            app:layout_constraintHorizontal_bias="0.478"
                             app:layout_constraintStart_toStartOf="@+id/imageView2Cart"
                             app:layout_constraintTop_toTopOf="@+id/imageView2Cart"
                             app:layout_constraintVertical_bias="0.478"
@@ -178,7 +178,7 @@
                             app:srcCompat="@drawable/circle_green" />
 
                         <ImageView
-                            android:id="@+id/imageViewPerro2"
+                            android:id="@+id/imagePreguntas"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
 

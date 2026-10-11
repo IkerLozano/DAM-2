@@ -34,11 +34,32 @@
     <string name="mensajePersonalizado2">Hello %s</string>
     <string name="Edad_Canina">Canine Age</string>
     <string name="SuperHerores">Superheroes</string>
-    <string name="bandeja_entrada">Inbox</string>
+    <string name="bandeja_entrada">Questions</string>
     <string name="Opciones">Options</string>
     <string name="Favoritos">Favorites</string>
     <string name="Cerrar_sesion">Log out</string>
     <string name="Desde">From</string>
     <string name="Descuento">Discount</string>
+
+
+    <!--FRASES PANTALLA PREGUNTAS-->
+    <string name="Enviar">Send  ➜</string>
+    <string name="Preguntas">Questions</string>
+    <string name="p1_texto">What is the largest planet in the solar system?</string>
+    <string name="p1_op1">Jupiter</string>
+    <string name="p1_op2">Saturn</string>
+    <string name="p2_texto">What is the capital of France?</string>
+    <string name="p3_texto">What is 10 × 7?</string>
+
+
+    <!--FRASES PANTALLA RESPUSETAS-->
+    <string name="Siguiente">Next  ➜</string>
+    <string name="Preguntas2">Questions</string>
+    <string name="sin_seleccion">You have not selected any answer</string>
+    <string name="respuesta_correcta">You chose the correct answer</string>
+    <string name="respuesta_fallo">Wrong answer</string>
+    <string name="cuestionario_finalizado">You have finished the quiz</string>
+    <string name="Volver_a_empezar">Start again</string>
+
 
 </resources>
