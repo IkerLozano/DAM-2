@@ -9,6 +9,7 @@ android {
         version = release(37)
     }
 
+    //acticamos el binding
     buildFeatures {
         viewBinding = true
     }

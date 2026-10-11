@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SuperHeroes</string>
+    <string name="Nombre_del_Superheroe">Nombre del Superheroe</string>
+    <string name="Alter_Ego">Alter Ego</string>
+    <string name="Bio">Bio</string>
+    <string name="Power">Power</string>
+    <string name="Name">Name</string>
+    <string name="Continuar">Continuar</string>
+</resources>

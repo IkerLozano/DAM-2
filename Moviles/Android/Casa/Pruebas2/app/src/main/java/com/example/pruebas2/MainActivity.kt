@@ -32,15 +32,14 @@ class MainActivity : AppCompatActivity() {
 
         //Desde aqui empieza la parte funcional
 
+        // 3. Al hacer clic en el botón
+        binding.botonGuardar.setOnClickListener {
 
-        //1. Obtenemos los datos y lo pasamos todo a la 2º pagina
-        binding.botonGuardar.setOnClickListener{ //cuanod hagamos click
-
-            //Obtemos el valor de los campos cuando hagamos click en el boton
+            // 3.1 Leer los datos de las vistas
             val nombreSuperHeroe = binding.editTextNombreSuper.text.toString()
             val alterEgo = binding.editTextAlterEgo.text.toString()
             val textoBio = binding.editTextDebajodelBIO.text.toString()
-            val estrellas = binding.estrellas.rating //rating devuleve Float
+            val estrellas = binding.estrellas.rating   // Float
             /*
                 el .text, sirve para obtener el contenido de texto de un EditText
                 y el toString(), convierte ese contenido en un String normal de Kotlin.
@@ -48,41 +47,32 @@ class MainActivity : AppCompatActivity() {
                 en caso de las estrellas como no es texto ponemos rating
              */
 
-            //Llamamos a la función para enviar los datos a la segunda Activity
-            irADetailActivity(nombreSuperHeroe, alterEgo, textoBio, estrellas)
+            // 3.2 Crear el Intent: desde aquí (this) hasta DetailActivity2
+            val intent = Intent(this, DetailActivity2::class.java)
+            /*
+               this → indica la Activity actual, es decir, desde dónde estamos.
+               DetailActivity2::class.java → indica la Activity a la que queremos ir.
+               val intent → guardamos ese Intent en una variable llamada intent.
 
+               En este caso: "Quiero ir desde la Activity actual hasta DetailActivity2
+           */
+
+            // 3.3 Meter los datos: putExtra("clave", valor)
+            intent.putExtra("nombreSuperHeroe", nombreSuperHeroe)
+            intent.putExtra("alterEgo", alterEgo)
+            intent.putExtra("textoBio", textoBio)
+            intent.putExtra("estrellas", estrellas)
+            /*
+               Intent → permite pasar de una Activity a otra y enviar datos entre ellas.
+               putExtra() → añade datos al Intent para enviarlos a la otra Activity
+
+               name = es la clave con la que identificaremos el dato
+               value = es el valor que queremos enviar
+           */
+            // 3.4 Lanzar la otra Activity
+            startActivity(intent)
         }
+
     }
 
-
-    //2. Sirve para enviar los datos de la primera pantalla a la segunda Activity (DetailActivity2)
-    fun irADetailActivity(nombreSuperHeroe: String, alterEgo: String, textoBio: String, estrellas: Float){
-
-        //indicamos que queremos pasar de una Activity a otra
-        val intent = Intent(this, DetailActivity2::class.java)
-        /*
-            this → indica la Activity actual, es decir, desde dónde estamos.
-            DetailActivity2::class.java → indica la Activity a la que queremos ir.
-            val intent → guardamos ese Intent en una variable llamada intent.
-
-            En este caso: "Quiero ir desde la Activity actual hasta DetailActivity2
-         */
-
-
-        //pasamos los datos
-        intent.putExtra("nombreSuperHeroe", nombreSuperHeroe)
-        intent.putExtra("alterEgo", alterEgo)
-        intent.putExtra("textoBio", textoBio)
-        intent.putExtra("estrellas", estrellas)
-        /*
-            Intent → permite pasar de una Activity a otra y enviar datos entre ellas.
-            putExtra() → añade datos al Intent para enviarlos a la otra Activity
-
-            name = es la clave con la que identificaremos el dato
-            value = es el valor que queremos enviar
-         */
-
-        //ejecutar el Intent y abrir la Activity indicada
-        startActivity(intent)
-    }
 }
