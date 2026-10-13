@@ -26,17 +26,17 @@ class miVentana(QMainWindow):
         #CREO LA BARRA DE OPCIONES
         barra = QToolBar("Barra de herramientas") #crea una barra de herramientas.
         barra.setIconSize(QSize(16,16))#todos los iconos que metamos en la barra de herramientas tendras el tamaño de 16,16
-        self.addToolBar(barra) #añadO la barra de herramientas a la ventana principal.
+        self.addToolBar(barra) #añado la barra de herramientas a la ventana principal.
 
 
         #METO COSAS A LA BARRA DE OPCIONES
-        boton1 = QAction(QIcon("Casa/Layout/icons/bug.png") ,"Mi boton", self) # el self ese es ara indicar que la acción pertenece a la ventana principa
+        boton1 = QAction(QIcon("Layout/icons/bug.png") ,"Mi boton", self) # el self ese es para indicar que la acción pertenece a la ventana principal
         boton1.setStatusTip("Este mi  boton") #mensaje al dejar retaon encima
         barra.addAction(boton1) #hañado el boton a la barra
 
         barra.addSeparator() #linea de sepracion
 
-        boton2 = QAction(QIcon("Casa/Layout/icons/cake.png"), "Mi otro boton", self)
+        boton2 = QAction(QIcon("Layout/icons/cake.png"), "Mi otro boton", self)
         boton2.setStatusTip("Este mi otro boton")
         barra.addAction(boton2)
 
