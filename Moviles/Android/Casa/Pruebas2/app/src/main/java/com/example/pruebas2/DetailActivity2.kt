@@ -1,5 +1,6 @@
 package com.example.pruebas2
 
+import android.graphics.Bitmap
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -34,7 +35,6 @@ class DetailActivity2 : AppCompatActivity() {
     //3. recogemos los datos que enviamos desde la primera Activity
 
         val datosRecibidos = intent.extras!!
-
         /*
             intent → es el Intent con el que hemos llegado a esta Activity.
             .extras → contiene los datos que enviamos con putExtra().
@@ -48,6 +48,7 @@ class DetailActivity2 : AppCompatActivity() {
         val alterEgo = datosRecibidos.getString("alterEgo") ?: "No hay alter ego"
         val textoBio = datosRecibidos.getString("textoBio") ?: "No hay bio"
         val estrellas = datosRecibidos.getFloat("estrellas")
+        val foto = intent.getParcelableExtra<Bitmap>("foto")
 
         /*
             getString() → obtiene un dato que es de tipo String.
@@ -63,5 +64,6 @@ class DetailActivity2 : AppCompatActivity() {
         binding.alterEgoResult.text = alterEgo
         binding.bioResultado.text = textoBio
         binding.estrellasResultado.rating = estrellas
+        binding.foto2.setImageBitmap(foto)
     }
 }

@@ -1,9 +1,11 @@
 package com.example.pruebas2
 
 import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.Telephony
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat.enableEdgeToEdge
@@ -31,6 +33,24 @@ class MainActivity : AppCompatActivity() {
 
 
         //Desde aqui empieza la parte funcional
+
+
+        // Aquí guardo la foto para poder mandarla luego
+        var fotoBitmap: Bitmap? = null
+
+        val camaraLauncher = registerForActivityResult(
+            ActivityResultContracts.TakePicturePreview()
+        ) { bitmap ->
+            if (bitmap != null) {
+                fotoBitmap = bitmap                    // la guardo
+                binding.foto.setImageBitmap(bitmap)    // la muestro
+            }
+        }
+
+        binding.foto.setOnClickListener {
+            camaraLauncher.launch(null)
+        }
+
 
         // 3. Al hacer clic en el botón
         binding.botonGuardar.setOnClickListener {
@@ -62,6 +82,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("alterEgo", alterEgo)
             intent.putExtra("textoBio", textoBio)
             intent.putExtra("estrellas", estrellas)
+            intent.putExtra("foto", fotoBitmap)
             /*
                Intent → permite pasar de una Activity a otra y enviar datos entre ellas.
                putExtra() → añade datos al Intent para enviarlos a la otra Activity
