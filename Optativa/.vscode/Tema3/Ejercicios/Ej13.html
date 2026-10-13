@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 13</title>
+</head>
+
+
+    <script>
+      
+
+
+        let fecha = new Date()
+
+        let fechaString = fecha.toDateString()
+
+        let partes = fechaString.split(" ")
+
+
+        let dia
+        let mes
+
+        switch(partes[0]){
+            case "Mon":
+                dia = "Lunes"
+                break;
+            case "Tue":
+                dia = "Martes"
+                break;
+            case "Wed":
+                dia = "Miercoles"
+                break;
+            case "Thu":
+                dia = "Jueves"
+                break;
+            case "Fri":
+                dia = "Viernes"
+                break;
+            case "Sat":
+                dia = "Sabado"
+                break;
+            case "Sun":
+                dia = "Domingo"
+                break;
+        }
+
+
+        switch(partes[1]){
+            case "Jan":
+                mes = "Enero";
+                break;
+            case "Feb":
+                mes = "Febrero";
+                break;
+            case "Mar":
+                mes = "Marzo";
+                break;
+            case "Apr":
+                mes = "Abril";
+                break;
+            case "May":
+                mes = "Mayo";
+                break;
+            case "Jun":
+                mes = "Junio";
+                break;
+            case "Jul":
+                mes = "Julio";
+                break;
+            case "Aug":
+                mes = "Agosto";
+                break;
+            case "Sept":
+                mes = "Septiembre";
+                break;
+            case "Oct":
+                mes = "Octubre";
+                break;
+            case "Nov":
+                mes = "Noviembre";
+                break;
+            case "Dec":
+                mes = "Diciembre";
+                break;
+        }
+
+
+        document.write(dia + ", " + partes[2] + " de " + mes + " de " + partes[3])
+          //jueves, 26 de noviembre de 2015
+
+
+    </script>
+
+<body>
+    
+</body>
+</html>
