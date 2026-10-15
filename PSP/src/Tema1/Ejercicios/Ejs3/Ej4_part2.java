@@ -70,7 +70,7 @@ public class Ej4_part2 implements Runnable{
                 System.out.println("Hilo " + Thread.currentThread().getName() + " --> " + palabras.get(i));
 
             }else{
-                //si el ilo no a sdio interrumpido espero 4 seg entre cada palabra
+                //si el hilo no a sdio interrumpido espero 4 seg entre cada palabra
                 System.out.println("Hilo " + Thread.currentThread().getName() + " --> " + palabras.get(i));
 
                 try {
