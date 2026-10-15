@@ -7,11 +7,14 @@ class miVenatana(QMainWindow):
         super().__init__()
 
         boton = QPushButton("Pulsa")
-        self.setCentralWidget(boton)
+        
         boton.setCheckable(True) #si esta en true, el boton se quedara pulsado, si esta en false se pulsa y se suelta
 
         boton.clicked.connect(self.booleano) #le digo que cuando presione el boton llame a la funcion saludar
                                                 #llamo a la segunda funcion en vez de la primera
+
+
+        self.setCentralWidget(boton)
 
     def saludar(self): #esta funcon se ejecuta cuando pulse el boton
         print("Boton pulsado")

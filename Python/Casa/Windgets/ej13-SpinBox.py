@@ -13,6 +13,7 @@ class miVentana(QMainWindow):
 
 
         spinBox = QSpinBox() #creo el spinBox
+        
         spinBox.setRange(-10, 10) #el indico el num max y el min que va a poder tener
         spinBox.setSuffix(" €") #le pongo texto al lado del numero
         spinBox.setSingleStep(2) #para que vaya sumando de x en x, minimo tiene q ser 1

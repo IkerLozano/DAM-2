@@ -11,6 +11,7 @@ class miVentana(QMainWindow):
         self.setWindowTitle("Ventana")
 
         self.texto = QLineEdit() #creamos la barra del texto
+        
         self.texto.setMaxLength(10) #el max de caracteres de la linea
         self.texto.setPlaceholderText("Escribe aqui") #Placeholder
 

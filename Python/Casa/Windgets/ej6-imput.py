@@ -9,22 +9,26 @@ class miVentana(QMainWindow):
 
         self.setWindowTitle("Ventana")
 
-        inputt = QLineEdit() #crea un campo de texto donde se puede escribir
-        label = QLabel() #Sirve para mostrar texto
+        self.inputt = QLineEdit() #crea un campo de texto donde se puede escribir
+        self.label = QLabel() #Sirve para mostrar texto
 
-        inputt.textChanged.connect(label.setText) #cuando escribamos en el input se pondra un label debajo con ese texto
+        #inputt.textChanged.connect(label.setText) #cuando escribamos en el input se pondra un label debajo con ese texto
+        self.inputt.textChanged.connect(self.conectado)
+        
 
         caja = QVBoxLayout() #creamos una caja donde los elemtos se colocan uno debajo de otro
 
         #ponemos el imput y el label dentro de la caja
-        caja.addWidget(label)
-        caja.addWidget(inputt)
+        caja.addWidget(self.label)
+        caja.addWidget(self.inputt)
 
         #metemos la caja en la ventana para que se muestre
         contenedor = QWidget() #Crea un widget que hará de contenedor
         contenedor.setLayout(caja) #metemos la caja dentro del contenedor
         self.setCentralWidget(contenedor) #ponemos el contedor en la ventana
 
+    def conectado(self):
+        self.label.setText(self.inputt.text())
 
 
 app = QApplication([])

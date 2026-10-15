@@ -9,11 +9,12 @@ class miVentana(QMainWindow):
         super().__init__()
 
         self.boton = QPushButton("Pulsa")
-        self.setCentralWidget(self.boton)
-        self.boton.setCheckable(True)
-        self.boton.setChecked(True)
+        self.boton.setCheckable(True) #convierte el botón en un botón “de dos estados” (tipo interruptor). Al pulsarlo se queda hundido, y al volver a pulsarlo se suelta
+        self.boton.setChecked(True) #lo deja ya pulsado desde el principio
 
         self.boton.clicked.connect(self.cambiarTexto)
+
+        self.setCentralWidget(self.boton)
 
 
     def cambiarTexto(self):

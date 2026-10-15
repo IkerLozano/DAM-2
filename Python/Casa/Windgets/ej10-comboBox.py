@@ -12,7 +12,7 @@ class miVentana(QMainWindow):
 
         lista = QComboBox() #creamos la lista de opciones
 
-        lista.addItems(["Uno", "Dos", "Tres"]) #ponemos las opciones de la lista
+        lista.addItems(["Uno", "Dos", "Tres"]) #ponemos las opciones
         lista.addItems(["Nuevo"]) #podemos añadir mas opciones a la lista
         lista.setEditable(True) #hace que podamos editar las opciones desde la propia lista
 
