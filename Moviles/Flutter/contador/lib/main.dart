@@ -15,7 +15,10 @@ class MiApp extends StatelessWidget {
    
     return MaterialApp(
       debugShowCheckedModeBanner: false, //para quitar lo de la derecha
-      theme: ThemeData.light(), //pone la pantalla en modo oscuro
+      theme: ThemeData.dark(
+        useMaterial3: true
+      ), //pone la pantalla en modo oscuro
+      
       home: ContadorScreen()
     );
   }
