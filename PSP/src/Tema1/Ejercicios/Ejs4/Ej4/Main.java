@@ -9,39 +9,25 @@ public class Main implements Runnable{
 
     boolean productor = true;
     static Queue<Integer> cola = new LinkedList<>();
+    static ColaTrabajos ct = new ColaTrabajos(cola);
 
-    public Main(Queue<Integer> cola, boolean productor) {
+    public Main(ColaTrabajos ct, boolean productor) {
+        this.ct = ct;
         this.productor = productor;
-        this.cola = cola;
     }
-
-
 
     public static void main(String[] args) throws InterruptedException {
 
 
-        Thread h1P = new Thread(new Main(cola, true));
-        Thread h2P = new Thread(new Main(cola, true));
-        Thread h1C = new Thread(new Main(cola, false));
-        Thread h2C = new Thread(new Main(cola, false));
+        Thread h1P = new Thread(new Main(ct, true), "Hilo 1P");
+        Thread h2P = new Thread(new Main(ct, true), "Hilo 2P");
+        Thread h1C = new Thread(new Main(ct, false), "Hilo 1C");
+        Thread h2C = new Thread(new Main(ct, false), "Hilo 2C");
 
         h1P.start();
         h2P.start();
         h1C.start();
         h2C.start();
-
-
-        if (cola.size() >= 5){
-            h1P.wait();
-            h2P.wait();
-        }
-
-        if (cola.isEmpty()){
-            h1C.wait();
-            h2C.wait();
-        }
-
-
 
     }
 
@@ -52,28 +38,24 @@ public class Main implements Runnable{
 
         if (productor){
 
-            for (int i = 0; i <10 ; i++) {
-                Random random = new Random();
-                int num = random.nextInt();
-
-                cola.offer(num);
-
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-
-        }else{
-            System.out.println(cola.poll());
-
             try {
-                Thread.sleep(800);
+                ct.anadir();
+
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+
+        }else{
+
+            try {
+                ct.sacar();
+
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
         }
+
 
 
     }

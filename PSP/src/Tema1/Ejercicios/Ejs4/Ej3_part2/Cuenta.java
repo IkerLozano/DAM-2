@@ -1,4 +1,4 @@
-package Tema1.Ejercicios.Ejs4.Ej3_part2.Ej3;
+package Tema1.Ejercicios.Ejs4.Ej3_part2;
 
 import java.util.Random;
 
