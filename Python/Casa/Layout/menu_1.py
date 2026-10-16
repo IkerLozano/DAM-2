@@ -20,11 +20,11 @@ class miVentana(QMainWindow):
 
 
         texto = QLabel("Hola") 
-        texto.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        texto.setAlignment(Qt.AlignmentFlag.AlignCenter) #lo alineo el centro
 
 
         #CREO LA BARRA DE OPCIONES
-        barra = QToolBar("Barra de herramientas") #crea una barra de herramientas.
+        barra = QToolBar() #crea una barra de herramientas.
         barra.setIconSize(QSize(16,16))#todos los iconos que metamos en la barra de herramientas tendras el tamaño de 16,16
         self.addToolBar(barra) #añado la barra de herramientas a la ventana principal.
 
@@ -46,6 +46,8 @@ class miVentana(QMainWindow):
         barra.addWidget(QLabel("Texto"))
 
         self.setStatusBar(QStatusBar(self)) #para mostrar los mensajes de abajo
+
+
         self.setCentralWidget(texto)
 
 

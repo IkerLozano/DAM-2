@@ -28,15 +28,14 @@ class miVentana(QMainWindow):
 
 
     def botonPulsado(self): 
-        dlg = QMessageBox(self) #pinemos aqui self para que la ventana nueva slaga dentro de la ventana padre
-        dlg.setWindowTitle("Cuadro de mensaje")
-        dlg.setText("Este es el cuadro de mensaje de mi cuadro mensaje")
+        dlg = QMessageBox(self) #creo el dialog 
+        dlg.setWindowTitle("Cuadro de mensaje") #titulo de la nueva ventana 
+        dlg.setText("Este es el cuadro de mensaje de mi cuadro mensaje") #mensaje de la ve
+        #le digo los botones que quiero
         dlg.setStandardButtons(QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
-        dlg.setIcon(QMessageBox.Icon.Information)
+        dlg.setIcon(QMessageBox.Icon.Information) #elijo el icono
         
-
-
-        
+        #segun la respuesta mando un mensaje
         if dlg.exec() == QMessageBox.StandardButton.Yes:
             print("El usuario ha aceptado")
         else:

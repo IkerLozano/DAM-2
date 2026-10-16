@@ -6,7 +6,11 @@ from PyQt6.QtWidgets import (
 )   
 from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QPixmap, QAction, QIcon
-from color import Color # Del archivo color.py, tráeme la clase Color
+
+from dialogs import CustomDialog
+
+
+#from color import Color # Del archivo color.py, tráeme la clase Color
 
 
 class miVentana(QMainWindow):
@@ -20,17 +24,14 @@ class miVentana(QMainWindow):
         boton = QPushButton("Pulsa aqui")
         boton.clicked.connect(self.botonPulsado)
         
-
-
-       
         self.setCentralWidget(boton)
 
 
-
+    #creo el dialog
     def botonPulsado(self, s):
-       dlg = QDialog(self) #con el self indicamosquein es su padre, por eso al ejecutarlo la nueva ventana sale dentro
+       dlg = CustomDialog(self) #con el self indicamosquein es su padre, por eso al ejecutarlo la nueva ventana sale dentro
        dlg.setWindowTitle("Cuadro de dialogo")
-       dlg.exec()
+       dlg.exec() #la ventana principal queda bloqueada hasta que se cierre el diálogo y devuelve un resultado,
 
     
 

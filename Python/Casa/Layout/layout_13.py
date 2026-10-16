@@ -42,22 +42,25 @@ class miVentana(QMainWindow):
 
         #UNION DE LAS PESTAÑAS
         
-        union = QTabWidget()
-        union.setTabPosition(QTabWidget.TabPosition.North)
-        union.setMovable(True)
+        pestañas = QTabWidget() #permite organizar diferentes widgets en pestañas
+        pestañas.setTabPosition(QTabWidget.TabPosition.North) #donde colocar las pestañas
+        pestañas.setMovable(True) #si se pueden mover
+
 
         widget1 = QWidget()
         widget2 = QWidget()
 
+        #mero las plantillas con su contenido
         widget1.setLayout(plantillaP1)
         widget2.setLayout(plantillaP2)
 
-        union.addTab((widget1), "Pestaña 1")
-        union.addTab((widget2), "Pestaña 2")
+        #creo una pestaña para cada plantilla
+        pestañas.addTab((widget1), "Pestaña 1")
+        pestañas.addTab((widget2), "Pestaña 2")
         
         
         
-        self.setCentralWidget(union)
+        self.setCentralWidget(pestañas)
 
 
 

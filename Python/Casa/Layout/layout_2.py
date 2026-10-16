@@ -33,9 +33,9 @@ class miVnetana(QMainWindow):
 
 
         #este es la ventana, metemos todo en la ventana
+      
         widget = QWidget() 
         widget.setLayout(plantilla)
-
         self.setCentralWidget(widget)
 
 

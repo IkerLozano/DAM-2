@@ -51,7 +51,7 @@ class miVentana(QMainWindow):
     def textoCambiado(self):
         self.cont = self.cont +1
         self.texto.setText(f"Texto cambiado: {self.cont}")
-        #con setText le deciomos que cambie el contenid del texto 
+        #con setText le deciomos que cambie el contenido del texto 
 
 
 

@@ -26,6 +26,7 @@ class miVentana(QMainWindow):
         plantilla.addWidget(colores("blue"), 2,0)
 
 
+        #los muestro
         widget = QWidget()
         widget.setLayout(plantilla)
         self.setCentralWidget(widget)

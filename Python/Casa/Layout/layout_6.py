@@ -40,10 +40,9 @@ class miVentana(QMainWindow):
         plantilla.addWidget(grupo2)
 
 
+        #lo muestro en la ventana
         widget = QWidget()
         widget.setLayout(plantilla)
-
-
         self.setCentralWidget(widget)
 
 

@@ -21,14 +21,11 @@ class miVentana(QMainWindow):
         boton.clicked.connect(self.botonPulsado)
         
 
-
-       
         self.setCentralWidget(boton)
 
 
-
     def botonPulsado(self): 
-        dlg = CustomDialog(self) #pinemos aqui self para que la ventana nueva slaga dentro de la ventana padre
+        dlg = CustomDialog(self) #ponemos aqui self para que la ventana nueva slaga dentro de la ventana padre
         if dlg.exec():
             print("El usuario ha aceptado")
         else:

@@ -27,7 +27,7 @@ class miVentana(QMainWindow):
         plantilla.addWidget(colores("yellow")) #2
         plantilla.addWidget(colores("blue")) #3
 
-        #selecciona y muestra el widget que está en la posición 1 dentro del QStackedLayout
+        #Mmuestro el widget 3
         plantilla.setCurrentIndex(3)
 
 

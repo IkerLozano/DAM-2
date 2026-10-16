@@ -18,6 +18,8 @@ class miVentana(QMainWindow):
 
         self.setWindowTitle("Ventana")
 
+        boton = QPushButton("Boton")
+
         
         pestañas = QTabWidget() #permite organizar diferentes widgets en pestañas
         pestañas.setTabPosition(QTabWidget.TabPosition.North) #donde colocar las pestañas
@@ -29,6 +31,7 @@ class miVentana(QMainWindow):
         pestañas.addTab(colores("blue"), "Azul")
         pestañas.addTab(colores("yellow"), "Amarillo")
         pestañas.addTab(colores("pink"), "Rosa")
+        pestañas.addTab(boton, "Boton")
 
 
         self.setCentralWidget(pestañas)

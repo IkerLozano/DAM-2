@@ -16,13 +16,16 @@ class CustomDialog(QDialog):
 
         self.setWindowTitle("Caudro de dialogo")
 
-
+        #guardo los botones que voya a usar (ok y cancel)
         Qbtn = QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
 
-        self.dialogBox = QDialogButtonBox(Qbtn)
+        self.dialogBox = QDialogButtonBox(Qbtn) #agrupa los botones
+
+        #para que al pusarlo tengan accion, si  no se ven pero no hacen nada
         self.dialogBox.accepted.connect(self.accept)
         self.dialogBox.rejected.connect(self.reject)
 
+        #hago la plantilla
         self.plantilla = QVBoxLayout()
         mensaje = QLabel("Algo ha sucedido ¿Todo ok?")
         self.plantilla.addWidget(mensaje)
