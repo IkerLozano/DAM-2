@@ -25,30 +25,34 @@ class miVentana(QMainWindow):
     def __init__(self):
         super().__init__()
 
-
-        self.window=None
         self.setWindowTitle("Mi ventana")
-
+        
+        
+        #guarda una referencia de la segunda ventana y le dice que no hay nonguna ventana guardada
+        #Para saber si ya se ha creado la segunda ventana y poder reutilizar esa información para decidir qué hacer al pulsar el botón.
+        self.window=None
+        
 
         boton = QPushButton("Pulsa aqui")
         boton.clicked.connect(self.mostrarVentana)
         
 
-
-       
         self.setCentralWidget(boton)
 
 
 
     def mostrarVentana(self): 
+
+        #si no hay ninguna ventana guadarda
         if self.window is None:
 
-            self.window = OtraVentana()
-            self.window.show()
+            self.window = OtraVentana() #se crea la ventaa segundaria
+            self.window.show() #se muestra
 
+        #si windows ya tiene una ventana creada
         else:
-            self.window.close()
-            self.window=None
+            self.window.close() #la cierra
+            self.window=None #le indica que ya no hay ninguna creada
     
 
 app = QApplication([])
