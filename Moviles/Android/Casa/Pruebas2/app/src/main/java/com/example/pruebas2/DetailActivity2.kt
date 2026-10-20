@@ -32,7 +32,7 @@ class DetailActivity2 : AppCompatActivity() {
 
 
 
-    //3. recogemos los datos que enviamos desde la primera Activity
+        //3. recogemos los datos que enviamos desde la primera Activity
 
         val datosRecibidos = intent.extras!!
         /*
