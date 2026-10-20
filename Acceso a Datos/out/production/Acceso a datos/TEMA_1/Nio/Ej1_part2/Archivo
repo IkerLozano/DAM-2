@@ -1,0 +1,6 @@
+Producto{id=1, nombre='Teclado', precio=25.4, descuento=true, tipo=I}
+Producto{id=2, nombre='Ratón', precio=15.99, descuento=true, tipo=I}
+Producto{id=3, nombre='Monitor', precio=149.99, descuento=true, tipo=I}
+Producto{id=4, nombre='Auriculares', precio=35.5, descuento=true, tipo=I}
+Producto{id=5, nombre='Impresora', precio=89.99, descuento=true, tipo=I}
+Producto{id=6, nombre='Altavoces', precio=29.99, descuento=true, tipo=I}
