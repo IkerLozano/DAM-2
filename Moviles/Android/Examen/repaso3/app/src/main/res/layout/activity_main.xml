@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -44,12 +45,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="24dp"
+            android:background="@drawable/personalizado"
+            android:drawableStart="@drawable/outline_account_circle_24"
             android:ems="10"
             android:hint="@string/Nombre_de_la_mascota"
             android:inputType="text"
+            android:padding="5dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.888"
             app:layout_constraintStart_toStartOf="@+id/titulo"
             app:layout_constraintTop_toBottomOf="@+id/fotoMascota" />
 
@@ -60,9 +65,11 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
+            android:background="@drawable/personalizado"
             android:ems="10"
             android:hint="@string/Edad"
             android:inputType="text"
+            android:padding="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/editText_nombre"
             app:layout_constraintTop_toBottomOf="@+id/editText_nombre" />

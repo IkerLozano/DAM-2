@@ -4,8 +4,8 @@
     <!--APILCACION MAIN-->
     <string name="app_name">Review Application 3</string>
     <string name="Mi_mascota">My pet</string>
-    <string name="Nombre_de_la_mascota">Pet name</string>
-    <string name="Edad">Age</string>
+    <string name="Nombre_de_la_mascota">   Pet name</string>
+    <string name="Edad">   Age</string>
     <string name="Comida">Food</string>
     <string name="Paseo">Walk</string>
     <string name="Veterinario">Veterinarian</string>

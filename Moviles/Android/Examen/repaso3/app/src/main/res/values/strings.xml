@@ -3,15 +3,15 @@
     <!--APILCACION MAIN-->
     <string name="app_name">Aplicacion de repaso3</string>
     <string name="Mi_mascota">Mi mascota</string>
-    <string name="Nombre_de_la_mascota">Nombre de la mascota</string>
-    <string name="Edad">Edad</string>
+    <string name="Nombre_de_la_mascota">   Nombre de la mascota</string>
+    <string name="Edad">   Edad</string>
     <string name="Comida">Comida</string>
     <string name="Paseo">Paseo</string>
     <string name="Veterinario">Veterinario</string>
     <string name="Guardar">Guardar</string>
 
     <!--APILCACION DETAIL-->
-    <string name="personalizado">Si fueras un humano tendrias %  d años</string>
+    <string name="personalizado">Si fueras un humano tendrias %d años</string>
     <string name="Volver">Volver</string>
 
 
