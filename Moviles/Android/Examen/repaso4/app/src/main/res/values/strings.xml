@@ -1,0 +1,39 @@
+<resources>
+
+    <!--NOMBRE DE LA APP-->
+    <string name="app_name">Hotel</string>
+
+    <!--LOGIN-->
+    <string name="Usuario">Usuario</string>
+    <string name="Contraseña">Contraseña</string>
+    <string name="Entrar">Entrar</string>
+
+
+    <!--LOGIN DETAIL-->
+    <string name="Saludo">Hola %s</string>
+    <string name="Reservar_habitacion">Reservar habitacion</string>
+    <string name="Ofertas">Ofertas</string>
+    <string name="Salir">Salir</string>
+
+
+
+    <!--USUARIO MAIN-->
+    <string name="Nombre_del_huesped">Nombre del huesped</string>
+    <string name="Noches">Noches</string>
+    <string name="Estrellas_del_hotel">Estrellas del hotel</string>
+    <string name="Calcular_precio">Calcular precio</string>
+
+
+    <!--USUARIO DETAIL-->
+    <string name="Noches2">Noches: %s</string>
+    <string name="personalizado">Tu reserva costara %.2f euros</string>
+    <string name="Volver">Volver</string>
+
+
+
+
+
+
+
+
+</resources>
