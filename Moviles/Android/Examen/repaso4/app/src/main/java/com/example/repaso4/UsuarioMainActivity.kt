@@ -38,6 +38,7 @@ class UsuarioMainActivity : AppCompatActivity() {
             var nombre = binding.editTextNombre.text.toString()
             var noches = binding.editTextNoches.text.toString()
             var rating = binding.rating.rating
+            var foto = binding.fotoPersona
 
 
             //con if compurblo si hay informacion en los datos
@@ -68,7 +69,7 @@ class UsuarioMainActivity : AppCompatActivity() {
 
 
                 //calculo el precio por noche segun las estrellas
-            if ((rating <= 1f && rating < 2f)){
+            if (rating <= 1f && rating < 2f){
                 precioXnoche = 40f
                 precioSD = precioXnoche * noches.toInt()
             }else if(rating >= 2f && rating < 3f){
@@ -86,7 +87,7 @@ class UsuarioMainActivity : AppCompatActivity() {
             }
 
                 //calculo el precioT segun las noches
-            if (noches.toInt() in 3..6){
+            if (rating.toInt() in 3..6){
 
                 precioT = precioSD*(90f/100)
 
@@ -105,6 +106,23 @@ class UsuarioMainActivity : AppCompatActivity() {
             intent.putExtra("noches", noches)
             intent.putExtra("rating", rating)
             intent.putExtra("precioT", precioT)
+
+
+
+            //segun las estrellas del hotel mando una foto u otra
+            if (rating <= 1 && rating < 3f){
+
+                intent.putExtra("foto", R.drawable.hotel_barto)
+
+            }else if(rating >= 3f && rating < 5f){
+
+                intent.putExtra("foto", R.drawable.hotel_medio)
+
+            }else if (rating == 5f){
+
+                intent.putExtra("foto", R.drawable.hotel_caro)
+
+            }
 
             //inicio el intent
             startActivity(intent)
