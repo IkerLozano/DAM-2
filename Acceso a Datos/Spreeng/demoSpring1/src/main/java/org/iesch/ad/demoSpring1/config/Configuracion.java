@@ -10,7 +10,9 @@ import java.util.List;
 @Configuration
 public class Configuracion {
 
+    /*
     @Bean
+
     public List<Persona> dameLista(){
 
         List<Persona> listaPersona = new ArrayList<>();
@@ -33,6 +35,10 @@ public class Configuracion {
 
         return listaPersona;
 
+
+
     }
+
+    */
 
 }
