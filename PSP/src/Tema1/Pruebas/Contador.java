@@ -1,4 +1,4 @@
-package Tema1;
+package Tema1.Pruebas;
 
 public class Contador {
 

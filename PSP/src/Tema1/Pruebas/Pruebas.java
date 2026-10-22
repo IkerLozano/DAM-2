@@ -1,4 +1,4 @@
-package Tema1;
+package Tema1.Pruebas;
 
 import java.io.IOException;
 
@@ -39,7 +39,7 @@ public class Pruebas {
                 "java",
                 "-cp",
                 clase,
-                "Tema1.Suma"
+                "Tema1.Pruebas.Suma"
         );
 
         Process p4 = pb4.start();
