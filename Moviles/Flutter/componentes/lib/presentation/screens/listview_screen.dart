@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 
 class ListviewScreen extends StatelessWidget {
-  const ListviewScreen({super.key});
+
+  final games = ["Sonic", "Rocket Night Adventures", "Cool Spot", "Micromachines", "SkibidyRemon"];
+   ListviewScreen({super.key});
 
 
   @override
@@ -11,10 +13,25 @@ class ListviewScreen extends StatelessWidget {
       appBar: AppBar(title: Text('Listview Tipo 1'),),
       body: ListView(
        children: [
+
+          ...games.map( (juego) => ListTile(
+
+              leading: Icon(Icons.access_time_sharp),
+              title: Text('Hola mundo'),
+              subtitle: Text('Juegos OGs'),
+              onTap: (){
+
+              },
+              trailing: Icon(Icons.arrow_back),
+          )
+        ),
+        Divider() //linea divisora
+        /*
           ListTile(
             leading: Icon(Icons.access_time_sharp),
             title: Text('Hola mundo'),
           ),
+          
           ListTile(
             leading: Icon(Icons.access_time_sharp),
             title: Text('Hola mundo'),
@@ -32,6 +49,7 @@ class ListviewScreen extends StatelessWidget {
             leading: Icon(Icons.access_time_sharp),
             title: Text('Hola mundo'),
           )
+          */
        ],
       )
    );
