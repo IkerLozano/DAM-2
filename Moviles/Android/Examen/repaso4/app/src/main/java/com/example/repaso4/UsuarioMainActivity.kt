@@ -131,6 +131,5 @@ class UsuarioMainActivity : AppCompatActivity() {
         }
 
 
-
     }
 }

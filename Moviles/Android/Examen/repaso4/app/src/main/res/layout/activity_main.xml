@@ -61,7 +61,7 @@
             android:drawableStart="@drawable/outline_admin_panel_settings_24"
             android:ems="10"
             android:hint="@string/Contraseña"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:padding="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.502"

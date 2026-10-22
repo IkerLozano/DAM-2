@@ -3,6 +3,7 @@ package com.example.repaso4
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -72,5 +73,37 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("CLICO_VIDA", "Metodo onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("CLICO_VIDA", "Metodo onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("CLICO_VIDA", "Metodo onPuase")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("CLICO_VIDA", "Metodo onStop")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.i("CLICO_VIDA", "Metodo onRestart")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("CLICO_VIDA", "Metodo onDestroy")
+    }
+
+
 
 }

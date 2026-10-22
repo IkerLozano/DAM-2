@@ -34,7 +34,7 @@ class UsurioDetailActivity : AppCompatActivity() {
 
 
         //los saco
-        var nombre = datos.getString("nombre")
+        var nombre = datos.getString("nombre").takeUnless { it.isNullOrBlank() } ?: "No hay nombre"
         var noches = datos.getString("noches")
         var rating = datos.getFloat("rating")
         var precioT = intent.getFloatExtra("precioT", -1f)

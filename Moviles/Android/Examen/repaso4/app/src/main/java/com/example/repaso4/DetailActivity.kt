@@ -2,6 +2,7 @@ package com.example.repaso4
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -47,5 +48,36 @@ class DetailActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("Log", "onStart")
+    }
+
+    override fun onResume() {
+        super.onStart()
+        Log.i("Log", "onResume")
+    }
+
+    override fun onPause() {
+        super.onStart()
+        Log.i("Log", "onPause")
+    }
+
+
+    override fun onStop() {
+        super.onStart()
+        Log.i("Log", "onStop")
+    }
+
+    override fun onRestart() {
+        super.onStart()
+        Log.i("Log", "onRestart")
+    }
+
+    override fun onDestroy() {
+        super.onStart()
+        Log.i("Log", "onDestroy")
     }
 }
