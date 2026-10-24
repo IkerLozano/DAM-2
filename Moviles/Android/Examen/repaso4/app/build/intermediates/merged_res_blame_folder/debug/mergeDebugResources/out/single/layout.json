@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.example.repaso4.app-mergeDebugResources-39:/layout/activity_usurio_detail.xml",
+        "source": "com.example.repaso4.app-main-42:/layout/activity_usurio_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\Iker\\.gradle\\daemon\\9.6.0\\com.example.repaso4.app-mergeDebugResources-39:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Iker\\.gradle\\daemon\\9.6.0\\com.example.repaso4.app-main-42:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Iker\\.gradle\\daemon\\9.6.0\\com.example.repaso4.app-mergeDebugResources-39:\\layout\\activity_usurio_detail.xml",
+        "source": "C:\\Users\\Iker\\.gradle\\daemon\\9.6.0\\com.example.repaso4.app-main-42:\\layout\\activity_usurio_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\Iker\\.gradle\\daemon\\9.6.0\\com.example.repaso4.app-mergeDebugResources-39:\\layout\\activity_detail.xml",
+        "source": "C:\\Users\\Iker\\.gradle\\daemon\\9.6.0\\com.example.repaso4.app-main-42:\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\Iker\\.gradle\\daemon\\9.6.0\\com.example.repaso4.app-mergeDebugResources-39:\\layout\\activity_usuario_main.xml",
+        "source": "C:\\Users\\Iker\\.gradle\\daemon\\9.6.0\\com.example.repaso4.app-main-42:\\layout\\activity_usuario_main.xml"
+    }
+]

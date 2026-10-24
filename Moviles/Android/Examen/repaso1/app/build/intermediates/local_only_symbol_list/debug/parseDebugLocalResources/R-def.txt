@@ -1,0 +1,33 @@
+R_DEF: Internal format may change without notice
+local
+color amarillo
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id alterEgo
+id alterEgoResult
+id bio
+id bioResult
+id botonGuardar
+id divider
+id editText_aterEgo
+id editText_nombre
+id editText_resumenBio
+id foto
+id imageView
+id main
+id nombre
+id poder
+id poderResult
+id power
+id rating
+layout activity_detail
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Repaso1
+style Theme.Repaso1
+xml backup_rules
+xml data_extraction_rules

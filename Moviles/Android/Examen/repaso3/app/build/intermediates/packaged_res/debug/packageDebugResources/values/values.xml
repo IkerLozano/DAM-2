@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="amarillo">#FFEB3B</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="Alter_Ego">Alter Ego</string>
+    <string name="Bio">Bio</string>
+    <string name="Comida">Comida</string>
+    <string name="Continuar">Continuar</string>
+    <string name="Edad">   Edad</string>
+    <string name="Guardar">Guardar</string>
+    <string name="Mi_mascota">Mi mascota</string>
+    <string name="Name">Nombre</string>
+    <string name="Nombre_de_la_mascota">   Nombre de la mascota</string>
+    <string name="Nombre_del_Superheroe">Nombre del Superheroe</string>
+    <string name="Paseo">Paseo</string>
+    <string name="Power">Power</string>
+    <string name="Veterinario">Veterinario</string>
+    <string name="Volver">Volver</string>
+    <string name="app_name">Aplicacion de repaso3</string>
+    <string name="personalizado">Si fueras un humano tendrias %  d años</string>
+    <style name="Base.Theme.Repaso3" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Repaso3" parent="Base.Theme.Repaso3"/>
+    <style name="imagenRedonda">
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

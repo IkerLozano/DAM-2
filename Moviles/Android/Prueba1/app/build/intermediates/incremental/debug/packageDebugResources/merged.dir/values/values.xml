@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="amarillo_personalizado">#FFEB3B</color>
+    <color name="black">#FF000000</color>
+    <color name="gris_personalizado">#333030</color>
+    <color name="ic_launcher_background">#F5F2F2</color>
+    <color name="verde_personalizado">#05680E</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="Alter_ego2">Alter ego</string>
+    <string name="Bienvenidos_a_la_app_Iesch">Bienvenidos a la app Iesch</string>
+    <string name="Bio2">Bio</string>
+    <string name="Buenos_dias">Buenos dias</string>
+    <string name="Cerrar_sesion">Cerrar sesion</string>
+    <string name="Contraseña">Contraseña</string>
+    <string name="Descuento">Descuento</string>
+    <string name="Desde">Desde</string>
+    <string name="Edad_Canina">Edad Canina</string>
+    <string name="Enviar">Enviar  ➜</string>
+    <string name="Favoritos">Favoritos</string>
+    <string name="Guardar">Guardar</string>
+    <string name="Logearse">Logearse</string>
+    <string name="Nombre">Nombre</string>
+    <string name="Nombre_superheroe">Nombre superheroe</string>
+    <string name="Opciones">Opciones</string>
+    <string name="Power2">Power</string>
+    <string name="Preguntas">Preguntas</string>
+    <string name="Preguntas2">Preguntas</string>
+    <string name="Siguiente">Siguiente  ➜</string>
+    <string name="SuperHerores">SuperHerores</string>
+    <string name="Volver_a_empezar">Volver a empezar</string>
+    <string name="alter_ego">Alter Ego</string>
+    <string name="app_name">Prueba 1</string>
+    <string name="bandeja_entrada">Preguntas</string>
+    <string name="bio">Bio</string>
+    <string name="calcular">Calcular</string>
+    <string name="cuestionario_finalizado">Has acabado el cuestionario</string>
+    <string name="introduce_tu_edad">Introduce tu edad</string>
+    <string name="mensajePersonalizado">Si fueras un perro tendrias %d años</string>
+    <string name="mensajePersonalizado2">Hola %s</string>
+    <string name="p1_op1">Júpiter</string>
+    <string name="p1_op2">Saturno</string>
+    <string name="p1_texto">¿Cuál es el planeta más grande del sistema solar?</string>
+    <string name="p2_texto">¿Cuál es la capital de Francia?</string>
+    <string name="p3_texto">¿Cuánto es 10 × 7?</string>
+    <string name="power">Power</string>
+    <string name="que_edad_tienes">¿Que edad tienes?</string>
+    <string name="respuesta_correcta">Has acertado</string>
+    <string name="respuesta_fallo">Has fallado</string>
+    <string name="sin_seleccion">No has seleccionado ninguna respuesta</string>
+    <style name="Base.Theme.Prueba1" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Prueba1" parent="Base.Theme.Prueba1"/>
+</resources>

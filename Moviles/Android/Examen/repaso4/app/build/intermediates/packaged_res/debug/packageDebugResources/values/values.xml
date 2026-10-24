@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="blue">#00BCD4</color>
+    <color name="red">#FF0000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FFC107</color>
+    <string name="Calcular_precio">Calcular precio</string>
+    <string name="Contraseña">Contraseña</string>
+    <string name="Entrar">Entrar</string>
+    <string name="Estrellas_del_hotel">Estrellas del hotel</string>
+    <string name="Noches">Noches</string>
+    <string name="Noches2">Noches: %s</string>
+    <string name="Nombre_del_huesped">Nombre del huesped</string>
+    <string name="Ofertas">Ofertas</string>
+    <string name="Reservar_habitacion">Reservar habitacion</string>
+    <string name="Salir">Salir</string>
+    <string name="Saludo">Hola %s</string>
+    <string name="Usuario">Usuario</string>
+    <string name="Volver">Volver</string>
+    <string name="app_name">Hotel</string>
+    <string name="personalizado">Tu reserva costara %.2f euros</string>
+    <style name="Base.Theme.Repaso4" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Repaso4" parent="Base.Theme.Repaso4"/>
+    <style name="imagenRedonda">
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="imagenRedonda2">
+
+        <item name="cornerSize">50%</item>
+
+    </style>
+</resources>

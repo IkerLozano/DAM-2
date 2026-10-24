@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Alter_Ego">Alter Ego</string>
+    <string name="Bio">Bio</string>
+    <string name="Comida">Food</string>
+    <string name="Continuar">Continue</string>
+    <string name="Edad">   Age</string>
+    <string name="Guardar">Save</string>
+    <string name="Mi_mascota">My pet</string>
+    <string name="Name">Name</string>
+    <string name="Nombre_de_la_mascota">   Pet name</string>
+    <string name="Nombre_del_Superheroe">Superhero Name</string>
+    <string name="Paseo">Walk</string>
+    <string name="Power">Power</string>
+    <string name="Veterinario">Veterinarian</string>
+    <string name="Volver">Back</string>
+    <string name="app_name">Review Application 3</string>
+    <string name="personalizado">If you were a human, you would be %d years old</string>
+</resources>

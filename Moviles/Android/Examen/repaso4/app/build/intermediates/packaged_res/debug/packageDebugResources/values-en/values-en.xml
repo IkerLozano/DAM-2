@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Calcular_precio">Calculate price</string>
+    <string name="Contraseña">Password</string>
+    <string name="Entrar">Log in</string>
+    <string name="Estrellas_del_hotel">Hotel stars</string>
+    <string name="Noches">Nights</string>
+    <string name="Noches2">Nights: %s</string>
+    <string name="Nombre_del_huesped">Guest name</string>
+    <string name="Ofertas">Offers</string>
+    <string name="Reservar_habitacion">Book a room</string>
+    <string name="Salir">Exit</string>
+    <string name="Saludo">Hello %s</string>
+    <string name="Usuario">Username</string>
+    <string name="Volver">Back</string>
+    <string name="app_name">Hotel</string>
+    <string name="personalizado">Your reservation will cost %.2f euros</string>
+</resources>
