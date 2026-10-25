@@ -1,2 +1,0 @@
-org.iesch.prueba1.test:style/WhiteBackgroundTheme = 0x7f010001
-org.iesch.prueba1.test:style/WhiteBackgroundDialogTheme = 0x7f010000
