@@ -1,86 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ej 16</title>
 
     <style>
-
-
-        table{
+        table {
             border-collapse: collapse;
             text-align: center;
         }
 
-        td, th{
+        td,
+        th {
             border: 2px solid green;
             width: 100px;
         }
-
-       
-
     </style>
 </head>
 
-    <script>
+<script>
 
-        let horario = [
-            ["IPPE", "PROY", "IPPE", "AD", "SGE"],
-            ["DI", "SGE", "AD", "AD", "SGE"],
-            ["DI", "SGE", "AD", "AD", "SASP"],
-            ["RECREO","RECREO","RECREO","RECREO","RECREO"],
-            ["DWC", "PMDM", "PMDM", "PROY", "DI"],
-            ["DWC", "PMDM", "PMDM", "PSP", "DI"],
-            ["DWC", "PMDM", "PMDM", "PSP", "DI"]
-        ];
+    let horario = [
+        ["IPPE", "PROY", "IPPE", "AD", "SGE"],
+        ["DI", "SGE", "AD", "AD", "SGE"],
+        ["DI", "SGE", "AD", "AD", "SASP"],
+        ["RECREO", "RECREO", "RECREO", "RECREO", "RECREO"],
+        ["DWC", "PMDM", "PMDM", "PROY", "DI"],
+        ["DWC", "PMDM", "PMDM", "PSP", "DI"],
+        ["DWC", "PMDM", "PMDM", "PSP", "DI"]
+    ];
 
 
-        let dias = [" ", "lunes", "martes", "miercoles", "jueves", "viernes"]
+    let dias = [" ", "lunes", "martes", "miercoles", "jueves", "viernes"]
 
-        document.write("<table>")
-        
-        //FILA DE LOS DIAS
+    document.write("<table>")
+
+    //FILA DE LOS DIAS
+    document.write("<tr>")
+    for (let i = 0; i < dias.length; i++) {
+        document.write("<th>" + dias[i] + "</th>")
+
+    }
+    document.write("</tr>")
+
+
+    //PONGO LAS ASIGNATURAS
+    for (let i = 0; i < horario.length; i++) {
+        //console.log(horario.length);
+
         document.write("<tr>")
-        for (let i = 0; i < dias.length; i++) {
-            document.write("<th>" + dias[i] + "</th>")
-            
+
+        document.write("<td>" + "15:45-16:35" + "</td>")
+
+        for (let j = 0; j < horario[i].length; j++) {
+            document.write("<td>" + horario[i][j] + "</td>")
+
         }
+
+
         document.write("</tr>")
+    }
+
+    document.write("</table>")
 
 
-        //PONGO LAS ASIGNATURAS
-        for (let i = 0; i < horario.length; i++) {
-            console.log(horario.length);
-            
-            document.write("<tr>")
-
-                document.write("<td>" + "15:45-16:35" + "</td>")
-                
-                for (let j = 0; j <horario[i].length; j++) {
-                    document.write("<td>" + horario[i][j] + "</td>")
-                
-            }
-            
-            
-            document.write("</tr>")
-        }
-
-           
-
-        
-
-
-
-
-
-
-        document.write("</table>")
-
-
-    </script>
+</script>
 
 <body>
-    
+
 </body>
+
 </html>

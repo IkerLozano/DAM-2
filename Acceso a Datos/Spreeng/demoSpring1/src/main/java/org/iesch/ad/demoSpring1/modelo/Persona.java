@@ -3,6 +3,8 @@ package org.iesch.ad.demoSpring1.modelo;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 
 @Getter //genera los setters
 @Setter //genera los getters
@@ -25,6 +27,28 @@ public class Persona {
     @Column(length = 9)
     String dni;
     String email;
+    private LocalDateTime createdAt;
+
+    //antes de guarda la h hace esto
+    @PrePersist
+    public void preGuardar(){
+        this.createdAt = LocalDateTime.now();
+    }
+
+    //mensaje que muetsra al insertar
+    @PostPersist
+    public void postGuardado(){
+
+        System.out.println("Se guarda con id: " + this.id);
+    }
+
+
+
+    @OneToOne(cascade = CascadeType.ALL)//si se elimina el padre se elimina todo
+    Coche coche;
+
+
+
 
 
 }

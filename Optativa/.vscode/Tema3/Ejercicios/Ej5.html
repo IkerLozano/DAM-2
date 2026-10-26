@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 5</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,
+        th {
+            border: 2px solid green;
+            width: 100px;
+        }
+    </style>
+
+</head>
+
+
+<script>
+
+    var festivos = [[1, 6], [], [], [17, 18, 23], [1], [], [], [15], [], [12], [1], [6, 8, 25]];
+    var dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "Sabado", "Domingo"]
+
+    var fechaA = new Date()
+    var anio = fechaA.getFullYear()
+    var mes = fechaA.getMonth()
+
+    var dia1 = new Date(`${anio}-${mes + 1}-1`) //el 0 es enero
+    var diaS = dia1.getDay()
+    var mes1 =  new Date(`${anio}-${mes + 2}-1`)
+    var diaU = mes1-1
+    
+    console.log(dia1)
+    console.log(diaS)
+    console.log(mes1)
+    console.log(diaU)
+
+
+
+    document.write("<table>")
+
+    //FILA DE LOS DIAS
+    document.write("<tr>")
+
+    for (let i = 0; i < dias.length; i++) {
+
+        document.write("<th>" + dias[i] + "</th>")
+
+    }
+
+    document.write("</tr>")
+
+
+    //FILA DE LOS NUMEROS
+    document.write("<tr>")
+    for (let a = 1; a < diaS; a++) {
+        document.write("<td>" + " " + "</td>")
+
+    }
+
+
+    var cont = diaS-1
+    for (let i = 1; i < 31; i++) {
+        
+
+        document.write("<td>" + i + "</td>")
+
+        cont ++
+        if (cont%7 == 0) {
+            document.write("<tr>")
+
+            document.write("</tr>")
+        }
+
+    }
+    document.write("</tr>")
+
+
+
+
+
+
+
+    document.write("</table>")
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
