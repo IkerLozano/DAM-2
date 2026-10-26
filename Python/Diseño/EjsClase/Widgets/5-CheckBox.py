@@ -10,26 +10,26 @@ class miVentana(QMainWindow):
 
         self.setWindowTitle("Mi ventana")
 
-        #-----18/09/26-----
-
-        self.setWindowTitle("Mi aplicacion")
 
 
-        casilla = QCheckBox("Casilla de verificacion")
-        self.setCentralWidget(casilla) #la colocamos
+        casilla = QCheckBox("Casilla de verificacion") #crear el CheckBox
+        
 
         formato = casilla.font() #creamos el elemento sobre la etiqueta label
         formato.setBold(True) #negrita
         casilla.setFont(formato) #todo el formato que hemos puesto se lo aplicamos
 
-        #casilla.stateChanged.connect(self.muestraEstado) #cuando haya un cambio en lacasilla se dispara est señal
 
+
+        casilla.stateChanged.connect(self.muestraEstado) #stateChanged  --> cuando cambie el estado
         casilla.stateChanged.connect(self.mensaje)
 
-    
+
 
 
         self.setCentralWidget(casilla)
+
+
 
     def muestraEstado(self, estado): #2 es marcado y 0 no marcado tamb puede estar parcialmente marcado (1)
         print(estado)
@@ -37,6 +37,7 @@ class miVentana(QMainWindow):
 
     def mensaje(self, estado):
         print(["Boton no Pulsado", "", "Boton pulsado"][estado])
+        #el "", es para cuando este en 1
 
          
 

@@ -8,20 +8,15 @@ class miVentana(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Mi ventana")
+        self.setWindowTitle("Ventana")
 
-        #-----18/09/26-----
-
-        self.setWindowTitle("Mi aplicacion")
-
-        label = QLabel()
-        label.setPixmap(QPixmap("img\Captura de pantalla 2026-09-16 205952.png")) #poner una foto
-        label.setScaledContents(True) #Para q sea responsiva con el tamaño de la pantaña
-
+        label = QLabel()#sirve para mostar contenido, en este caso una foto
+        
+        label.setPixmap(QPixmap("img\Captura de pantalla 2026-09-16 205952.png")) #poner la imagen
+        label.setScaledContents(True)#Para q sea responsiva con el tamaño de la pantaña
 
         self.setCentralWidget(label)
 
-         
 
 
 app = QApplication([])
@@ -29,6 +24,4 @@ app = QApplication([])
 ventana = miVentana()
 ventana.show()
 
-
 app.exec()
-

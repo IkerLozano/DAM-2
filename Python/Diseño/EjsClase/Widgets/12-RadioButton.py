@@ -14,8 +14,10 @@ class miVentana(QMainWindow):
 
         self.texto = QLabel("Seleciona un lenguaje")
 
+        #creo 2 radioButton
         self.radio1 = QRadioButton("Java")
         self.radio2 = QRadioButton("Python")
+
 
         plantilla = QVBoxLayout()
 
@@ -24,7 +26,8 @@ class miVentana(QMainWindow):
         plantilla.addWidget(self.radio2)
 
 
-        self.radio1.clicked.connect(self.mostrar)
+
+        self.radio1.clicked.connect(self.mostrar) #clicked →cuando se pulse la opcion
         self.radio2.clicked.connect(self.mostrar)
 
 
@@ -35,14 +38,21 @@ class miVentana(QMainWindow):
 
     def mostrar(self):
 
-        
         if self.radio1.isChecked():
+
             print("Has selccionado Java")
             self.texto.setText("Has selccionado Java")
 
         else:
+
             print("Has selccionado Python")
             self.texto.setText("Has selccionado Python")
+
+
+
+#toggled --> se activa cuando se cambia la opción, tanto al marcar como al desmarcar (señal)
+#clicked --> detecta la pulsación del usuario (usar esta mjr)
+#isChecked()  -->  Comprueba el estado actual (metodo)
 
 
     

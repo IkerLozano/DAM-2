@@ -51,6 +51,7 @@ class miVentana(QMainWindow):
 
       
         
+        plantilla.setSpacing(20) #espacio entre todo los elementos
 
 
 

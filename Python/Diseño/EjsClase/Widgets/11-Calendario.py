@@ -12,27 +12,21 @@ class miVentana(QMainWindow):
 
 
 
-        self.calendario = QCalendarWidget()
-
-        self.calendario.selectionChanged.connect(self.verFecha)
-
-
-      
         
-        
+        self.calendario = QCalendarWidget() #crea el calendario grande siempre visible
+
+        self.calendario.selectionChanged.connect(self.dia) #selectionChanged --> cuando cambie la fecha
 
 
-    
+
         self.setCentralWidget(self.calendario)
 
 
-    
-    def verFecha(self):
+    def dia(self):
         print(self.calendario.selectedDate().toString("dd/MM/yyyy"))
 
-
-   
-
+        # selectedDate() --> Obtiene la fecha que el usuario ha seleccionado en el calendario
+        #.toString("dd/MM/yyyy") --> el selectedDate nos devolvera una fecha en formato QDate, asi que nosotros la pasmos a String y le indicamos que formato queremos 
 
          
 

@@ -8,39 +8,20 @@ class miVentana(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Mi ventana")
+        self.setWindowTitle("Ventana")
 
 
+        dial = QDial() #crea el dial
+        dial.setNotchesVisible(True) #para ver las muescas
+
+        dial.valueChanged.connect(self.valores) #valueChanged --> cuando el valor cambie
 
 
-        dial = QDial()
-        dial.setNotchesVisible(True) #mostrar las muescas
-
-        
-        dial.valueChanged.connect(self.valorCambiado)
-        dial.sliderMoved.connect(self.valorCambiado)
-        
-        
-
-
-    
         self.setCentralWidget(dial)
 
 
-    def valorCambiado(self, estado):
+    def valores(self, estado):
         print(estado)
-        
-        
-    def textoCambiado(self, estado):
-        print(estado)
-        
-
-
-
-   
-
-
-         
 
 
 app = QApplication([])
@@ -49,7 +30,4 @@ ventana = miVentana()
 ventana.show()
 
 
-app.exec()
-
-
-
+app .exec()

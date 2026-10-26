@@ -18,17 +18,17 @@ class miVentana(QMainWindow):
 
 
     
-        spinBox = QSpinBox()
-        spinBox.setRange(-10, 10) #ranfo maximo y minimo
-        spinBox.setSuffix(" €") #texto que saldra al lado de los umeros
-        spinBox.setSingleStep(2) #para que vaya de 2 en 2, tiene q ser distinto de 1
-
-        spinBox.valueChanged.connect(self.valorCambiado)
-        spinBox.textChanged.connect(self.textoCambiado)
+        spinBox = QSpinBox() #crear el SpinBox
+        spinBox.setRange(-10, 10) #rango maximo y minimo
+        spinBox.setSuffix(" €") #le pongo texto al lado del numero
+        spinBox.setSingleStep(2) #para que vaya sumando de x en x, minimo tiene q ser 1
 
 
+        spinBox.valueChanged.connect(self.valorCambiado) #valueChanged -->  pone solo el número
+        spinBox.textChanged.connect(self.textoCambiado) #textChanged -->  pone el número y el texto
 
-    
+
+
         self.setCentralWidget(spinBox)
 
 

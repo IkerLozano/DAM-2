@@ -43,7 +43,13 @@ class miVentana(QMainWindow):
         print(f"Boton {self.sender().text()} pulsado") 
         #self.sender() --> detecta el objeto exacto que envió la señal
         #.text() -->  Recupera el texto visible que tiene escrito ese botón, si no loponemos se vera mal
-        #f --Z para concatenar cadenas
+        #f --> para concatenar cadenas
+
+
+#plantilla1.addWidget() --> para añadir un widget a la plantilla
+#plantilla.addLayout(plantilla2) --> añadir las plantillas dentro de la plantilla padre
+#widget.setLayout(plantilla) --> meter todas las plantillas dentro de un widget pq QMainWindow solo puede tener un widget central así que metemos la plantilla padre en un widget y mostramos este widget
+
     
 
 

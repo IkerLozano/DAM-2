@@ -10,20 +10,19 @@ class miVentana(QMainWindow):
 
         self.setWindowTitle("Mi ventana")
 
-        #-----18/09/26-----
 
-        self.setWindowTitle("Mi aplicacion")
-
-
-        lista = QListWidget()
-        lista.addItems(["Uno", "Dos", "Tres"])
-
-        lista.currentTextChanged.connect(self.muestraTexto) #cuando el texto cambie se ejecuta la funcion
-
+        lista = QListWidget() #creamos la lista
+        lista.addItems(["Uno", "Dos", "Tres"]) #metemos opciones a la lista
         lista.setSelectionMode(QAbstractItemView.SelectionMode.MultiSelection) #para poder seleccionar vasras opciones de la lista
+
+
+        lista.currentTextChanged.connect(self.muestraTexto) #currentTextChanged -->  cuando el texto cambie
+
 
     
         self.setCentralWidget(lista)
+
+
 
     def muestraTexto(self, texto): 
         print(texto)

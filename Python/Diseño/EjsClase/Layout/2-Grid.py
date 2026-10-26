@@ -16,26 +16,37 @@ class miVentana(QMainWindow):
 
         self.setWindowTitle("Mi ventana")
 
-       
+
         plantilla = QGridLayout()
-        
-        
-        plantilla.addWidget(Color("red"), 0, 0)
-        plantilla.addWidget(Color("green"), 0, 1)
-        plantilla.addWidget(Color("yellow"), 1, 3)
-        plantilla.addWidget(Color("blue"), 3, 0)
-    
+
+        #en la paltilla coloco varios elementos
+        plantilla.addWidget(Color("red"), 0,0)
+        plantilla.addWidget(Color("green"), 0,1)
+        plantilla.addWidget(Color("yellow"), 1,2)
+        plantilla.addWidget(Color("blue"), 2,0)
+
+
+        #los muestro
+        widget = QWidget()
+        widget.setLayout(plantilla)
+        self.setCentralWidget(widget)
+
+
+
+
+
+
+      
         
 
 
-        
-        widget_central = QWidget()
-        widget_central.setLayout(plantilla)
-        self.setCentralWidget(widget_central)
+
+
 
 app = QApplication([])
 
 ventana = miVentana()
 ventana.show()
+
 
 app.exec()

@@ -16,8 +16,8 @@ class miVentana(QMainWindow):
 
         self.setCentralWidget(self.boton)
 
-    def pulsado(self, estado):
-        self.boton.setText(["Boton pulsado", "Boton no pulsado"])
+    def pulsado(self, pulsado):
+        self.boton.setText(["No pulsado", "Pulsado"][pulsado])
         #hacemos una lista con los posibles mensajes del boton
         #segun el estado elegira pulsado si el estado es True y  no pulsado si es False
 

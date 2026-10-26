@@ -10,18 +10,15 @@ class miVentana(QMainWindow):
 
         self.setWindowTitle("Mi ventana")
 
-
     
-       
-        spinBox = QSlider(Qt.Orientation.Horizontal)
+        spinBox = QSlider(Qt.Orientation.Horizontal) #lo de dentro es para cambiar la orientacion de la barra
         spinBox.setRange(-10, 10)
 
-        spinBox.valueChanged.connect(self.valorCambiado)
-        #spinBox.sliderMoved.connect(self.textoCambiado)
+
+        spinBox.valueChanged.connect(self.valorCambiado) #valueChanged --> cuando el valor cambie
+        spinBox.sliderMoved.connect(self.textoCambiado) #sliderMoved --> cuando mueves el deslizador 
         
 
-
-    
         self.setCentralWidget(spinBox)
 
 

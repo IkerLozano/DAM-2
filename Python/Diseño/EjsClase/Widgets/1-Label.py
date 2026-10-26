@@ -12,14 +12,20 @@ class miVentana(QMainWindow):
         #-----18/09/26-----
 
         self.setWindowTitle("Mi aplicacion")
+        #self.setFixedSize(QSize(400,300)) #tamaño fijo de la ventan
 
-        label = QLabel("Hola")
-        formato = label.font() #creamos el elemento sobre la etiqueta label
+        label = QLabel("Hola") #crear un texto
+
+        #formatos del texto
+        formato = label.font() #nos da acceso a los formatos
+
         formato.setPointSize(30) #tamaño
         formato.setFamily("Aial") #tipo de letra
         formato.setBold(True) #negrita o no
-        label.setFont(formato) #todo el formato que hemos puesto se lo aplicamos
+
+        label.setFont(formato) #aplicamos todas las configuraciones
         label.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter) #alinear el texto, de esta manera esta alieado tanto vertical como horizontal
+
 
 
         self.setCentralWidget(label)

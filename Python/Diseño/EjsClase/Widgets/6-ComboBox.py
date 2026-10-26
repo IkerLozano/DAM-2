@@ -10,21 +10,18 @@ class miVentana(QMainWindow):
 
         self.setWindowTitle("Mi ventana")
 
-        #-----18/09/26-----
-
-        self.setWindowTitle("Mi aplicacion")
-
-
-        lista = QComboBox() #creamos el comboBox
-        lista.addItems(["Uno", "Dos", "Tres"]) #opciones
+    
+        lista = QComboBox() #creaR el comboBox
+        lista.addItems(["Uno", "Dos", "Tres"]) #ponemos opciones
         lista.addItems(["Cuatro"]) #añadir un algo a la lista de opciones
-        lista.setEditable(True) #hace que puedas editar elelemento de la lista
+        lista.setEditable(True) #hace que podamos editar las opciones desde la propia lista
 
-        lista.currentIndexChanged.connect(self.muestraIndice) #recoger el indice cuando cambie y llamara a su funcion correspondiente
-        lista.currentTextChanged.connect(self.muestraTexto) #recoger el texto cuando cambie
+        lista.currentIndexChanged.connect(self.muestraIndice) #currentIndexChanged -->  cuando el índice cambie (el índice empieza desde el 0)
+        lista.currentTextChanged.connect(self.muestraTexto)  #currentTextChanged -->  cuando el texto cambie
 
     
         self.setCentralWidget(lista)
+
 
 
     def muestraIndice(self, indice):

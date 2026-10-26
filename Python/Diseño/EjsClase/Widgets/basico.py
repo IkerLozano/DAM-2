@@ -26,6 +26,8 @@ class MainWindow(QMainWindow): #nombre de la clase, cuando se empieza una clase 
                 self.botonPulsado = chekeada
                 print(self.botonPulsado)
 
+                
+
 app = QApplication([])
 
 window = MainWindow() #creo una ventana y le pongo el nombre de la funcuion de arriba

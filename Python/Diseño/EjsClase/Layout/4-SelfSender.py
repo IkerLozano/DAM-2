@@ -51,7 +51,11 @@ class miVentana(QMainWindow):
 
 
     def mensaje(self, estado):
-        print(f"El boton {self.sender().text()} {["no pulsado", "", "pulsdo"][estado]}")
+       print(f"El boton '{self.sender().text()}' esta {["no pulsado", "", "pulsado"][estado]}")
+    #self.sender() --> detecta el objeto exacto que envió la señal
+    #.text() -->  Recupera el texto visible que tiene escrito ese botón, si no loponemos se vera mal
+    #f --> para concatenar cadenas
+    #Cuando usemos estas dos cosas juntas, la lista hay que meterla tamb entre {}
 
 
 

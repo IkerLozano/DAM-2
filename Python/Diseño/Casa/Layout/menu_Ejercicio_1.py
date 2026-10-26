@@ -52,6 +52,7 @@ class miVentana(QMainWindow):
         self.cont = self.cont +1
         self.texto.setText(f"Texto cambiado: {self.cont}")
         #con setText le deciomos que cambie el contenido del texto 
+        #f"" --> Permite introducir variables dentro de un texto usando {}.
 
 
 
