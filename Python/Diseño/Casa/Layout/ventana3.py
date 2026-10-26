@@ -50,7 +50,11 @@ class miVentana(QMainWindow):
             self.ventana2.show()  #muestra la ventana.
 
 
-    
+#esta es otra manera de controlar el funcionamiento de la ventan (cunado se abre y se cierra)
+#La diferencia:
+#    Con hide(), la ventana se oculta y, al volver a mostrarla, normalmente conserva lo que habías escrito.
+#    Con close(), se cierra. Si después creas una nueva instancia con OtraVentana(), abra una ventana nueva con su contenido inicial.
+ 
 
 app = QApplication([])
 

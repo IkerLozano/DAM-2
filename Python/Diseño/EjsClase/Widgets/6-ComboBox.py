@@ -31,6 +31,10 @@ class miVentana(QMainWindow):
         print(texto)
 
          
+#para recoger texto --> .currentText() --> str
+#                   --> .currentIndex() --> int
+
+#para borar texto --> .setCurrentIndex(0) --> vuelve a la opcion 0
 
 
 app = QApplication([])

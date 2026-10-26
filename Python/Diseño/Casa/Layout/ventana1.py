@@ -21,6 +21,8 @@ class otraVentana(QWidget):
 
         self.setLayout(plantilla)
 
+#QWidget no tiene el método setCentralWidget. Ese método solo existe en QMainWindow 
+#Por eso en la ventana secundaria hay que crear un plantilla, pq QWidget  trabaja con setLayout
 
 
 class miVentana(QMainWindow):
@@ -51,3 +53,9 @@ ventana = miVentana()
 ventana.show()
 
 app.exec()
+
+
+
+#La diferencia entre una ventana y un dialog es que en la ventana si ponemos 
+#un botón no podemos recoger el resultado o va a ser mucho más costoso que con 
+#un dialog. En Un dialog la venta padre se bloquea hasta cerrar la nueva y aquí no

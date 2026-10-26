@@ -14,7 +14,8 @@ class MainWindow(QMainWindow):
 
         self.setCentralWidget(self.texto)
 
-    
+
+    #eventos princpiles
     def mouseMoveEvent(self, a0):
         self.texto.setText("Has pulsado y arrastrado")
 

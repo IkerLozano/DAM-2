@@ -6,7 +6,6 @@ from PyQt6.QtWidgets import (
 )   
 from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QPixmap, QAction, QIcon
-from dialogs import CustomDialog # Del archivo color.py, tráeme la clase Color
 
 
 

@@ -14,10 +14,13 @@ class MainWindow(QMainWindow):
 
         self.setCentralWidget(self.texto)
 
+
     
     def contextMenuEvent(self, event): #Gestiona el evento
 
-        menu = QMenu(self) #Crea el menú
+        menu = QMenu(self) #Crea un menú contextual (es un menú que aparece al hacer clic derecho con el ratón y muestra opciones)
+        #El self es para referirnos a que pertenecen estar en la ventana padre
+
 
         #Añado opciones al menu
         menu.addAction(QAction("Accion 1", self)) 

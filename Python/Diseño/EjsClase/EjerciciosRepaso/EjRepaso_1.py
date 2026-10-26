@@ -28,7 +28,7 @@ class miVentana(QMainWindow):
         DepTexto = QLabel("Departamento:")
         self.dep = QComboBox()
         DescripcionTexto = QLabel("Descripcion")
-        self.descripcion = QTextEdit()
+        self.descripcion = QTextEdit() #TextEdit grande
         self.boton1 = QPushButton("Grabar")
         self.boton2 = QPushButton("Reset")
 
@@ -104,7 +104,12 @@ class miVentana(QMainWindow):
         self.apellidos.clear()
         self.dep.clear()
         self.descripcion.clear()
-        self.fecha.setDate(QDate(2006,1,1)) #establezco la fecha minima
+        self.fecha.setDate(QDate(2006,1,1)) #establezco la fecha minima/por defecto
+
+
+
+#para recoger texto del QTextEdit --> .toPlainText() --> str
+#para borar texto del QTextEdit --> .clear()
 
 
 

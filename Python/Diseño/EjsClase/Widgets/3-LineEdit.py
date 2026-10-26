@@ -29,7 +29,8 @@ class miVentana(QMainWindow):
         print("Mnesaje enviado:")
         print("-->", self.texto.text()) #el .text() devuelve el texto que hay dentro de la "caja" del texto
 
-
+#para recoger texto --> .text() --> str
+#para borar texto --> .clear()
 
 app = QApplication([])
 

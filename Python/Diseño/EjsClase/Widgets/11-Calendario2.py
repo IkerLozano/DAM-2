@@ -32,6 +32,8 @@ class miVentana(QMainWindow):
         #.toString("dd/MM/yyyy") --> convierte la fecha a texto con el formato día/mes/año
          
 
+#para recoger texto --> .date()/.text() --> QDate
+
 
 app = QApplication([])
 

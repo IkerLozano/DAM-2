@@ -28,6 +28,8 @@ class miVentana(QMainWindow):
 
         self.setWindowTitle("Mi ventana")
 
+
+        #Para poder acceder a los elementos de la ventana secundaria desde la ventana padre
         self.ventana2=OtraVentana()
        
 

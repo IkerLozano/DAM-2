@@ -29,7 +29,7 @@ class miVentana(QMainWindow):
 
     #creo el dialog
     def botonPulsado(self, s):
-       dlg = CustomDialog(self) #con el self indicamosquein es su padre, por eso al ejecutarlo la nueva ventana sale dentro
+       dlg = CustomDialog(self) #con el self indicamos quien es su padre, por eso al ejecutarlo la nueva ventana sale dentro
        dlg.setWindowTitle("Cuadro de dialogo")
        dlg.exec() #la ventana principal queda bloqueada hasta que se cierre el diálogo y devuelve un resultado,
 
