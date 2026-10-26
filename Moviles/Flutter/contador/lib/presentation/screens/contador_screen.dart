@@ -12,114 +12,117 @@ class ContadorScreen extends StatefulWidget {
 class _ContadorScreenState extends State<ContadorScreen> {
   int contador = 0;
 
- @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       // ----- La bombillica carrea dart
-      // ----- Añado una barra arriba
+
+      //BARRA SUPERIOR
       appBar: AppBar(
         title: Text("Contador App"),
-        centerTitle: true,
-        backgroundColor: Colors.blue.shade100, //color para la cabecera y cambio la transparencia
-        //arriba a la derecha se a puesto un icono de refresh, le indico que al darle se ponga a 0
-        //leading: IconButton(
-        //  onPressed: (){
-        //    contador = 0;
-        //    setState(() {});
-        //  }, 
-        //  icon: Icon(Icons.refresh_rounded)),
-          //aqui podemos meter muchos widgets
-          actions: [
-            IconButton(
-          onPressed: (){
-            contador = 0;
-            setState(() {});
-          }, 
-          icon: Icon(Icons.refresh_rounded)),
-          ],
+        centerTitle: true, //centrado
+        backgroundColor: Colors
+            .blue
+            .shade100, //color para la cabecera y cambio la transparencia
+        //aqui podemos meter muchos widgets
+        actions: [
+          IconButton(
+            //Crea un botón con un icono.
+            onPressed: () {
+              //Define qué ocurre al pulsar el botón.
+              contador = 0;
+              setState(() {}); //actualiza la pantalla
+            },
+            icon: Icon(Icons.refresh_rounded), //el icono
+          ),
+        ],
       ),
+
       // CUERPO
       body: Center(
         child: Column(
-          // ----- Le digo que la columna los posicione en el centro
-          // ----- Si se tiene que usar la clase otra vez para sacar algún valor solo hace falta un "."
+          //Coloca los widgets en vertical (uno debajo de otro)
+          // ----- El "." es lo mimo que "mainAxisAlignment: MainAxisAlignment.center"
           mainAxisAlignment: .center,
           children: [
-            // ----- Se pueden añadir propiedades al widget 
+            //lista de widgets que contiene la columna
+
+            //numero del contador
             Text(
-              contador.toString(), 
-              style: TextStyle(
-                fontSize: 160,
-                fontWeight: .w100
-              ),
+              contador
+                  .toString(), //lo ponemos en String para poder usar el style
+              style: TextStyle(fontSize: 160, fontWeight: .w100),
             ),
+
             //mensaje de click
             Text(
               "Click${contador == 1 ? '' : 's'}",
-              style: TextStyle(
-                fontSize: 45
-              ),
-              ),
+              style: TextStyle(fontSize: 45),
               /*
-              if  (contador != 1) Text('Cliks', style: TextStyle(fontSize: 25),),
-              if  (contador == 1) Text('Clik', style: TextStyle(fontSize: 25),),
+                  if  (contador != 1) Text('Cliks', style: TextStyle(fontSize: 25),),
+                  if  (contador == 1) Text('Clik', style: TextStyle(fontSize: 25),),
               */
+            ),
           ],
-          ),
+        ),
       ),
 
-      floatingActionButton: Column(
+      //BOTONES QUE MODICAN EL CONTADOR
+      floatingActionButton: Column( //un boton encima de otro
         mainAxisAlignment: .end,
-        children: [
+
+        children: [ //lista de widgets
           //BOTON 1
-          BotonCustom(icono: Icons.plus_one, onPressed: (){
-            contador++;
-            setState(() {
-              
-            });
-          }),
-          SizedBox(height: 10,),
+          BotonCustom(
+            icono: Icons.plus_one,
+            onPressed: () { //define lo que pasa cuando se pulsa el boton
+              contador++;
+              setState(() {});
+            },
+          ),
+          SizedBox(height: 10), //espacio entre botones
+
+
           //BOTON 2
-          BotonCustom(icono: Icons.exposure_minus_1, onPressed: (){
-            contador--;
-            setState(() {
-              
-            });
-          }),
-          SizedBox(height: 10,),
+          BotonCustom(
+            icono: Icons.exposure_minus_1,
+            onPressed: () {
+              //if (contador == 1) contador--;    --> para no poder ser negativo
+              contador--;
+              setState(() {});
+            },
+          ),
+          SizedBox(height: 10),
+
+
           //BOTON 3
-          BotonCustom(icono: Icons.refresh_rounded, onPressed: (){
-            contador = 0;
-            setState(() {
-              
-            });
-          }),
-          SizedBox(height: 10,),
-           
-        ]
-      )
+          BotonCustom(
+            icono: Icons.refresh_rounded,
+            onPressed: () {
+              contador = 0;
+              setState(() {});
+            },
+          ),
+          SizedBox(height: 10),
+        ],
+      ),
 
 
-
-      // ----- Botónes
-      // ----- Con la bombillica se pueden extraer métodos  
+      // ----- Con la bombillica se pueden extraer métodos
       //floatingActionButton: Column(
       //mainAxisAlignment: .end,
       //children: [
       //  BotonPersonalizado(icono: Icons.refresh_rounded,),
-      //  SizedBox(height: 10,),        
-      //  BotonPersonalizado(icono: Icons.plus_one,),        
-      //  SizedBox(height: 10,),        
-      //  BotonPersonalizado(icono: Icons.exposure_minus_1,),              
+      //  SizedBox(height: 10,),
+      //  BotonPersonalizado(icono: Icons.plus_one,),
+      //  SizedBox(height: 10,),
+      //  BotonPersonalizado(icono: Icons.exposure_minus_1,),
       //  ],
       //)
     );
   }
 
-
-
-
-/*
+  /*
  FloatingActionButton customButton() {
    return FloatingActionButton(
         shape: StadiumBorder(), //para redondear el boton
@@ -132,33 +135,23 @@ class _ContadorScreenState extends State<ContadorScreen> {
       );
  }
 */
-
 }
 
 class BotonCustom extends StatelessWidget {
 
-  final IconData icono;
-  final VoidCallback? onPressed;
+  //esto es lo que recibe, cuando lo usemos le tenemos que pasar esto
+  final IconData icono; //icono
+  final VoidCallback? onPressed; //la accion al presionar
+  /*
+    VoidCallback: representa una función que no recibe parámetros ni devuelve ningún valor.
+    ?: indica que puede ser null, es decir, que puedes no pasarle ninguna función.
+  */
 
-  const new({
-    super.key,
-    required this.icono,
-    this.onPressed
-  });  
+  //el constructor
+  const BotonCustom({super.key, required this.icono, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-
-    return FloatingActionButton(
-      
-      onPressed: onPressed,
-      child: Icon(icono),
-
-    );
-
+    return FloatingActionButton(onPressed: onPressed, child: Icon(icono));
   }
-
-
-
 }
-
