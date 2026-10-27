@@ -13,7 +13,7 @@ class miVentana(QMainWindow):
 
 
         casilla = QCheckBox("Casilla de verificacion") #crear el CheckBox
-        
+        casilla.setChecked(True) #marcada por defecto, si le poemos False no se marca
 
         formato = casilla.font() #creamos el elemento sobre la etiqueta label
         formato.setBold(True) #negrita
@@ -40,7 +40,7 @@ class miVentana(QMainWindow):
         #el "", es para cuando este en 1
 
          
-
+#isChecked() --> comprobar si esta marcada
 
 app = QApplication([])
 

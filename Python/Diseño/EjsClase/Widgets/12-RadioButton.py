@@ -17,6 +17,7 @@ class miVentana(QMainWindow):
         #creo 2 radioButton
         self.radio1 = QRadioButton("Java")
         self.radio2 = QRadioButton("Python")
+        self.radio2.setChecked(True) #opcion 2 marcada por defecto
 
 
         plantilla = QVBoxLayout()

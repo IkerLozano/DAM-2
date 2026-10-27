@@ -41,6 +41,9 @@ class miVentana(QMainWindow):
         boton3.pressed.connect(lambda: plantilla2.setCurrentIndex(2))
         #Sintaxis
         #lambda parametros: expresion
+        #En el lambda se puede poner cualquier cosa:
+        #boton1.pressed.connect(lambda: self.texto.setText("Has pulsado: Amarillo"))
+
 
         plantilla.addLayout(plantilla1)
         plantilla.addLayout(plantilla2)

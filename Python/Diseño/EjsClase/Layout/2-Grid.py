@@ -20,6 +20,7 @@ class miVentana(QMainWindow):
         plantilla = QGridLayout()
 
         #en la paltilla coloco varios elementos
+        #primero van las fila y luego las columnas
         plantilla.addWidget(Color("red"), 0,0)
         plantilla.addWidget(Color("green"), 0,1)
         plantilla.addWidget(Color("yellow"), 1,2)

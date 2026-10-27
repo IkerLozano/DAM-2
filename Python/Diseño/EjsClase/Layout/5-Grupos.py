@@ -30,6 +30,7 @@ class miVentana(QMainWindow):
         plantilla2.addWidget(opt1)
         plantilla2.addWidget(opt2)
         plantilla2.addWidget(opt3)
+        #las plantillas hay que meterlas a la plantilla padre en el momento que se hace el grupo, no antes
 
         #GRUPOS#####
         grupo1 = QGroupBox("Botones") #creo el grupo

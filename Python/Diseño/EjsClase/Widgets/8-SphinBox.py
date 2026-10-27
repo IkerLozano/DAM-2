@@ -22,7 +22,8 @@ class miVentana(QMainWindow):
         spinBox.setRange(-10, 10) #rango maximo y minimo
         spinBox.setSuffix(" €") #le pongo texto al lado del numero
         spinBox.setSingleStep(2) #para que vaya sumando de x en x, minimo tiene q ser 1
-
+        spinBox.setValue(5) #valor por defecto
+        #cantidad = self.spinBox.value() saber que valor hay puesto
 
         spinBox.valueChanged.connect(self.valorCambiado) #valueChanged -->  pone solo el número
         spinBox.textChanged.connect(self.textoCambiado) #textChanged -->  pone el número y el texto

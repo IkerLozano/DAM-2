@@ -14,6 +14,7 @@ class miVentana(QMainWindow):
         lista = QListWidget() #creamos la lista
         lista.addItems(["Uno", "Dos", "Tres"]) #metemos opciones a la lista
         lista.setSelectionMode(QAbstractItemView.SelectionMode.MultiSelection) #para poder seleccionar vasras opciones de la lista
+        lista.setCurrentRow(0) #opcion 0 marcada por defecto
 
 
         lista.currentTextChanged.connect(self.muestraTexto) #currentTextChanged -->  cuando el texto cambie

@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import (
-    QApplication, QHBoxLayout, QWidget, QMainWindow, QPushButton, QLabel,
+    QApplication, QHBoxLayout, QMessageBox, QWidget, QMainWindow, QPushButton, QLabel,
     QRadioButton, QLineEdit, QVBoxLayout, QCheckBox, QComboBox, QListWidget,
     QAbstractItemView, QDial, QSpinBox, QSlider, QCalendarWidget, QGroupBox, 
     QGridLayout, QStackedLayout, QTabWidget, QToolBar, QStatusBar, QDateEdit,
@@ -18,93 +18,81 @@ class miVentana(QMainWindow):
 
         self.setWindowTitle("Ventana")
 
-        #DECLARO LOS WIDGETS############
-        nombreTexto = QLabel("Nombre:")
-        self.nombre = QLineEdit()
-        apellidosTexto = QLabel("Apellidos:")
-        self.apellidos = QLineEdit()
-        fechaTexto = QLabel("Fecha de alta:")
-        self.fecha = QDateEdit()
-        DepTexto = QLabel("Departamento:")
-        self.dep = QComboBox()
-        DescripcionTexto = QLabel("Descripcion")
-        self.descripcion = QTextEdit()
-        self.boton1 = QPushButton("Grabar")
-        self.boton2 = QPushButton("Reset")
+        #WIDGETS####
+        texto = QLabel("Resgistro")
+        textoUser = QLabel("Usuario")
+        self.uaurio = QLineEdit()
+        self.casilla = QCheckBox("Acepto las condiciones")
+        self.boton =QPushButton("Boton no pulsado")
+        self.texto2 = QLabel("Texto actual:....")
 
 
-        #CONFUGURO EL CALENDARIO##########
-        self.fecha = QDateEdit(QDate(2007, 3, 10)) #te pone una fecha por defecto
-        self.fecha.setMinimumDate(QDate(2006,1,1)) #establezco la fecha minima
-        self.fecha.setCalendarPopup(True) #abre el calendario grande a apartir de una barra
+        #FORMATO DEL TEXTO#####
+        formato = texto.font() #nos da acceso a los formatos
+
+        formato.setPointSize(20) #tamaño
+        formato.setFamily("Aial") #tipo de letra
+
+        texto.setFont(formato) #aplicamos todas las configuraciones
+        texto.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter) #alinear el texto, de esta manera esta alieado tanto vertical como horizontal
+        self.texto2.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter) #alinear el texto, de esta manera esta alieado tanto vertical como horizontal
 
 
-        #CONFIGURO EL MENU DE DEPARTAMENTO#######
-        self.dep.addItems(["Contabilidad", "Administracion", "Produccion"]) #meto las opciones al menu
+        #FUNCIONALIDAD#####
+        self.uaurio.textChanged.connect(self.mostrar)
+        self.casilla.stateChanged.connect(self.muestraEstado)
+        self.boton.clicked.connect(self.estadoBoton)
+        self.uaurio.returnPressed.connect(self.intro) 
 
 
-        #CREO LAS PLANTILLAS##################
+
+        #OTRAS CONFG#####
+        self.uaurio.setMaxLength(10) #el max de caracteres de la linea
+
+        self.boton.setChecked(True) #hace que empiece desmarcado.
+        self.boton.setEnabled(False)#Empieza desactivado
+        self.boton.setCheckable(True) #como si fuera un interruptor
+
+
+        #PLANTILLAS#####
         plantillaP = QVBoxLayout()
         plantilla1 = QHBoxLayout()
-        plantilla2 = QHBoxLayout()
-        plantilla3 = QHBoxLayout()
-        plantilla4 = QHBoxLayout()
-        plantilla5 = QHBoxLayout()
-        plantilla6 = QHBoxLayout()
 
+        plantilla1.addWidget(textoUser)
+        plantilla1.addWidget(self.uaurio)
 
-        #METO LOS WIDGETS A LAS PLATILLAS#######
-        plantilla1.addWidget(nombreTexto)
-        plantilla1.addWidget(self.nombre)
-
-        plantilla2.addWidget(apellidosTexto)
-        plantilla2.addWidget(self.apellidos)
-
-        plantilla3.addWidget(fechaTexto)
-        plantilla3.addWidget(self.fecha)
-
-        plantilla4.addWidget(DepTexto)
-        plantilla4.addWidget(self.dep)
-
-        plantilla5.addWidget(DescripcionTexto)
-        plantilla5.addWidget(self.descripcion)
-
-        plantilla6.addWidget(self.boton1)
-        plantilla6.addWidget(self.boton2)
-
+        plantillaP.addWidget(texto)
         plantillaP.addLayout(plantilla1)
-        plantillaP.addLayout(plantilla2)
-        plantillaP.addLayout(plantilla3)
-        plantillaP.addLayout(plantilla4)
-        plantillaP.addLayout(plantilla5)
-        plantillaP.addLayout(plantilla6)
+        plantillaP.addWidget(self.casilla)
+        plantillaP.addWidget(self.boton)
+        plantillaP.addWidget(self.texto2)
 
 
-        #FUNCIONALIDAD DE LOS BOTONES######
-        self.boton1.clicked.connect(self.grabar)
-        self.boton2.clicked.connect(self.reset)
-
-        #MUESTRO TODO POR PATALLA##################
         widget = QWidget()
         widget.setLayout(plantillaP)
         self.setCentralWidget(widget)
+
+
+
+    def mostrar(self):
+        self.texto2.setText("Texto actual: " + self.uaurio.text())
+
+    def intro(self):
+        self.texto2.setText("Has enviado: " + self.uaurio.text())
+
+
+    def muestraEstado(self, estado):
+        self.boton.setEnabled(estado == 2)
+        print(f"{["Casilla 0", "", "Casilla 2"][estado]}")
+
+
+    def estadoBoton(self, estado):
+        self.boton.setText(["No pulsado", "Pulsado"][estado])
+
         
 
 
-    def grabar(self):
-        self.descripcion.append(self.nombre.text())
-        self.descripcion.append(self.apellidos.text())
-        self.descripcion.append(self.fecha.text())
-        self.descripcion.append(self.dep.currentText())
-        #append() añade texto al final de lo que ya hay en un QTextEdit, sin borrar el contenido anterior
 
-
-    def reset(self):
-        self.nombre.clear()
-        self.apellidos.clear()
-        self.dep.clear()
-        self.descripcion.clear()
-        self.fecha.setDate(QDate(2006,1,1)) #establezco la fecha minima
 
 
 
@@ -115,3 +103,5 @@ aplicacion = miVentana()
 aplicacion.show()
 
 app.exec()
+
+        

@@ -18,9 +18,11 @@ class miVentana(QMainWindow):
         self.boton.setEnabled(True) #desactiva el boton para que no se pueda pulsar más (con False se desactiva)
         self.boton.setCheckable(True) #como si fuera un interruptor
         self.boton.setChecked(True) #lo deja ya pulsado desde el principio
+        #self.boton.setEnabled(False)#Empieza desactivado
 
         self.boton.clicked.connect(self.estadoBoton) #cliked --> cuando se pulse el botón
         self.boton.clicked.connect(self.lista)
+
 
         #Diferentes acciones que podemos hacer con el botón
         self.boton.pressed.connect(self.uno) #pulsar son soltar
@@ -55,7 +57,7 @@ class miVentana(QMainWindow):
         #segun el estado elegira pulsado si el estado es True y  no pulsado si es False
 
 
-        
+#boton.setEnabled(estado == 2) activamel boton si es estado es 2 (pulsado)
 
          
 
