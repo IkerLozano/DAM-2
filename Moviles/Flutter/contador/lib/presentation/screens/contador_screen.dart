@@ -38,6 +38,8 @@ class _ContadorScreenState extends State<ContadorScreen> {
         ],
       ),
 
+
+
       // CUERPO
       body: Center(
         child: Column(
@@ -136,6 +138,9 @@ class _ContadorScreenState extends State<ContadorScreen> {
  }
 */
 }
+
+
+
 
 class BotonCustom extends StatelessWidget {
 

@@ -27,6 +27,63 @@
     var festivos = [[1, 6], [], [], [17, 18, 23], [1], [], [], [15], [], [12], [1], [6, 8, 25]];
     var dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "Sabado", "Domingo"]
 
+    var mesUsuario = prompt("Dime un mes")
+    var mesUsuarioMayus = mesUsuario.toUpperCase()
+    var mesNumero
+    //var diasDeMes = me
+
+    switch(mesUsuarioMayus){
+        case "ENERO":
+            mesNumero = 0;
+            break;
+        case "FEBRERO":
+            mesNumero = 1;
+            break;
+        case "MARZO":
+            mesNumero = 2;
+            break;
+        case "ABRIL":
+            mesNumero = 3;
+            break;
+        case "MAYO":
+            mesNumero = 4;
+            break;
+        case "JUNIO":
+            mesNumero = 5;
+            break;
+        case "JULIO":
+            mesNumero = 6;
+            break;
+        case "AGOSTO":
+            mesNumero = 7;
+            break;
+        case "SEPTIEMBRE":
+            mesNumero = 8;
+            break;
+        case "OCTUBRE":
+            mesNumero = 9;
+            break;
+        case "NOVIEMBRE":
+            mesNumero = 10;
+            break;
+        case "DICIEMBRE":
+            mesNumero = 11;
+            break;
+        default:
+           console.log("No es un mes") 
+           break;
+    }
+
+    
+    var fechaConMesUsuario  = new Date(2026, mesNumero, 1)
+    
+    var anioDeFechaUser = fechaConMesUsuario.getFullYear()
+    
+    var diaMes1 = new Date(`${anioDeFechaUser}-${mesNumero + 1}-1`)
+    console.log(diaMes1)
+
+
+
     var fechaA = new Date()
     var anio = fechaA.getFullYear()
     var mes = fechaA.getMonth()
@@ -34,13 +91,16 @@
     var dia1 = new Date(`${anio}-${mes + 1}-1`) //el 0 es enero
     var diaS = dia1.getDay()
     var mes1 =  new Date(`${anio}-${mes + 2}-1`)
-    var diaU = mes1-1
-    
+    var fechaUltimoDia = new Date(fechaA.getFullYear(), (fechaA.getMonth()+1), 0)
+    var ultimoDia = fechaUltimoDia.getDate()
+
     console.log(dia1)
     console.log(diaS)
     console.log(mes1)
-    console.log(diaU)
+    console.log(ultimoDia)
 
+
+   
 
 
     document.write("<table>")
@@ -66,7 +126,7 @@
 
 
     var cont = diaS-1
-    for (let i = 1; i < 31; i++) {
+    for (let i = 1; i <= ultimoDia; i++) {
         
 
         document.write("<td>" + i + "</td>")
