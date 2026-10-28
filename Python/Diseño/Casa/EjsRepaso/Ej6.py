@@ -128,11 +128,11 @@ class miVentana(QMainWindow):
         self.cont = self.cont +1
 
         #creo el widget
-        self.textoCont = QTextEdit()
-        self.textoCont.setPlaceholderText("Escribe aquí...")
+        textoCont = QTextEdit()
+        textoCont.setPlaceholderText("Escribe aquí...")
 
         plantillaP = QHBoxLayout()
-        plantillaP.addWidget(self.textoCont)
+        plantillaP.addWidget(textoCont)
 
         #meto las plantillas con su contenido
         widgetNuevo = QWidget()

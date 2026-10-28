@@ -1,4 +1,4 @@
-from Ej2.Ej2 import Ui_MainWindow
+from Ej2 import Ui_MainWindow
 from PyQt6.QtWidgets import QMainWindow, QApplication 
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QPalette, QColor

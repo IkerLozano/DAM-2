@@ -1,0 +1,49 @@
+QLabel{
+
+    font-family: Tahoma;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+
+QPushButton{
+
+    background-color: red;
+}
+
+QTextEdit {
+
+    border: 5px dotted green;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+/*
+QLineEdit {
+
+   min-width: 20px;
+   max-width: 20px;
+   min-height: 20px;
+   max-height: 20px;
+
+}
+   */
+
+
+   /* con el . solo el padre tendra estas propiedades*/
+.QWidget {
+
+    background-color: green;
+}
+
+/*aplica a solo el boton con ese id*/
+QPushButton#horizontalLayout{
+    
+    background-color: red;
+}
+
+
