@@ -51,10 +51,10 @@ class miVentana(QMainWindow):
         widget2 = QWidget()
 
         #meto las plantillas con su contenido
-        widget1.setLayout(plantillaP1)
+        widget1.setLayout(plantillaP1) #cada widget es como un nuevo menu, al que le añado el contenido
         widget2.setLayout(plantillaP2)
 
-        #creo una pestaña para cada plantilla
+        #añado a la pestaña los menus
         pestañas.addTab((widget1), "Pestaña 1")
         pestañas.addTab((widget2), "Pestaña 2")
         

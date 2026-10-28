@@ -58,7 +58,7 @@ class miVentana(QMainWindow):
 
 
 #boton.setEnabled(estado == 2) activamel boton si es estado es 2 (pulsado)
-
+#triggered --> si el boton es un Qaction
          
 
 

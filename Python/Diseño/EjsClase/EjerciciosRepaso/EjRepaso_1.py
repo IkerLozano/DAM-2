@@ -29,6 +29,7 @@ class miVentana(QMainWindow):
         self.dep = QComboBox()
         DescripcionTexto = QLabel("Descripcion")
         self.descripcion = QTextEdit() #TextEdit grande
+        self.descripcion.setPlaceholderText("Escribe aquí...") #placeholder
         self.boton1 = QPushButton("Grabar")
         self.boton2 = QPushButton("Reset")
 
