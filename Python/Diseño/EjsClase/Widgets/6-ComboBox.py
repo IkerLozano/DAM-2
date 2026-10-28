@@ -15,7 +15,7 @@ class miVentana(QMainWindow):
         lista.addItems(["Uno", "Dos", "Tres"]) #ponemos opciones
         lista.addItems(["Cuatro"]) #añadir un algo a la lista de opciones
         lista.setEditable(True) #hace que podamos editar las opciones desde la propia lista
-        lista.setCurrentIndex(2) #opcion 0 mracada por defecto
+        lista.setCurrentIndex(2) #opcion 2 mracada por defecto
 
         lista.currentIndexChanged.connect(self.muestraIndice) #currentIndexChanged -->  cuando el índice cambie (el índice empieza desde el 0)
         lista.currentTextChanged.connect(self.muestraTexto)  #currentTextChanged -->  cuando el texto cambie
@@ -37,7 +37,7 @@ class miVentana(QMainWindow):
 
 #para borar texto --> .setCurrentIndex(0) --> vuelve a la opcion 0
 
-#currentText() == " lo q sea " --> para ver si esta marcada
+#currentText() == " lo q sea " --> para ver si esta marcada o sin nada para scar la q esta marcada
 
 app = QApplication([])
 

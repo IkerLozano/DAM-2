@@ -13,6 +13,8 @@ class miVentana(QMainWindow):
 
         dial = QDial() #crea el dial
         dial.setNotchesVisible(True) #para ver las muescas
+        dial.setValue(5) #valor por defecto
+        #valor = dial.value() #saber el valor
 
         dial.valueChanged.connect(self.valores) #valueChanged --> cuando el valor cambie
 

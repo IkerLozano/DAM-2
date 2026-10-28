@@ -42,6 +42,7 @@ class miVentana(QMainWindow):
          
 #isChecked() --> comprobar si esta marcada
 
+
 app = QApplication([])
 
 ventana = miVentana()

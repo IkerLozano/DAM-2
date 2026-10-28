@@ -33,6 +33,7 @@ class miVentana(QMainWindow):
          
 
 #para recoger texto --> .date()/.text() --> QDate
+#self.entrada.setDate(self.calendario.selectedDate()) --> recoger la fecha de un calendario grande y mterla en uno de barra
 
 
 app = QApplication([])
