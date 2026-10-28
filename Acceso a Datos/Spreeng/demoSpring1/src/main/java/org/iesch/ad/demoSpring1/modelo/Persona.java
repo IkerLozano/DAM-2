@@ -1,7 +1,9 @@
 package org.iesch.ad.demoSpring1.modelo;
 
+//import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.web.JsonPath;
 
 import java.time.LocalDateTime;
 
@@ -45,8 +47,8 @@ public class Persona {
 
 
     @OneToOne(cascade = CascadeType.ALL)//si se elimina el padre se elimina todo
+    @JoinColumn(name = "coche_id", referencedColumnName = "id") //clabe ajena
     Coche coche;
-
 
 
 

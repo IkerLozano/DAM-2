@@ -197,7 +197,7 @@ public class DemoSpring1Application implements CommandLineRunner {
 
 */
 
-
+/*
 		System.out.println("ONE TO ONE");
 
 		//nueva persona
@@ -213,14 +213,14 @@ public class DemoSpring1Application implements CommandLineRunner {
 		coche.setMarca("Tesla");
 		coche.setModelo("3");
 		coche.setMatricula("9999 JNY");
-
+*/
 
 		//le asigno el coche a la persona
-		persona.setCoche(coche);
+		//persona.setCoche(coche);
 		//lo guardo en la BBDD
-		personaRepositorio.save(persona);
+		//personaRepositorio.save(persona);
 
-
+/*
 		//cargar de la bbdd la persona con id 16
 		Optional<Persona> personaConCoche = personaRepositorio.findById(16L);
 		if (personaConCoche.isPresent()){
@@ -231,8 +231,53 @@ public class DemoSpring1Application implements CommandLineRunner {
 
 
 
-		Optional<Coche> coche = cocheRepositorio
+		Optional<Coche> coche2 = cocheRepositorio.findById(1L);
+		if (coche2.isPresent()){
+			Coche p = coche2.get();
+			System.out.println(p);
+		}
+*/
 
+/*
+		System.out.println("ONE TO ONE BIDIRECCIONAL ");
+		Persona persona1 = new Persona();
+		persona1.setNombre("Junalu");
+		persona1.setApellidos("dbz");
+		persona1.setDni("147258A");
+		persona1.setEmail("Jjuanlu@.es");
+		//personaRepositorio.save(persona1);
+
+		Coche coche1	= new Coche();
+		coche1.setMarca("Tesla");
+		coche1.setModelo("3");
+		coche1.setMatricula("9988 NAN");
+		//cocheRepositorio.save(coche1);
+
+
+		persona1.setCoche(coche1);
+		coche1.setPersona(persona1);
+		personaRepositorio.save(persona1);
+*/
+
+		System.out.println("Peta bidireccional");
+		Optional<Persona> persona = personaRepositorio.findById(21L);
+
+		if (persona.isPresent()){
+			Persona persona1 = persona.get();
+			System.out.println(persona1);
+		}
+
+
+
+		Optional<Coche> coche = cocheRepositorio.findById(6L);
+
+		if (coche.isPresent()){
+			Coche coche1 = coche.get();
+			System.out.println(coche1);
+			Persona personatmp = coche1.getPersona();
+			System.out.println(coche1.getPersona().getCoche().getMatricula());
+			System.out.println("---> " + personatmp);
+		}
 
 
 

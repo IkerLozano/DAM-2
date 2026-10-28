@@ -1,10 +1,9 @@
 package org.iesch.ad.demoSpring1.modelo;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+//import com.fasterxml.jackson.annotation.JsonBackReference;
+//import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 import lombok.*;
 
 
@@ -24,7 +23,9 @@ public class Coche {
     String modelo;
     String matricula;
 
-
+    @OneToOne(mappedBy = "coche")//nombre de la variable que hace el mapeo en la relacion padre
+    @ToString.Exclude //para q el hijo no tenga el toString y que no tenga referencia infinita
+    Persona persona;
 
 
 
