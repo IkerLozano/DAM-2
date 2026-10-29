@@ -11,6 +11,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+
+    
+
+
     //lista de opciones para mostrar en la pantalla, esto lo indicamoe en el "menu_options"
     final menuOptions = <MenuOptions>[
 
@@ -18,6 +22,7 @@ class HomeScreen extends StatelessWidget {
       MenuOptions(ruta: "ListView2", icono: Icons.list, nombre: "ListView Tipo 2"),
       MenuOptions(ruta: "Alert", icono: Icons.add_alert, nombre: "Alertas - Alerts"),
       MenuOptions(ruta: "Card", icono: Icons.list_alt, nombre: "Tarjetas - Cards"),
+      MenuOptions(ruta: "Button", icono: Icons.radio_button_on_outlined, nombre: "Botones - Buttons"),
 
     ];
 

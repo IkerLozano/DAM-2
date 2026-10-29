@@ -2,7 +2,36 @@
 import 'package:flutter/material.dart';
 
 
+const listaColores = <Color> [
+  Colors.blue,
+  Colors.green,
+  Colors.red,
+  Colors.purple,
+  Colors.yellow,
+  Colors.deepOrange,
+  Colors.pink
+
+];
+
 class AppTheme {
+
+  final int coloresSeleccion;
+  new({
+     this.coloresSeleccion = 2
+    }):assert( coloresSeleccion >= 0, 'El color seleccionado debe ser mayor que 0'),
+      assert( coloresSeleccion < listaColores.length, 'El color seleccionado debe igual o menor que ${listaColores.length}');
+      //esto es para errores personalizados, no es de la app, es un error q alta aqui
+
+
+  ThemeData getTheme() => ThemeData(
+    useMaterial3: true,
+    colorSchemeSeed: listaColores[coloresSeleccion],
+
+    appBarTheme: AppBarTheme(
+      centerTitle: true,
+    )
+  );
+
 
   //Color primario
   static const Color primary = Colors.pink;
@@ -50,5 +79,7 @@ class AppTheme {
 
     
   );
+
+
   
 }
