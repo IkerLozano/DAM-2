@@ -1,9 +1,9 @@
-import 'package:componentes/theme/app_theme.dart';
-import 'package:flutter/material.dart'; //desde el archivo screens (con todos los imports) los traemos
 
-import 'presentation/screens.dart';
+import 'presentation/screens.dart'; //desde el archivo screens nos traemos todos los imports
+
 
 void main() => runApp(const MyApp());
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,25 +12,26 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, //quitar la etiqueta
-      title: 'Material App',
-      //home: Listview2Screen(), ns pq se comenta esto
+      title: 'Material App', //título general de la aplicación.(no es visible)
+      //home: Listview2Screen(), con esto le indicamos cual seria la pantalla de inicio de la app
 
 
-      initialRoute: "/", //la pagina inicial la pgina inicial se sule poner con una barra, pero se puede poner lo que sea
-      //para enlazar paginas
+      initialRoute: "/", //pagina inicial de la app,  se sule poner con una "/", pero se puede poner lo que sea
+      
+      //asocia la pagina conunu nomvre, para que ea mas facil usarlas
       routes: {
-        "/"       : (BuildContext context) => HomeScreen(),
+        "/l"       : (BuildContext context) => HomeScreen(),
         "ListView1"  : (BuildContext context) => ListviewScreen(),
         "ListView2"  : (BuildContext context) => Listview2Screen(),
         "Alert"      : (BuildContext context) => AlertScreen(),
         "Card"       : (BuildContext context) => CardScreen()
       },
 
-      //gestiona donde vamos si la ruta no existe, ira a cardScreen
+      //gestiona donde vamos si la ruta no existe, ira a "HomeScreen"
       onGenerateRoute: (settings) => MaterialPageRoute(builder: (context) => HomeScreen(),),
 
       //llamo al archivo de los temas comunes
-      theme: AppTheme.lightTheme
+      theme: AppTheme.halloweenTheme //esto necesita que le pasemos un theme, si le pasamos un color (primary) dara error
       
     );
   }
