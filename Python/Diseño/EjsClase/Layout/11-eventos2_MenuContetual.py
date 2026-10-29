@@ -23,6 +23,7 @@ class MainWindow(QMainWindow):
 
 
         #Añado opciones al menu
+        #te pilla todos los widgets
         menu.addAction(QAction("Accion 1", self)) 
         menu.addAction(QAction("Accion 2", self))
         menu.addAction(QAction("Accion 3", self))
@@ -32,7 +33,10 @@ class MainWindow(QMainWindow):
 
          
 
-
+#si queremos hacer algo segun que accion le damos
+    #1- self.ac1 = QAction("Accion 1", self)
+    #2- menu.addAction(self.ac1)
+    #3- self.ac1.triggered.connect(self.metodo1) y llamas a la funcion
         
 
    

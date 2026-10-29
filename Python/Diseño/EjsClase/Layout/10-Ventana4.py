@@ -55,7 +55,7 @@ class miVentana(QMainWindow):
     def mostrarVentana(self): 
         if self.ventana2.isVisible(): #comprueba si la ventana está visible (devuelve true/false)
 
-            self.ventana2.hide() #culta la ventana sin cerrarla definitivamente.
+            self.ventana2.hide() #oculta la ventana sin cerrarla definitivamente.
 
         else:
             self.ventana2.show()  #muestra la ventana.

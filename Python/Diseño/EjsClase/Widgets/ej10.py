@@ -30,3 +30,18 @@ ventana.show()
 
 app.exec()
 
+
+
+
+#1. python -m venv App (se añadirá contenido a nuestra carpeta)
+#2. cd App (estas carpetas se crean solas)
+#3. cd Scripts
+#4. .\activate 
+#5. pip install PyQt6 (instalar libreria)
+#
+#
+#pip install PySide6 (instalar Qt Designer)
+#pyside6-designer (ejecutar Qt Designer) 
+
+
+

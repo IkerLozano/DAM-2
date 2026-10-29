@@ -43,7 +43,7 @@ class miVentana(QMainWindow):
             print("El usuario ha rechazado")
 
 #QMessageBox() -->  es como un customDialog pero viene ya predefinido con un estilo y con un botón de ok
-
+#app.closeAllWindows() --> te cierra la aplicacion
 
 app = QApplication([])
 
