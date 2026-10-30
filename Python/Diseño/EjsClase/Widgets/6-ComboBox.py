@@ -37,7 +37,7 @@ class miVentana(QMainWindow):
 
 #para borar texto --> .setCurrentIndex(0) --> vuelve a la opcion 0
 
-#currentText() == " lo q sea " --> para ver si esta marcada o sin nada para scar la q esta marcada
+#currentText() == " lo q sea " --> para ver si esta marcada o sin nada para sacar la q esta marcada
 
 app = QApplication([])
 

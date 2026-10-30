@@ -27,9 +27,11 @@ class miVentana(QMainWindow):
         #BARRA DE OPCIONES
         barra = QToolBar() #creo la barra
         self.addToolBar(barra) #añado la barra a la ventana
+        barra.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon) #para qu el icono no tape el texto
 
 
-        #METO LOS BOTONES DENTRO DE LA BARRA
+
+        #METO LOS BOTONES DENTRO DE LA BARRA DE TAREAS
 
             #les pongo icono y mensaje al passar el raton
         boton = QAction(QIcon("icons/disk.png"), "Guardar", self)
@@ -48,7 +50,7 @@ class miVentana(QMainWindow):
         barra.addAction(boton3)
 
 
-        #CREO EL MENU DE OPCIONES DE ARRIBA Y METO UNA OPCION
+        #CREO EL MENU SUPERIOR DE OPCIONES DE ARRIBA Y METO UNA OPCION
             #creo el menu
         menu = self.menuBar()
 

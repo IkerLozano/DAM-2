@@ -43,6 +43,7 @@ class miVentana(QMainWindow):
         #lambda parametros: expresion
         #En el lambda se puede poner cualquier cosa:
         #boton1.pressed.connect(lambda: self.texto.setText("Has pulsado: Amarillo"))
+        #si queremos poner mas de una condicion despues de los : poner un ( y cerralo al final
 
 
         plantilla.addLayout(plantilla1)

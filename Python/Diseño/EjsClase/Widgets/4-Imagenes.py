@@ -12,7 +12,7 @@ class miVentana(QMainWindow):
 
         label = QLabel()#sirve para mostar contenido, en este caso una foto
         
-        label.setPixmap(QPixmap("img\Captura de pantalla 2026-09-16 205952.png")) #poner la imagen
+        label.setPixmap(QPixmap("img\Captura de pantalla 2026-09-16 205952.png").scaled(200, 100)) #poner la imagen
         label.setScaledContents(True)#Para q sea responsiva con el tamaño de la pantaña
 
         self.setCentralWidget(label)
