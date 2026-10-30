@@ -1,5 +1,6 @@
-import 'package:componentes/theme/app_theme.dart';
-import 'package:flutter/material.dart';
+import '../screens.dart';
+
+
 
 class AlertScreen extends StatelessWidget {
   const AlertScreen({super.key});
@@ -28,7 +29,7 @@ class AlertScreen extends StatelessWidget {
   }
 
   //CONSTRUYE LA PANTALLA COMPLETA(Barra superior, botón, fondo)
-  //siempre que ponga buils esq esta se está construyendo la interfaz
+  //siempre que ponga build esq esta se está construyendo la interfaz
   //dentro del onPresed se podriaponer el showDialog de arriba peropara  quede mas ordenado se hace asi
   @override
   Widget build(BuildContext context) {

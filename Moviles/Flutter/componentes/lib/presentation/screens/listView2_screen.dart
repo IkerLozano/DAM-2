@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../screens.dart';
 
 // CORREGIDO: Añadido el '2' al nombre de la clase para que coincida con el constructor
 class Listview2Screen extends StatelessWidget {

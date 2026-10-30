@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 
 
+
+//lista de colores
 const listaColores = <Color> [
   Colors.blue,
   Colors.green,
@@ -15,15 +17,16 @@ const listaColores = <Color> [
 
 class AppTheme {
 
-  final int coloresSeleccion;
-  new({
+  final int coloresSeleccion; //aqui se guarda la posicion del color seleccionado
+
+  AppTheme({
      this.coloresSeleccion = 2
     }):assert( coloresSeleccion >= 0, 'El color seleccionado debe ser mayor que 0'),
       assert( coloresSeleccion < listaColores.length, 'El color seleccionado debe igual o menor que ${listaColores.length}');
       //esto es para errores personalizados, no es de la app, es un error q alta aqui
 
 
-  ThemeData getTheme() => ThemeData(
+  ThemeData getTheme() => ThemeData( //getTheme --> puede ser el nombre que queramos
     useMaterial3: true,
     colorSchemeSeed: listaColores[coloresSeleccion],
 

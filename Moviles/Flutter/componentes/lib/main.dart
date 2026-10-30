@@ -1,9 +1,6 @@
 
 import 'presentation/screens.dart'; //desde el archivo screens nos traemos todos los imports
 
- 
-
-
 
 void main() => runApp(const MyApp());
 
