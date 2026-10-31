@@ -31,21 +31,35 @@
 	</properties>
 
 
+	<!--DEPENDENCIAS-->
 	<dependencies>
 
 
+	<!--
+		Permite trabajar con la base de datos usando objetos Java (incluye Hibernate y Spring Data).
+        Dónde lo uso: en las entidades (Cliente, Coche...) y en los repositorios
+        (PersonaRepositorio, CocheRepositorio) para guardar, buscar y borrar sin escribir SQL.
+	-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
+
+	<!--
+		Permite a Java hablar con el servidor de base de datos.
+        Dónde lo uso: para conectar con la BD de XAMPP (MariaDB) con los datos de application.properties.
+	-->
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 
-
+	<!--
+		Qué hace: herramientas para probar repositorios y entidades (JUnit, @DataJpaTest...).
+        Dónde lo uso: en la carpeta src/test. No afecta a la app normal.
+    -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa-test</artifactId>
@@ -53,7 +67,11 @@
 		</dependency>
 
 
-
+	<!--
+		Genera código repetitivo automáticamente con anotaciones
+        (@Getter, @Setter, @NoArgsConstructor, @AllArgsConstructor, @Data...).
+        Dónde lo uso: en las clases del paquete modelo (Cliente, Coche...) para no escribir getters y setters a mano.
+    -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

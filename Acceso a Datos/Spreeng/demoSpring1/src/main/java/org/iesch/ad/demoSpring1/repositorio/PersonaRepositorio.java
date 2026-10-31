@@ -9,21 +9,26 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository //si no anotamos va a salir todo mal
+
+//Los repositorios (Repository) sirven para comunicarnos con la base de datos
+
+@Repository //indico que es un repo
 public interface PersonaRepositorio extends JpaRepository<Persona, Long> {
 
 
-//aqui ponemos las consultas de nuestro programa (q no esten echas), no se pueden usar * hayque usar p qp es una entidad
+//aqui ponemos las consultas de nuestro programa (q no esten echas)
 
-    @Query("select p from Persona p") //HQL
-    List<Persona> buscaTodasPersonas();
+    //HQL
+    @Query("select p from Persona p where p.nombre = 'Iker'")
+    List<Persona> buscaTodasPersonas(); //devuelve una lista con todas las personas encontradas
 
 
-    @NativeQuery("select * from Persona") //Nativo
+    //Nativo
+    @NativeQuery("select * from Persona where dni = '11811114C'")
     List<Persona> buscaTodasPersonasNative();
 
 
-    //El nombre tiene q ser findBy+"lo que buscamos"+StartingWith
+    //pseudo-lenguaje
     List<Persona> findByNombreStartingWith(char c);
     List<Persona> findByDniContainingAndApellidosContaining (char d, String a); //funciona tanto string como char
     List<Persona> findByDniContainingOrEmailIsNull (String s);

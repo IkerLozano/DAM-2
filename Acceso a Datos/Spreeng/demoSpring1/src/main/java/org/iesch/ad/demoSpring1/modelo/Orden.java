@@ -14,7 +14,7 @@ public class Orden {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //id autonumerico
     Long id;
     LocalDateTime fecha;
 

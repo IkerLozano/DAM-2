@@ -1,11 +1,9 @@
 package org.iesch.ad.demoSpring1;
 
-import lombok.RequiredArgsConstructor;
 import org.iesch.ad.demoSpring1.modelo.Coche;
 import org.iesch.ad.demoSpring1.modelo.Persona;
 import org.iesch.ad.demoSpring1.repositorio.CocheRepositorio;
 import org.iesch.ad.demoSpring1.repositorio.PersonaRepositorio;
-import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -17,15 +15,16 @@ import java.util.*;
 
 
 @SpringBootApplication
-@RequiredArgsConstructor //FORMA2 - 1)
-@PropertySource(value = "classpath:mi.properties", encoding = "UTF-8") // para que pille bien acentos y demas
+//@RequiredArgsConstructor
+@PropertySource(value = "classpath:mi.properties", encoding = "UTF-8") //UTF-8 --> para que pille bien acentos y ñ
 public class DemoSpring1Application implements CommandLineRunner {
 
 
-	//private final PersonaRepositorio personaRepositorio;   // //FORMA2 - 2) el campo tiene que ser final
+	// ==========================================================================
+	//  VALORES LEIDOS DEL ARCHIVO "mi.properties"
+	// ==========================================================================
 
-
-	//sacar informacion, esta info esta en mi.propierties
+	//para sacar la informacion del archivo "mi.properties"
 	@Value("${mi.app.nombre}")
 	String nombre;
 
@@ -35,200 +34,284 @@ public class DemoSpring1Application implements CommandLineRunner {
 	@Value("${firma}")
 	String firma;
 
-//	@Autowired
-//	List<Persona> listaPersona;
 
-	//FORMA 3:
-	@Autowired
+	// ==========================================================================
+	//  INYECCION DE DEPENDENCIAS - usar los Repos aqui
+	// ==========================================================================
+
+	//FORMA 1 (constructor manual)
+
+	/*
 	PersonaRepositorio personaRepositorio;
-
-
-	//FORMA 1:
-/*
-	PersonaRepositorio personaRepositorio;
-	public DemoSpring1Application(PersonaRepositorio personaRepositorio) {
+	public DemoSpring2Application(PersonaRepositorio personaRepositorio) {
 
 		this.personaRepositorio = personaRepositorio;
 	}
+ 	*/
 
- */
+	//FORMA 2 (Autowired)
+	//	@Autowired
+	//	List<Persona> listaPersona;
 
-	//para podr usar el repo de coche
+
+	//FORMA 3 (RequiredArgsConstructor)
+	//@RequiredArgsConstructor (poner encima de clase)
+	//private final PersonaRepositorio personaRepositorio;   //el campo tiene que ser final
+
+
+	//Meto los repos con la forma2
+
+		//repo de personas
+	@Autowired
+	PersonaRepositorio personaRepositorio;
+
+
+		//repo de coches
 	@Autowired
 	CocheRepositorio cocheRepositorio;
+
+
+
+	// ==========================================================================
+	//  METODO MAIN  (arranca la aplicacion)
+	// ==========================================================================
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoSpring1Application.class, args);
 	}
 
+
+	// ==========================================================================
+	//  METODO RUN  (aqui probamos tódo)
+	// ==========================================================================
+
 	@Override
 	public void run(String... args) throws Exception {
 
 
-		System.out.println("Hola mundo");
+		// ======================================================================
+		//  MOSTRAR INFO DEL ARCHIVO mi.properties
+		// ======================================================================
+
+		System.out.println("====== INFO ======");
+		System.out.println(nombre);
+		System.out.println(version);
+		System.out.println(firma);
+		System.out.println("==================");
 
 
-		//CREO PEROSONAS CON SU INFO
-		//INSERTAR
- /*
-		Persona p = Persona.builder().nombre("Iker").apellidos("Lozano").email("ilozanor@iesch.org").dni("11811114G").build();
+
+
+
+		// ======================================================================
+		//  INSERTAR DATOS
+		// ======================================================================
+
+
+/*
+		//Crear personas con BUILDER
+		Persona p1 = Persona.builder().nombre("Iker").apellidos("Lozano").email("ilozanor@iesch.org").dni("11811114G").build();
 		Persona p2 = Persona.builder().nombre("Juan").apellidos("Magan").email("juan@iesch.org").dni("11811114A").build();
 		Persona p3 = Persona.builder().nombre("Hecproll").apellidos("criado").email("hectorcriado@iesch.org").dni("11811114B").build();
 		Persona p4 = Persona.builder().nombre("Paula").apellidos("Micas").email("paulam@iesch.org").dni("11811114C").build();
-*/
 
-		//System.out.println(p);
-/*
-		Persona p = new Persona();
-		p.setNombre("Pascualico");
-		p.setApellidos("java");
-		p.setDni("123123A");
-		p.setEmail("PAC");
-		personaRepositorio.save(p); //solo una
-*/
 
-/*
-		//------->meto esas peronas a la lista
-		List<Persona> personaList = new ArrayList<>(Arrays.asList(p, p2, p3, p4));
 
-		// -----> añado personas a la bbdd
-//		personaRepositorio.save(p); //solo una
+		//Crear personas con SETTERS
+		Persona p5 = new Persona();
+		p5.setNombre("Pascualico");
+		p5.setApellidos("java");
+		p5.setDni("123123A");
+		p5.setEmail("PAC");
+
+
+
+		//INSERTAR:
+
+		//meto las personas a la lista
+		List<Persona> personaList = new ArrayList<>(Arrays.asList(p1, p2, p3, p4));
+
+		//añado las personas a la bbdd
 		personaRepositorio.saveAll(personaList); //todas
+		personaRepositorio.save(p5); //solo una
+
+*/
 
 
-		//CRUD
-		//------> nos traemos todo los dato de ls bbdd y lo mete en personaList1 y lo mostramos
-		List<Persona> personaList1 = personaRepositorio.findAll();
-		System.out.println("--TRAIGO TODA LA INFO DE LA BBDD---");
-		personaList.forEach(System.out::println);
+
+
+		// ======================================================================
+		//  LEER DATOS
+		// ======================================================================
+
+/*
+		//nos traemos tódo los dato de la bbdd y lo mete en personasBBDD y lo mostramos
+		List<Persona> personasBBDD = personaRepositorio.findAll();  //findAll() --> busca y devuelve todas las personas almacenadas en la base de datos.
+
+		System.out.println("---TRAIGO TODA LA INFO DE LA BBDD---");
+		personasBBDD.forEach(System.out::println);
 		System.out.println("-----------------------------------");
 
-
-		//INFO
-		System.out.println(version);
-		System.out.println(nombre);
-		System.out.println(firma);
+*/
 
 
 
-		Persona p5 = Persona.builder().id(1L).dni("18444555A").build();
-		System.out.println(p);
 
-		Persona p6 = Persona.builder().id(2L).nombre("Iker").build();
-		System.out.println(p2);
+		// ======================================================================
+		//  ACTUALIZAR DATOS
+		// ======================================================================
 
-		//listaPersona.forEach(System.out::println);
-
-
-		//UPDATE
-
-		//si no ponemos el Optional y no encuientra esa persona nos dara fallo
-		Optional<Persona> PersonaEncontradaPorId = personaRepositorio.findById(4L);
+/*
 
 
+		//me creo una persona nueva y la meto a la bbdd
+		Persona p6 = Persona.builder().nombre("Andres").apellidos("Stan").email("aestan@iesch").dni("18444555A").build();
+		personaRepositorio.save(p6);
+
+
+		//busco la persona por su ID
+
+			//si no ponemos el Optional y nos encuentra esa persona nos dara fallo
+		Optional<Persona> PersonaEncontradaPorId = personaRepositorio.findById(6L);
+
+			//compruebo si esa persona existe
 		if (PersonaEncontradaPorId.isPresent()){
-			System.out.println("---------------Persona encontrada por ID----------------");
 
 			System.out.println(PersonaEncontradaPorId.get()); //el .get() es para q no muetsre el Optional
-
-		}else{
-			System.out.println("Persona no encontrada");
-		}
-
-
-		//cambiamnos los datos
-		if (PersonaEncontradaPorId.isPresent()){
 
 			PersonaEncontradaPorId.get().setNombre("Joaquin");
 			PersonaEncontradaPorId.get().setApellidos("juanlu");
 			PersonaEncontradaPorId.get().setDni("99999999R");
 			PersonaEncontradaPorId.get().setEmail("juanlu@aa.es");
+
 			//guardo los cambios
 			personaRepositorio.save(PersonaEncontradaPorId.get());
 
+			//consulto los datos
+			List<Persona> personasUpdate = personaRepositorio.findAll();
+			personasUpdate.forEach(System.out::println);
+
+
+		}else{
+			System.out.println("Persona no encontrada");
 		}
 
-		personaList1 = personaRepositorio.findAll();
-		System.out.println(personaList1);
+*/
 
 
 
-		//DELETE
-		//----> forma 1 de borrar
-		Optional<Persona> personaBorrar = personaRepositorio.findById(5L);
+		// ======================================================================
+		//  ELIMINAR DATOS
+		// ======================================================================
+
+
+/*
+		//FORMA 1 (buscar y borrar)
+		Optional<Persona> personaBorrar = personaRepositorio.findById(6L); //busco la perosna con ese id
+
+		//si existe la boroo
 		if (personaBorrar.isPresent()){
 
-			Persona personaBorra = personaBorrar.get();
-			personaRepositorio.delete(personaBorra);
+			Persona personaEliminada = personaBorrar.get();
+			personaRepositorio.delete(personaEliminada);
 
-			//pone esto pero no hace nada --> Hibernate: delete from persona where id=?
 		}
 
-		//----> forma 2 de borrar
-		Persona personaTMP = new Persona();
-		personaTMP.setId(3L);
-		personaRepositorio.delete(personaTMP);
+
+		//forma 2 (objeto temporal con el id)
+		Persona personaTMP = new Persona(); //crea un objeto perona vacio, no se crea una persona nueva
+		personaTMP.setId(5L); //le asigno el id 5
+		personaRepositorio.delete(personaTMP); //borro la perona con id5
 
 
 */
 
+
+
+
+		// ======================================================================
+		//  4.5  CONSULTAS PERSONALIZADAS (HQL, NATIVO Y PSEUDO-LENGUAJE)
+		// ======================================================================
+
+
 /*
-		//CONSULTAS
+		//1- HQL
 		System.out.println("POR HQL");
-		List<Persona> listaPersonas = personaRepositorio.buscaTodasPersonas();
-		listaPersonas.forEach(System.out::println);
 
+		List<Persona> consulta1 = personaRepositorio.buscaTodasPersonas();
+		consulta1.forEach(System.out::println);
+
+
+
+		//2- NATIVO
 		System.out.println("POR NATIVO");
-		List<Persona> listaPersonas2 = personaRepositorio.buscaTodasPersonasNative();
-		listaPersonas.forEach(System.out::println);
 
+		List<Persona> consulta2 = personaRepositorio.buscaTodasPersonasNative();
+		consulta2.forEach(System.out::println);
+
+
+
+		//3- PSEUDO-LENGUAJE
 		System.out.println("PSEUDO-LENGUAJE");
+
 		//buscamos personas q su nomnre empieze por J
 		List<Persona> empeizaJ = personaRepositorio.findByNombreStartingWith('j');
 		System.out.println(empeizaJ);
 
-		//buscamos personas con DNI que acabe en A y el apellido contenga una z
+		//buscamos personas con DNI que acabe en A y el apellido contenga una A
 		List<Persona> dniYapellido = personaRepositorio.findByDniContainingAndApellidosContaining('A', "A");
 		System.out.println(dniYapellido);
 
-		//persona con dni que contenga un 9 o su email sea nulo
+		//persona con dni que contenga un 1 o su email sea nulo
 		List<Persona> dniYemial = personaRepositorio.findByDniContainingOrEmailIsNull("1");
 		System.out.println(dniYemial);
 
 */
 
+
+
+		// ======================================================================
+		//  RELACION ONE TO ONE
+		// ======================================================================
+
+
 /*
-		System.out.println("ONE TO ONE");
 
-		//nueva persona
-		Persona persona = new Persona();
-		persona.setNombre("Pepelu");
-		persona.setNombre("Valencia");
-		persona.setDni("1231123A");
-		persona.setEmail("pepelu@aa.es");
+		//UNIDIRECCIONAL
+		System.out.println("ONE TO ONE UNIDIRECCIONAL");
+
+		//creo una persona
+		Persona persona1 = new Persona();
+		persona1.setNombre("Pepelu");
+		persona1.setApellidos("Valencia");
+		persona1.setDni("1231123A");
+		persona1.setEmail("pepelu@aa.es");
 
 
-		//Nuevo coche
-		Coche coche	= new Coche();
-		coche.setMarca("Tesla");
-		coche.setModelo("3");
-		coche.setMatricula("9999 JNY");
-*/
+		//Creo un coche
+		Coche coche1 = new Coche();
+		coche1.setMarca("Tesla");
+		coche1.setModelo("3");
+		coche1.setMatricula("9999 JNY");
 
-		//le asigno el coche a la persona
-		//persona.setCoche(coche);
+
+
+		//relacionarlos y guardarlo
+
+		//Relaciono el coche con la persona
+		persona1.setCoche(coche1);
 		//lo guardo en la BBDD
-		//personaRepositorio.save(persona);
+		personaRepositorio.save(persona1);
 
-/*
-		//cargar de la bbdd la persona con id 16
-		Optional<Persona> personaConCoche = personaRepositorio.findById(16L);
+
+
+
+		//muestro la persona y el coche
+		Optional<Persona> personaConCoche = personaRepositorio.findById(7L);
 		if (personaConCoche.isPresent()){
 			Persona p = personaConCoche.get();
 			System.out.println(p);
 		}
-
-
 
 
 		Optional<Coche> coche2 = cocheRepositorio.findById(1L);
@@ -236,47 +319,72 @@ public class DemoSpring1Application implements CommandLineRunner {
 			Coche p = coche2.get();
 			System.out.println(p);
 		}
+
 */
+
+
 
 /*
-		System.out.println("ONE TO ONE BIDIRECCIONAL ");
-		Persona persona1 = new Persona();
-		persona1.setNombre("Junalu");
-		persona1.setApellidos("dbz");
-		persona1.setDni("147258A");
-		persona1.setEmail("Jjuanlu@.es");
-		//personaRepositorio.save(persona1);
+		//BIDIRECCIONAL
+		System.out.println("ONE TO ONE BIDIRECCIONAL");
 
-		Coche coche1	= new Coche();
-		coche1.setMarca("Tesla");
-		coche1.setModelo("3");
-		coche1.setMatricula("9988 NAN");
-		//cocheRepositorio.save(coche1);
+		//creo una persona
+		Persona persona2 = new Persona();
+		persona2.setNombre("Junalu");
+		persona2.setApellidos("dbz");
+		persona2.setDni("147258A");
+		persona2.setEmail("Jjuanlu@.es");
+		personaRepositorio.save(persona2);
+
+		//creo un coche
+		Coche coche2 = new Coche();
+		coche2.setMarca("Tesla");
+		coche2.setModelo("3");
+		coche2.setMatricula("9988 NAN");
+		cocheRepositorio.save(coche2);
+
+		//Relaciono el coche con la persona
+		persona2.setCoche(coche2);
+		//Le asigno la persona 2 al coche 2. Así quedan relacionadas en ambos sentidos
+		coche2.setPersona(persona2);
+		//lo guardo en la bbdd
+		personaRepositorio.save(persona2);
 
 
-		persona1.setCoche(coche1);
-		coche1.setPersona(persona1);
-		personaRepositorio.save(persona1);
 */
+		//Buscar una persona y acceder a su coche
+		Optional<Persona> personaCoche = personaRepositorio.findById(8L);
 
-		System.out.println("Peta bidireccional");
-		Optional<Persona> persona = personaRepositorio.findById(21L);
+		if (personaCoche.isPresent()){
+			Persona personaConCoche = personaCoche.get();
+			System.out.println(personaConCoche);
 
-		if (persona.isPresent()){
-			Persona persona1 = persona.get();
-			System.out.println(persona1);
+			//accedo al coche desde la persona, mostrando al matricula del coche de la perona con id 8
+				//esto ya lo podiamos hacer desde la unidireccional
+			System.out.println(personaConCoche.getCoche().getMatricula());
 		}
 
 
+		System.out.println("----------------------------------------");
 
-		Optional<Coche> coche = cocheRepositorio.findById(6L);
 
-		if (coche.isPresent()){
-			Coche coche1 = coche.get();
+		//Buscar un coche y acceder a su persona
+		Optional<Coche> cochePersona = cocheRepositorio.findById(2L);
+
+		if (cochePersona.isPresent()){
+			Coche coche1 = cochePersona.get();
 			System.out.println(coche1);
-			Persona personatmp = coche1.getPersona();
+
+			Persona cocheDePersona = coche1.getPersona(); //Acceder desde el coche hasta la persona
+
 			System.out.println(coche1.getPersona().getCoche().getMatricula());
-			System.out.println("---> " + personatmp);
+			/*
+				coche1.getPersona() → accedo a la persona
+				.getCoche() → desde la persona vuelvo a acceder a su coche.
+				.getMatricula() → obtienes la matrícula de ese coche.
+			 */
+
+			System.out.println(cocheDePersona);//muestro la persona
 		}
 
 
