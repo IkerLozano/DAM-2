@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas DOM</title>
+</head>
+
+
+
+
+<body>
+
+    <div id="miDiv">
+
+        <p class="texto">Hola</p>
+        <p class="texto">Adiós</p>
+        <input type="checkbox" name="alumnos">
+        <input type="checkbox" name="alumnos">
+
+    </div>
+
+
+
+    
+    <script>
+
+        //busco el id de ese elemeto y guardo el elemento en myDiv
+        var myDiv = document.getElementById("miDiv");//document: representa todo el documento HTML
+        alert("El html de miDiv es" + myDiv.innerHTML);
+        //innerHTML -->  permite obtener o modificar todo el contenido HTML que hay dentro de un elemento.
+            
+        //myDiv.innerHTML = "<p>Hola Iker</p>"
+        
+
+    </script>
+
+</body>
+
+</html>
