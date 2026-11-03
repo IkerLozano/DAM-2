@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas DOM</title>
+
+    <style>
+        .importante {
+            color: red;
+        }
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+
+
+    <div id="miDiv">
+        <p id="miParrafo">Hola, ¿qué tal?</p>
+    </div>
+
+
+
+    
+    <script>
+
+    
+       var parrafo = document.getElementById("miParrafo");
+
+       //obtengo el elemento padre cuyo hijo tiene ese id y lo eilimino
+       parrafo.parentNode.removeChild(parrafo);
+       //parrafo.textContent = ""; //vacio el texto peo no lo borro
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

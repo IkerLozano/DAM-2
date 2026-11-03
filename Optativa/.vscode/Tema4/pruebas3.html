@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas DOM</title>
+</head>
+
+
+
+
+<body>
+
+    <div id="miDiv">
+
+        <p class="texto">Hola</p>
+        <p class="texto">Adiós</p>
+        <input type="checkbox" name="alumnos">
+        <input type="checkbox" name="alumnos">
+        <input type="radio" name="alumnos">
+
+    </div>
+
+
+
+    
+    <script>
+
+        //en la x guardo los elementos que name="alumnos
+        var x = document.getElementsByName("alumnos");
+
+        //recorro el array de resultados
+        for (let i = 0; i < x.length; i++) {
+            
+            //si el resultado es un checkbox lo marco
+            if (x[i].type == "checkbox"){
+                x[i].checked = true
+
+                
+            }
+            
+        }
+
+        
+
+    </script>
+
+</body>
+
+</html>

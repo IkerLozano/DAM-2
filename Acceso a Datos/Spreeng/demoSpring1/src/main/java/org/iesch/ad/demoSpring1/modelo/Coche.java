@@ -17,15 +17,18 @@ public class Coche {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //id autonumerico
     Long id;
     String marca;
     String modelo;
     String matricula;
 
-    @OneToOne(mappedBy = "coche")//nombre de la variable que hace el mapeo en la relacion padre
-    @ToString.Exclude //para q el hijo no tenga el toString y que no tenga referencia infinita
-    Persona persona;
+
+
+    //indico la relacion uno a uno
+    @OneToOne(mappedBy = "coche")// indica que la relación está controlada por el atributo coche de la clase Persona
+    @ToString.Exclude //para que el hijo no tenga el toString y que no tenga referencia infinita
+    Persona persona; //permite acceder desde un coche hasta la persona relacionada
 
 
 

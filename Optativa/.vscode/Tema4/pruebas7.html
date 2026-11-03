@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas DOM</title>
+
+    <style>
+        .importante {
+            color: red;
+        }
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+
+
+    <div id="miCaja" class="caja"></div>
+
+
+    <div id="miDiv">
+        <p>Hola</p>
+    </div>
+
+
+    <script>
+
+
+        //obtengo el elemento
+        var div = document.getElementById("miDiv");
+
+        //creo u nnuevo elemento y le pongo el texto "Adiós"
+        var nuevo = document.createElement("p");
+        nuevo.textContent = "Adiós";
+
+        //remplazo el parrafo antiguo (<p>Hola</p>) por el nuevo (<p>Adiós</p>)
+        div.replaceChild(nuevo, div.firstElementChild);
+
+
+
+        //obtengo el elemento 
+        var caja = document.getElementById("miCaja");
+
+        //ahora el div tiene la class "caja naranja"
+        caja.setAttribute("class", "caja naranja");
+
+        //tambien lo podemos hacer asi
+        caja.className = "caja naranja";
+
+
+
+        //obtener el valor del atributo
+        var clase = caja.getAttribute("class");
+        alert(clase);
+
+
+        //elimino el atributo class
+        caja.removeAttribute("class");
+
+
+
+    </script>
+
+</body>
+
+</html>

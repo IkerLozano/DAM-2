@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas DOM</title>
+
+    <style>
+        .importante {
+            color: red;
+        }
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+
+    <div id="miDiv">
+
+        <p class="texto">Hola</p>
+        <p class="texto">Adiós</p>
+        <p class="importante">Cuidado</p>
+
+    </div>
+
+
+
+
+    <script>
+
+        //busca los de la clase importante
+        var elementos = document.getElementsByClassName("importante");
+
+
+
+        for (let i = 0; i < elementos.length; i++) {
+             
+            alert(elementos[i].innerHTML);
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

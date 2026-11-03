@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas DOM</title>
+
+    <style>
+        #cont {
+            border: 2px solid red;
+            padding: 20px;
+        }
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+
+
+    <!--cuando pulsemos en el boton  sale el mensaje-->
+    <input type="button" value="Pulsar" onclick="alert('Hola mundo');">
+
+
+    <!--cuando pulsemos en el boton  sale el mensaje-->
+    <input type="button" value="Pulsar 2" onclick="miFuncion()">
+
+
+
+    <div id="cont" onmouseover="this.style.borderColor='black';" onmouseout="this.style.borderColor='red';">
+
+        Contenidos
+    </div>
+    <!--
+        onmouseover: cuando pasamos el ratón por encima, el borde se vuelve negro.
+        onmouseout: cuando quitamos el ratón, el borde se vuelve rojo
+        this: hace referencia al propio div
+    -->
+
+
+    <button id="miObjeto">Pulsar</button>
+
+
+    <button id="miObjeto2">Pulsar nuevo</button>
+
+
+
+
+
+    <script>
+
+
+
+        function miFuncion() {
+            alert("Hola mundo");
+
+        }
+
+        document.getElementById("cont").style.borderColor = "black";
+
+
+
+
+
+
+        //function mostrarMensaje() {
+        //    alert("Hola");
+        //}
+        //
+        //document.getElementById("miObjeto").onclick = mostrarMensaje;
+        //
+        //
+        //
+        //
+        //
+        //function mostrarMensaje2(evento) {
+        //    alert(evento.type);
+        //}
+
+        //document.getElementById("miObjeto").onclick = mostrarMensaje2;
+
+
+        //function mostrarMensaje3(evento) {
+        //    if (evento.type == "keyup") {
+        //        alert(evento.key);
+        //    }
+        //    else if (evento.type == "click") {
+        //        alert(evento.clientX + " " + evento.clientY);
+        //    }
+        //}
+        //
+        //document.getElementById("miObjeto").onclick = mostrarMensaje3;
+        //document.onkeyup = mostrarMensaje3;
+
+
+
+
+
+
+
+        function mostrarMensaje(evento) {
+            alert("Hola");
+        }
+
+        document.getElementById("miObjeto2").addEventListener("click", mostrarMensaje);
+
+
+
+
+        document.getElementById("miObjeto").addEventListener("dblclick", function () {
+                alert("Código metido directamente");
+            });
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas DOM</title>
+</head>
+
+
+
+
+<body>
+
+    <div id="miDiv">
+
+        <p class="texto">Hola</p>
+        <p class="texto">Adiós</p>
+        <input type="checkbox" name="alumnos">
+        <input type="checkbox" name="alumnos">
+
+    </div>
+
+
+
+    
+    <script>
+
+        var myDiv = document.getElementById("miDiv");
+
+        var losP = myDiv.getElementsByTagName("p");
+        var num = losP.length; //número de elementos encontrados
+
+        alert("Hay " + num + " <p> elementos en el elemento miDiv");
+
+        alert("En el primer P el HTML asociado es " +losP[1].innerHTML)
+        
+
+    </script>
+
+</body>
+
+</html>

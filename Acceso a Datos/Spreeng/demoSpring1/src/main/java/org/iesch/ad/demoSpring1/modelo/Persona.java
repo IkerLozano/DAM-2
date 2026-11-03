@@ -8,8 +8,8 @@ import org.springframework.data.web.JsonPath;
 import java.time.LocalDateTime;
 
 
-@Getter //genera los setters
-@Setter //genera los getters
+@Getter //genera los getters
+@Setter //genera los setters
 @ToString //genera el toString
 @EqualsAndHashCode
 @Builder //Permite crear objetos de forma rapida, encadenando campos
@@ -26,29 +26,40 @@ public class Persona {
     //@Column() para indicarle la configuracion del dato(unique...)
     String nombre;
     String apellidos;
-    @Column(length = 9)
+    @Column(length = 9) //longutus de la columna
     String dni;
     String email;
     private LocalDateTime createdAt;
 
-    //antes de guarda la h hace esto
-    @PrePersist
+
+
+    //mostar la fecha de cuando creo una persona
+    @PrePersist //indica que este metodo se ejecuta justo antes de insertar una nueva persona en la base de datos
     public void preGuardar(){
         this.createdAt = LocalDateTime.now();
     }
 
-    //mensaje que muetsra al insertar
-    @PostPersist
+
+    //mostrar por consola el ID que se ha generado al guardar la persona
+    @PostPersist//indica que este metodo se ejecuta después de insertar una nueva persona en la base de datos
     public void postGuardado(){
 
         System.out.println("Se guarda con id: " + this.id);
+        //no tenemos que llamar a este metodo nostros, Hibernate lo ejecuta automáticamente
     }
 
 
 
-    @OneToOne(cascade = CascadeType.ALL)//si se elimina el padre se elimina todo
-    @JoinColumn(name = "coche_id", referencedColumnName = "id") //clabe ajena
-    Coche coche;
+    //índico la relación uno a uno
+        //Una persona tiene un coche.
+        //Un coche pertenece a una persona.
+    @OneToOne(cascade = CascadeType.ALL) //lo que hagamos en persona se propaga en coche
+    @JoinColumn(name = "coche_id", referencedColumnName = "id") //indica dnd esta la clave ajena, ledigo que la CA se llame "coche_id"
+            Coche coche;
+            /*
+                Es el atributo que permite que una persona tenga asociado un coche,
+                asi podemos acceder al coche de esa persona
+             */
 
 
 

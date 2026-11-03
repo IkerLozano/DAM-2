@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas DOM</title>
+
+    <style>
+        .importante {
+            color: red;
+        }
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+
+
+    <ul id="miLista">
+        <li>Leche</li>
+        <li>Pan</li>
+    </ul>
+
+
+
+
+    <script>
+
+        //creo un elemento
+        var nuevoNodo = document.createElement("LI");
+
+        //creo un texto
+        var nodoTexto = document.createTextNode("Agua");
+        
+        //al elemeto de antes de asigno el texto (<li>Agua</li>)
+        nuevoNodo.appendChild(nodoTexto);
+
+        //busca la lista con ese id y añade el elemento
+        document.getElementById("miLista").appendChild(nuevoNodo);
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
