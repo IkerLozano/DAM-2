@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+
+
+
+
+    <!-- actions opening views on models -->
+
+      <!-- el nombre de la accion tienq ser el mismo -->
+
+    <record model="ir.actions.act_window" id="school.action_window_student">
+      <field name="name">Alumnos</field>
+      <field name="res_model">school.student</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="school.action_window_asignaturas">
+      <field name="name">Asignaturas</field>
+      <field name="res_model">school.subject</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="school.action_window_profesores">
+      <field name="name">Profesores</field>
+      <field name="res_model">school.teacher</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="Escuela" id="school.menu_root"/>
+
+
+    <!-- menu categories -->
+
+    <menuitem name="Alumnos" id="school.menu_alumno" parent="school.menu_root"/>
+    <menuitem name="Asignaturas" id="school.menu_asignaturas" parent="school.menu_root"/>
+    <menuitem name="Profesores" id="school.menu_profesores" parent="school.menu_root"/>
+
+
+    <!-- actions -->
+
+    <menuitem name="Listado alumnos" id="school.menu_alumnos_list" parent="school.menu_alumno"
+            action="school.action_window_student"/>
+
+    <menuitem name="Listado asignaturas" id="school.menu_subject_list" parent="school.menu_asignaturas"
+            action="school.action_window_asignaturas"/>
+
+    <menuitem name="Listado profesores" id="school.menu_profesores_list" parent="school.menu_profesores"
+            action="school.action_window_profesores"/>
+    
+
+
+  </data>
+</odoo>

@@ -1,0 +1,25 @@
+<odoo>
+  <data>
+
+    <!-- explicit list view definition -->
+
+
+
+
+    <record model="ir.ui.view" id="school.asignatura_list">
+      <field name="name">Asiganturas</field>
+      <field name="model">school.subject</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="level"/>
+          <field name="teacher_id"/>
+          <field name="deparment_teacher"/>
+        </list>
+      </field>
+    </record>
+
+
+
+  </data>
+</odoo>
