@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 2</title>
+</head>
+
+<body>
+
+
+    <div id="div">
+
+
+
+    </div>
+
+
+    <script>
+
+
+        let nums = [];
+
+        function casiPrimo() {
+
+
+            for (let i = 1; i < 100; i++) {
+                let cont = 0
+
+                for (let j = 1; j <= i; j++) {
+                    if (i % j == 0) {
+                        cont++
+
+                    }
+
+                }
+                if (cont == 3) {
+                    nums.push(i)//si es casi primo lo mto en la lista 
+                    console.log(i)
+                }
+
+            }
+
+        }
+
+        casiPrimo() //llamo a la funcion para que me llene la lista 
+        cont = 0
+        for (let i = 0; i < 100; i++) { //se creara un div nuevo cada pasada
+
+            cont++
+
+
+            var elemento = document.createElement("DIV")//creo el nuevo div
+            var texto = document.createTextNode(cont)//creo el texto
+            elemento.appendChild(texto)//meto el texto dentro del div
+
+            document.getElementById("div").appendChild(elemento)//meto el elemento dentro del div padre
+
+
+            
+
+            
+            //estilo del cuadro segun el num
+            for (let j = 0; j < nums.length; j++) {
+
+                if (nums[j] == cont) {
+                    elemento.style.width = "50px";
+                    elemento.style.height = "50px";
+                    elemento.style.border = "1px solid black";
+                    elemento.style.display = "inline-block";
+                    elemento.style.background = "yellow";
+                } else {
+                    elemento.style.width = "50px";
+                    elemento.style.height = "50px";
+                    elemento.style.border = "1px solid black";
+                    elemento.style.display = "inline-block";
+                }
+            }
+
+
+
+
+
+        }
+
+        
+        
+
+        
+
+        //Un número primo solo se puede dividir exactamente entre 1 y él mismo.
+
+    </script>
+
+
+</body>
+
+</html>

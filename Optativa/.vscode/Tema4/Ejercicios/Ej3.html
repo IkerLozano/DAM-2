@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 3</title>
+</head>
+
+<body>
+
+    <button id="boton1">Marcar todos</button>
+    <button id="boton2">Desmarcar todos</button>
+
+
+
+    <ul id="div">
+
+    </ul>
+
+
+
+
+
+    <script>
+
+
+        let checks = []
+
+        //CREO LOS CHECKBOX
+
+        for (let i = 0; i < 100; i++) {
+
+            let num = Math.floor(Math.random() * 100);
+
+            //creo el elemento
+            var elemento = document.createElement("INPUT") //checkbox
+            elemento.type = "checkbox";
+
+            var label = document.createElement("LABEL")//etiqueta de los textos
+
+            var lista = document.createElement("LI")
+
+            //creo el texto para los CHEKBOX
+            var texto = document.createTextNode(num)
+
+            //al checkbox le pongo el texto
+            //meto todo en el label pq es lo que agrupa todo
+            label.appendChild(elemento)
+            label.appendChild(texto)
+            lista.appendChild(label)
+
+
+
+            //meto los checkbox al div
+            document.getElementById("div").appendChild(lista)
+
+            document.write(`<br>`)
+
+            checks.push(elemento)
+
+            
+
+        }
+
+
+        //FUNCIONAMIENTO BOTONES
+        document.getElementById("boton1").addEventListener("click", function(){
+
+            for (let i = 0; i < checks.length; i++) {
+                
+                checks[i].checked = true
+                
+                
+            }
+
+        })
+
+
+        document.getElementById("boton2").addEventListener("click", function(){
+
+            for (let i = 0; i < checks.length; i++) {
+                
+                checks[i].checked = false
+                
+                
+            }
+
+        })
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

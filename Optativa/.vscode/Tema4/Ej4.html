@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 4</title>
+</head>
+
+<body>
+
+    <p class="texto" onclick="ocultar(this)" ondblclick="borrar(this)">Hola</p>
+    <p class="texto" onclick="ocultar(this)" ondblclick="borrar(this)">Buenas</p>
+    <p class="texto" onclick="ocultar(this)" ondblclick="borrar(this)">Noches</p>
+
+    <button id="boton" onclick="reaparacer()">Reaparacer ocultos</button>
+
+
+    <script>
+
+
+        //this: representa el elemento HTML sobre el que has hecho clic
+
+
+        function borrar(elemento) {
+
+            elemento.remove();
+            console.log(elemento.innerHTML + " --> eliminado")
+
+        }
+
+
+
+        function ocultar(elemento) {
+
+            elemento.style.display = "none"
+            console.log(elemento.innerHTML + " --> ocultado")
+
+        }
+
+
+
+        var textoOculto = document.getElementsByClassName("texto")
+        function reaparacer() {
+
+            for (let i = 0; i < textoOculto.length; i++) {
+
+                //console.log(textoOculto[i].innerHTML)
+
+                if (textoOculto[i].style.display == "none") {
+
+                    textoOculto[i].style.display = "block" //lo vuelve a mostar 
+                }
+
+
+            }
+
+            //console.log(textoOculto.length)
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

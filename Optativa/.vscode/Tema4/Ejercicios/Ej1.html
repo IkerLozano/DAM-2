@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 1</title>
+</head>
+<body>
+
+    <button id="boton">Nuevo numero</button>
+    
+
+    
+
+    <script>
+
+        let lista = [];
+
+        document.getElementById("boton").addEventListener("click", function(){
+
+            //genra un num aleatorio son decimales(para eso es el floor)
+            //el *10 es para q sea enre 1 y 10
+            let num = Math.floor(Math.random() * 10);
+
+            lista.push(num)
+
+            console.log(lista)
+            
+        })
+
+    </script>
+
+</body>
+</html>
