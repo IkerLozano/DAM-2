@@ -1,0 +1,39 @@
+QWidget {
+
+    background-color: gainsboro;
+
+}
+QLabel {
+
+    color: blue;
+    font-weight: bold;
+
+}
+
+QLineEdit {
+
+    border: 2px solid blue;
+    border-radius: 5px;
+
+}
+
+QPushButton {
+
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+QPushButton#pushButton {
+
+    color: red;
+    border: 3px solid red;
+
+}
+
+QPushButton#pushButton_2 {
+
+    color: green;
+    border: 3px solid green;
+
+}

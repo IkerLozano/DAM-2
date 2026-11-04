@@ -1,9 +1,13 @@
 package org.iesch.ad.demoSpring1;
 
 import org.iesch.ad.demoSpring1.modelo.Coche;
+import org.iesch.ad.demoSpring1.modelo.Curso;
 import org.iesch.ad.demoSpring1.modelo.Persona;
+import org.iesch.ad.demoSpring1.modelo.Student;
 import org.iesch.ad.demoSpring1.repositorio.CocheRepositorio;
+import org.iesch.ad.demoSpring1.repositorio.CursoRepositorio;
 import org.iesch.ad.demoSpring1.repositorio.PersonaRepositorio;
+import org.iesch.ad.demoSpring1.repositorio.StudentRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -69,6 +73,15 @@ public class DemoSpring1Application implements CommandLineRunner {
 		//repo de coches
 	@Autowired
 	CocheRepositorio cocheRepositorio;
+
+		//repo de student
+	@Autowired
+	StudentRepositorio studentRepositorio;
+
+
+		//repo de curso
+	@Autowired
+	CursoRepositorio cursoRepositorio;
 
 
 
@@ -230,7 +243,7 @@ public class DemoSpring1Application implements CommandLineRunner {
 
 
 		// ======================================================================
-		//  4.5  CONSULTAS PERSONALIZADAS (HQL, NATIVO Y PSEUDO-LENGUAJE)
+		//  CONSULTAS PERSONALIZADAS (HQL, NATIVO Y PSEUDO-LENGUAJE)
 		// ======================================================================
 
 
@@ -351,7 +364,7 @@ public class DemoSpring1Application implements CommandLineRunner {
 		personaRepositorio.save(persona2);
 
 
-*/
+
 		//Buscar una persona y acceder a su coche
 		Optional<Persona> personaCoche = personaRepositorio.findById(8L);
 
@@ -378,14 +391,56 @@ public class DemoSpring1Application implements CommandLineRunner {
 			Persona cocheDePersona = coche1.getPersona(); //Acceder desde el coche hasta la persona
 
 			System.out.println(coche1.getPersona().getCoche().getMatricula());
-			/*
+
 				coche1.getPersona() → accedo a la persona
 				.getCoche() → desde la persona vuelvo a acceder a su coche.
 				.getMatricula() → obtienes la matrícula de ese coche.
-			 */
+
 
 			System.out.println(cocheDePersona);//muestro la persona
 		}
+
+
+*/
+
+
+
+		// ======================================================================
+		//  RELACION ONE TO MANY
+		// ======================================================================
+
+/*
+
+		//UNIDIRECCIONAL
+
+		System.out.println("MANY TO MANY --> UNIDIRECCIONAL");
+
+		Student student = new Student();
+		student.setNombre("Alberto");
+
+
+		Curso curso1 = new Curso();
+		curso1.setNombre("PHP");
+		Curso curso2 = new Curso();
+		curso2.setNombre("Spring");
+		Curso curso3 = new Curso();
+		curso3.setNombre("Python");
+
+
+		//al estudiante le meto los cursos
+		student.setCursos(Set.of(curso1, curso2, curso3));
+
+		//System.out.println(student);
+
+
+		studentRepositorio.save(student);
+
+*/
+
+
+		//BIIDIRECCIONAL
+
+		System.out.println("MANY TO MANY --> BIIDIRECCIONAL");
 
 
 
