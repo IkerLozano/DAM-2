@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 8</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+
+        document.addEventListener("dblclick", color)
+
+
+        function color(evento) {
+
+            let color = "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0");
+            document.bgColor = color
+
+            //.toString(16) --> Convierte el número a hexadecimal (base 16), que es el formato utilizado para representar colores.
+            //.padStart(6, "0") --> Se asegura de que tenga 6 caracteres, añadiendo ceros delante si hacen falta.
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

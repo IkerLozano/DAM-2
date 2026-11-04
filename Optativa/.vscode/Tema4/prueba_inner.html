@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba inner</title>
+</head>
+
+<body>
+
+    <p id="texto">hola</p>
+    <p id="texto2">Buenas</p>
+    
+
+
+    <script>
+
+
+        var parrafo = document.getElementById("texto")
+        var parrafo2 = document.getElementById("texto2")
+
+        parrafo.innerHTML = "<p>Adios</p>" //modificar
+        parrafo.innerHTML += "<p>Otro</p> <button>boton</button>" //añadir
+        parrafo2.innerHTML = "" //eliminar
+        console.log("Con innerHTML --> " + parrafo.innerHTML) //ver
+        console.log("Con textContent -> " + parrafo.textContent) //ver
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 6</title>
+</head>
+
+<body>
+
+
+    <button id="boton1">Comenzar Saludos</button>
+    <button id="boton2">Parar Saludos</button>
+
+    <script>
+
+        document.getElementById("boton1").onclick = empezar
+        document.getElementById("boton2").onclick = acabar
+
+
+
+        function saludo() {
+            alert("Hola")
+        }
+
+        
+        let intervalo
+        function empezar() {
+            intervalo = setInterval(saludo, 5000)
+        }
+
+
+
+        function acabar() {
+            clearInterval(intervalo)
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

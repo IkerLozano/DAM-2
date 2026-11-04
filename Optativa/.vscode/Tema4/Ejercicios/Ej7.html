@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 7</title>
+</head>
+
+<body>
+
+    <ul id="lista">
+
+    </ul>
+
+
+    <script>
+
+
+
+
+
+        let letra
+        let letraM
+
+
+        document.addEventListener("keypress", function (evento) {
+
+
+            letra = evento.key
+            letraM = letra.toUpperCase()
+
+
+            /*
+                keypress: es el evento que se activa cuando pulsas una tecla.
+                evento.key: obtiene cuál es la tecla que has pulsado.
+            */
+
+            var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'O'];
+
+            let resto
+
+            let texto2 = document.createTextNode("--------------DNI CON " + letraM + "--------------------------")
+            document.getElementById("lista").appendChild(texto2)
+
+            for (let i = 1; i < 9999; i++) {
+
+                resto = i % 23
+                let letraDNI = letras[resto]
+
+
+                if (letraDNI == letraM) {
+
+                    //document.write(i + letraDNI + " - ")
+
+                    let elemento = document.createElement("LI")
+                    let texto = document.createTextNode(i.toString().padStart(4, "0") + letraDNI) //.padStart(4, "0") --> se asegura que i tenga 4 cifras y si  no te pone un
+                    elemento.appendChild(texto)
+                    document.getElementById("lista").appendChild(elemento)
+                }
+
+
+            }
+
+
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

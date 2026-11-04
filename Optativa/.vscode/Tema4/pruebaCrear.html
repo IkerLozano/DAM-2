@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+
+        let check = document.createElement("input") 
+        check.type = "checkbox"
+        let texto1 = document.createTextNode("checkbox")//texto del check
+
+
+        let radio = document.createElement("input")
+        radio.type = "radio"
+        let texto2 = document.createTextNode("radio")//texto del radio
+
+
+        document.body.appendChild(radio);
+        document.body.appendChild(texto1);
+
+        document.body.appendChild(document.createElement("br"));//espacio entre los dos
+
+
+        document.body.appendChild(check);
+        document.body.appendChild(texto2);
+
+
+
+    </script>
+
+</body>
+
+</html>
