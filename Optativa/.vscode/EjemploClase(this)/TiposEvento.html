@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+
+</head>
+
+<body>
+
+	<div id="caja" style="width:150px; height:60px; border:thin solid silver;background: green;">Caja</div>
+
+	<script>
+
+		function mostrarMensaje(evento) {
+			if (evento.type == "keyup") {
+				console.log(evento.keyCode);
+			}
+			else if (evento.type == "click") {
+				console.log(evento.clientX + " " + evento.clientY);
+
+			}
+		}
+
+
+		document.getElementById("caja").onclick = mostrarMensaje;
+		document.onkeyup = mostrarMensaje;
+
+	</script>
+
+</body>
+
+</html>
