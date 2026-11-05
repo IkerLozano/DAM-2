@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+
+    <style>
+		.caja {
+			width: 200px;
+			height: 200px;
+			cursor: pointer;
+			background: #226fc1;
+			margin: 10px;
+			display: inline-block;
+			text-align: center;
+			font-size: 30px;
+			color: #fff;
+			font-family: Arial;
+		}
+
+		.negro {
+			background: #000;
+		}
+	</style>
+
+
+</head>
+<body>
+
+
+    <div class="caja" onclick="color(this)">1</div>
+    <div class="caja" onclick="color(this)">2</div>
+    <div class="caja" onclick="color(this)">3</div>
+    <div class="caja" onclick="color(this)">4</div>
+
+
+    <script>
+
+
+        function color(elemento){
+            
+            elemento.classList.toggle("negro")
+        }
+
+
+    </script>
+    
+</body>
+</html>

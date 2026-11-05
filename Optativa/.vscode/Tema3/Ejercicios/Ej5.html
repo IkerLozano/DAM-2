@@ -24,7 +24,7 @@
 
 <script>
 
-    var festivos = [[1, 6], [], [], [17, 18, 23], [1], [], [], [15], [], [12], [1], [6, 8, 25]];
+    var festivos = [[1, 6], [], [], [17, 18, 23], [1], [], [], [15], [], [1, 2], [1], [6, 8, 25]];
     var dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "Sabado", "Domingo"]
 
     var mesUsuario = prompt("Dime un mes")
@@ -32,7 +32,7 @@
     var mesNumero
     //var diasDeMes = me
 
-    switch(mesUsuarioMayus){
+    switch (mesUsuarioMayus) {
         case "ENERO":
             mesNumero = 0;
             break;
@@ -70,39 +70,41 @@
             mesNumero = 11;
             break;
         default:
-           console.log("No es un mes") 
-           break;
+            console.log("No es un mes")
+            break;
     }
 
+
+    //creo una fecha completa del dia 1 del mes del usuario
+    let fechaConMesUsuario = new Date(2026, mesNumero, 1)
+    console.log(fechaConMesUsuario)
+
+    //saco el año de esa fecha
+    let anioDeFechaUser = fechaConMesUsuario.getFullYear()
+    console.log(anioDeFechaUser)
+
+    //obtengo que dia de la semana(lunes, martes....) era el primer dia del mes
+    let diaSemana = fechaConMesUsuario.getDay()
+    console.log(diaSemana)
+
+    //obtengo la fecha completa del ultimo dia del mes
+    //poniendo 0 lo que hago es obetner el ultimo dia
+    let fechaUltimoDiaMes = new Date(anioDeFechaUser, mesNumero + 1, 0)
+    console.log(fechaUltimoDiaMes)
+
+    //obtengo el ultimo dia del mes
+    let numeroUltimoDiaMes = fechaUltimoDiaMes.getDate()
+    console.log(numeroUltimoDiaMes)
+
+    //Adapto el domingo de 0 a 7 para que la semana empiece en lunes.
+    if (diaSemana == 0) {
+        diaSemana = 7;
+    }
+
+
+
+
     
-    var fechaConMesUsuario  = new Date(2026, mesNumero, 1)
-    
-    var anioDeFechaUser = fechaConMesUsuario.getFullYear()
-    
-    var diaMes1 = new Date(`${anioDeFechaUser}-${mesNumero + 1}-1`)
-    console.log(diaMes1)
-
-
-
-    var fechaA = new Date()
-    var anio = fechaA.getFullYear()
-    var mes = fechaA.getMonth()
-
-    var dia1 = new Date(`${anio}-${mes + 1}-1`) //el 0 es enero
-    var diaS = dia1.getDay()
-    var mes1 =  new Date(`${anio}-${mes + 2}-1`)
-    var fechaUltimoDia = new Date(fechaA.getFullYear(), (fechaA.getMonth()+1), 0)
-    var ultimoDia = fechaUltimoDia.getDate()
-
-    console.log(dia1)
-    console.log(diaS)
-    console.log(mes1)
-    console.log(ultimoDia)
-
-
-   
-
-
     document.write("<table>")
 
     //FILA DE LOS DIAS
@@ -117,22 +119,39 @@
     document.write("</tr>")
 
 
+
     //FILA DE LOS NUMEROS
     document.write("<tr>")
-    for (let a = 1; a < diaS; a++) {
+
+    //con esto pongo las celdas vacias antes del dia 1
+    for (let a = 1; a < diaSemana; a++) {
         document.write("<td>" + " " + "</td>")
 
     }
 
 
-    var cont = diaS-1
-    for (let i = 1; i <= ultimoDia; i++) {
-        
+    var cont = diaSemana - 1//con esto se cuantas celdas estan vacias
 
-        document.write("<td>" + i + "</td>")
+    //recorro todos los dias del mes
+    for (let i = 1; i <= numeroUltimoDiaMes; i++) {
 
-        cont ++
-        if (cont%7 == 0) {
+        //para los dias festivos
+        if (festivos[mesNumero].includes(i)) {
+            document.write("<td style='color: red'>" + i + "</td>");
+        } else {
+            document.write("<td>" + i + "</td>");
+        }
+        /*
+            festivos[mesNumero] --> seleciona los festivos del mes
+                festivos[0] ->  [1, 6] (enero)
+            includes(i) --> Comprueba si el número que contiene i está dentro de ese array.
+                [1, 6].includes(6) --> devuelve tru/false
+        */
+
+
+
+        cont++
+        if (cont % 7 == 0) {
             document.write("<tr>")
 
             document.write("</tr>")
@@ -142,12 +161,9 @@
     document.write("</tr>")
 
 
-
-
-
-
-
     document.write("</table>")
+
+
 
 
 </script>

@@ -46,13 +46,39 @@
     document.write("</tr>")
 
 
+    let horaInicio = new Date(2026, 1, 1, 15, 45) //hora de inicio de la clase (la fecha da igual)
+    let horaInicio2 = new Date(2026, 1, 1, 16, 35) //hora de final de la clase (la fecha da igual)
+    console.log(horaInicio)
+
     //PONGO LAS ASIGNATURAS
     for (let i = 0; i < horario.length; i++) {
         //console.log(horario.length);
 
         document.write("<tr>")
 
-        document.write("<td>" + "15:45-16:35" + "</td>")
+
+        if (i == 0 || i == 1) {
+            document.write("<td>" + horaInicio.getHours() + ":" + horaInicio.getMinutes() + " - " + horaInicio2.getHours() + ":" + horaInicio2.getMinutes() + "</td>")
+            horaInicio.setMinutes(horaInicio.getMinutes() + 55)
+            horaInicio2.setMinutes(horaInicio2.getMinutes() + 55)
+        }else if (i == 2){
+            document.write("<td>" + horaInicio.getHours() + ":" + horaInicio.getMinutes() + " - " + horaInicio2.getHours() + ":" + horaInicio2.getMinutes() + "</td>")
+            horaInicio.setMinutes(horaInicio.getMinutes() + 50)
+            horaInicio2.setMinutes(horaInicio2.getMinutes() + 15)
+        }else if(i == 3){
+            document.write("<td>" + horaInicio.getHours() + ":" + horaInicio.getMinutes() + " - " + horaInicio2.getHours() + ":" + horaInicio2.getMinutes() + "</td>")
+            horaInicio.setMinutes(horaInicio.getMinutes() + 15)
+            horaInicio2.setMinutes(horaInicio2.getMinutes() + 50)
+        }else if (i == 4){
+            document.write("<td>" + horaInicio.getHours() + ":" + horaInicio.getMinutes() + " - " + horaInicio2.getHours() + ":" + horaInicio2.getMinutes() + "</td>")
+            horaInicio.setMinutes(horaInicio.getMinutes() + 55)
+            horaInicio2.setMinutes(horaInicio2.getMinutes() + 55)
+        }else{
+            document.write("<td>" + horaInicio.getHours() + ":" + horaInicio.getMinutes() + " - " + horaInicio2.getHours() + ":" + horaInicio2.getMinutes() + "</td>")
+            horaInicio.setMinutes(horaInicio.getMinutes() + 55)
+            horaInicio2.setMinutes(horaInicio2.getMinutes() + 55)
+        }
+
 
         for (let j = 0; j < horario[i].length; j++) {
             document.write("<td>" + horario[i][j] + "</td>")
