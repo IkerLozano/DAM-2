@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 1</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,
+        th {
+            border: 2px solid green;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <tr></tr>
+
+
+
+    </tr>
+    <script>
+
+        let dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "Sabado", "Domingo"]
+
+
+        let fechaDeHoy = new Date() //fecha actual
+        let anio = fechaDeHoy.getFullYear() //saco el año de la fecha
+        let mes = fechaDeHoy.getMonth() //saco el mes de la fecha
+        let fechaCompletaDia1 = new Date(anio, mes, 1) //fecha completa del dia 1
+        let diaSemana = fechaCompletaDia1.getDay() //dia de semana de esa fecha, me dice 0 que es domigo
+        let fechaCompletaDiaU = new Date(anio, mes + 1, 0) //fecha completa del ultimo dia del mes
+        let ultimoDia = fechaCompletaDiaU.getDate()//saco el ultimo dia del mes, me da 30 que es el ultimo dia
+
+
+
+
+        if (diaSemana == 0) {
+            diaSemana = 7;
+        }
+
+
+
+        document.write("<table>")
+
+        //DIAS DE LA SEMANA
+        document.write("<tr>")
+
+        for (let i = 0; i < dias.length; i++) {
+
+            document.write("<th>" + dias[i] + "</th>")
+
+        }
+
+        document.write("</tr>")
+
+
+
+
+
+        //COLOCO LOS DIAS DEL MES
+        document.write("<tr>")
+
+
+        //colocar los hucos blancos
+        for (let i = 1; i < diaSemana; i++) {
+
+            document.write("<td>" + " " + "</td>")
+        }
+
+        let cont = diaSemana - 1//con esto se cuantas celdas estan vacias
+
+
+        for (let i = 1; i <= ultimoDia; i++) {
+
+
+            document.write("<td>" + i + "</td>");
+
+
+
+            //para saber cuando tengo que hacer una nueva fila
+            cont++
+            if (cont % 7 == 0) {
+                document.write("<tr>")
+
+                document.write("</tr>")
+            }
+
+        }
+
+        document.write("</tr>")
+
+
+        document.write("</table>")
+
+
+    </script>
+
+</body>
+
+</html>
