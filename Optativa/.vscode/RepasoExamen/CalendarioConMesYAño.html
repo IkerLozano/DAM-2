@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ej 1</title>
+    <title>Ej 2</title>
 
     <style>
         table {
@@ -31,9 +31,59 @@
         let dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "Sabado", "Domingo"]
 
 
-        let fechaDeHoy = new Date() //fecha actual
-        let anio = fechaDeHoy.getFullYear() //saco el año de la fecha
-        let mes = fechaDeHoy.getMonth() //saco el mes de la fecha
+        let mesUsuario = prompt("Dime el mes")
+        let mesUsuarioMayus = mesUsuario.toUpperCase()
+        let anioUsuario = prompt("Dime el año")
+
+        switch (mesUsuarioMayus) {
+        case "ENERO":
+            mesNumero = 0;
+            break;
+        case "FEBRERO":
+            mesNumero = 1;
+            break;
+        case "MARZO":
+            mesNumero = 2;
+            break;
+        case "ABRIL":
+            mesNumero = 3;
+            break;
+        case "MAYO":
+            mesNumero = 4;
+            break;
+        case "JUNIO":
+            mesNumero = 5;
+            break;
+        case "JULIO":
+            mesNumero = 6;
+            break;
+        case "AGOSTO":
+            mesNumero = 7;
+            break;
+        case "SEPTIEMBRE":
+            mesNumero = 8;
+            break;
+        case "OCTUBRE":
+            mesNumero = 9;
+            break;
+        case "NOVIEMBRE":
+            mesNumero = 10;
+            break;
+        case "DICIEMBRE":
+            mesNumero = 11;
+            break;
+        default:
+            console.log("No es un mes")
+            break;
+    }
+
+        /*
+            lo unico que hay que cambiar para que sea del año que diga el user es calcular la
+            "fechaUser" con el "anioUsuario"
+        */
+        let fechaUser = new Date(anioUsuario, mesNumero, 1) //fecha completa con el mes y el año del usr 
+        let anio = fechaUser.getFullYear() //saco el año de la fecha
+        let mes = fechaUser.getMonth() //saco el mes de la fecha
         let fechaCompletaDia1 = new Date(anio, mes, 1) //fecha completa del dia 1
         let diaSemana = fechaCompletaDia1.getDay() //dia de semana de esa fecha, me dice 0 que es domigo
         let fechaCompletaDiaU = new Date(anio, mes + 1, 0) //fecha completa del ultimo dia del mes
@@ -41,7 +91,7 @@
 
 
 
-
+        //si el dia es 0 (domingo) lo paso  a 7 
         if (diaSemana == 0) {
             diaSemana = 7;
         }
@@ -63,17 +113,18 @@
 
 
 
-
+        let texto = document.write("CALENDARIO DE " + mesUsuarioMayus + " DE " + anioUsuario)
 
         //COLOCO LOS DIAS DEL MES
         document.write("<tr>")
 
 
-        //colocar los hucos blancos
+        //colocar los huecos blancos
         for (let i = 1; i < diaSemana; i++) {
 
             document.write("<td>" + " " + "</td>")
         }
+
 
         let cont = diaSemana - 1//con esto se cuantas celdas estan vacias
 
