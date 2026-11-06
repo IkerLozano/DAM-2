@@ -1,0 +1,12 @@
+
+Haciendo ping a www.google.es [216.58.205.67] con 32 bytes de datos:
+Respuesta desde 216.58.205.67: bytes=32 tiempo=11ms TTL=120
+Respuesta desde 216.58.205.67: bytes=32 tiempo=29ms TTL=120
+Respuesta desde 216.58.205.67: bytes=32 tiempo=11ms TTL=120
+Respuesta desde 216.58.205.67: bytes=32 tiempo=12ms TTL=120
+
+Estad¡sticas de ping para 216.58.205.67:
+    Paquetes: enviados = 4, recibidos = 4, perdidos = 0
+    (0% perdidos),
+Tiempos aproximados de ida y vuelta en milisegundos:
+    M¡nimo = 11ms, M ximo = 29ms, Media = 15ms

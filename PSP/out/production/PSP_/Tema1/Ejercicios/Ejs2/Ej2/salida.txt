@@ -1,0 +1,19 @@
+Microsoft Windows [Versi¢n 10.0.26200.9457]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>echo Usuario actual:
+Usuario actual:
+
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>whoami
+desktop-sd675c1\iker
+
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>echo Directorio actual:
+Directorio actual:
+
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>cd
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP
+
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>echo Contenido de el directorio:
+Contenido de el directorio:
+
+C:\Users\Iker\Desktop\Clase\DAM-2\PSP>¨M s? 
