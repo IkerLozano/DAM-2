@@ -1,0 +1,30 @@
+QPushButton:hover{
+    background-color :red ;
+}
+
+
+QPushButton:pressed{
+    background-color :yellow ;
+}
+
+QRadioButton:checked{
+    background-color :green ;
+}
+
+QComboBox:on{
+    background-color: red;
+}
+
+QTabBar{
+
+    color: white;
+    font-weight: bold;
+}
+
+QDial{
+    background-color: blue;
+}
+
+QSlider::handle{
+    background-image: url("img/android.png");
+}
