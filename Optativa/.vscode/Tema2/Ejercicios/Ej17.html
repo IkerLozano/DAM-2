@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 17</title>
+</head>
+<body>
+
+
+    <script>
+
+        for (let i = 0; i <= 100; i++) {
+            
+            let numS = i.toString()
+
+            for (let j = numS; j <= numS; j++) {
+               
+                if(numS[numS.length - 1] == "1" ||numS[numS.length - 1] == "3" ||numS[numS.length - 1] == "5" ||numS[numS.length - 1] == "7" ||numS[numS.length - 1] == "9"){
+                    console.log(numS)
+                }
+                
+            }
+            
+        }
+
+        /*
+            let numS = "12345";
+            
+            numS.length → 5 (hay 5 caracteres).
+            numS.length - 1 → 4 (la última posición).
+            numS[4] → "5" (el carácter que está en esa posición).
+        */
+
+    </script>
+    
+</body>
+</html>
