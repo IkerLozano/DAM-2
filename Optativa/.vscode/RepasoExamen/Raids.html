@@ -69,7 +69,7 @@
         nivel.addEventListener("change", function () {
 
 
-            //si es 0 o 5 minimo 2 y max los q sean
+            //si es 0  2 y max los q sean
             if (nivel.value == "0") {
 
                 numDiscos.innerHTML = ""; //vacio la lista
@@ -88,7 +88,7 @@
 
 
 
-                //si es 1 min y max 2
+            //si es 1 min y max 2
             } else if (nivel.value == "1") {
 
                 numDiscos.innerHTML = ""; //vacio la lista
@@ -98,6 +98,8 @@
                 opcion.appendChild(texto1)
                 document.getElementById("NumDiscos").appendChild(opcion)
 
+
+            //si es 5 min 3 y max los que sean
             } else if (nivel.value == "5") {
 
                 numDiscos.innerHTML = ""; //vacio la lista
