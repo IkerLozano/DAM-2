@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    var nac = prompt("Dame tu fecha de nacimiento (dd-mm-yyyy)").split("-")
+
+    var fecha = new Date(nac[2], nac[1]-1, nac[0])
+    var actual = new Date
+
+
+    document.write(`Tienes ${Math.floor(((((actual - fecha)/1000)/3600)/24)/365)}`)
+</script>
+<body>
+
+</body>
