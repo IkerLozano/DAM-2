@@ -21,6 +21,7 @@ class HomeScreen extends StatelessWidget {
       MenuOptions(ruta: "Alert", icono: Icons.add_alert, nombre: "Alertas - Alerts"),
       MenuOptions(ruta: "Card", icono: Icons.list_alt, nombre: "Tarjetas - Cards"),
       MenuOptions(ruta: "Button", icono: Icons.radio_button_on_outlined, nombre: "Botones - Buttons"),
+      MenuOptions(ruta: "Practica8", icono: Icons.list, nombre: "Practica 8"),
 
     ];
 
@@ -28,13 +29,13 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
 
       appBar: AppBar(
-      title: const Text("Componentes en Flutter"),
+        title: const Text("Componentes en Flutter"),
       ),
 
       body: ListView.separated(
 
         itemBuilder: (context, i) => ListTile(
-          //cada "i" e sn elemento
+          //cada "i" es un elemento
 
           leading: Icon(menuOptions[i].icono), 
           title: Text(menuOptions[i].nombre),

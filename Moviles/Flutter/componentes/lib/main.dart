@@ -1,4 +1,6 @@
 
+import 'package:componentes/presentation/screens/practica8.dart';
+
 import 'presentation/screens.dart'; //desde el archivo screens nos traemos todos los imports
 
 
@@ -26,13 +28,14 @@ class MyApp extends StatelessWidget {
         "Alert"      : (BuildContext context) => AlertScreen(),
         "Card"       : (BuildContext context) => CardScreen(),
         "Button"     : (BuildContext context) => BotonesScreen(),
+        "Practica8"  : (BuildContext context) => Practica8(),
       },
 
       //gestiona donde vamos si la ruta no existe, ira a "HomeScreen"
       onGenerateRoute: (settings) => MaterialPageRoute(builder: (context) => HomeScreen(),),
 
       //llamo al archivo de los temas comunes
-      theme: AppTheme().getTheme() //esto necesita que le pasemos un theme, si le pasamos un color (primary) dara error
+      theme: AppTheme.lightTheme//esto necesita que le pasemos un theme, si le pasamos un color (primary) dara error
         //halloweenTheme
         //().getTheme()
 
