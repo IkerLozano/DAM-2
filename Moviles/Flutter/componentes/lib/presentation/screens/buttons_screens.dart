@@ -10,6 +10,7 @@ class BotonesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Botones")),
       body: _Buttons(), //aqui metemos el contenido de la pagina, para no hacerlo larguismo creamos una clase con los botones y luego la llamamos aqui
+      
       floatingActionButton: FloatingActionButton(
         //boton flotante de la derecha abajo
         child: Icon(Icons.arrow_back_ios),

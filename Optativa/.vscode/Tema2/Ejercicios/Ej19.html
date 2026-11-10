@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 19</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,
+        th {
+            border: 2px solid green;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="tabla"></table>
+
+
+    <script>
+
+        let filas = prompt("Cuantas filas")
+        let col = prompt("Cuantas columnas")
+
+
+
+        let cont = 0
+        for (let i = 0; i < filas; i++) {//crea las filas
+
+            let fila = document.createElement("TR")
+
+            for (let j = 0; j < col; j++) { //crea las columnas
+                cont++
+                let celda = document.createElement("TD")
+                fila.appendChild(celda)
+                celda.innerHTML += "<p>" + cont + "</p>"
+                document.getElementById("tabla").appendChild(fila)
+
+            }
+
+        }
+
+
+
+        //PARA CREAR LA FILA Y COL EXTRA
+        //let filaE = document.createElement("TR")
+
+        //for (let j = 0; j < col; j++) { //crea las columnas
+        //    cont++
+        //    let celdaE = document.createElement("TD")
+        //    filaE.appendChild(celdaE)
+        //    celdaE.innerHTML += "<p>" + " " + "</p>"
+        //    document.getElementById("tabla").appendChild(filaE)
+
+        //    let celdaExtra = document.createElement("TD")
+        //    document.getElementById("tabla").rows[j].appendChild(celdaExtra)
+
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

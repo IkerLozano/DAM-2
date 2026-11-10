@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 16</title>
+</head>
+<body>
+
+<br>
+
+    <script>
+
+
+
+        let alto = prompt("alto")
+        let ancho = prompt("ancho")
+        let borde = prompt("borde")
+        let relleno = prompt("relleno")
+
+
+        for (let i = 0; i < alto; i++) {
+
+            document.write("<br>")
+            
+            for (let j = 0; j <ancho; j++) {
+                
+                if(i == 0 || i == alto-1 || j == 0 ||j == ancho-1){
+                    document.write(borde)
+                }else{
+                    document.write(relleno)
+                }
+                
+                
+            }
+            
+        }
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This 2</title>
+
+    <style>
+        .caja {
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            background: #fff;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            font-size: 30px;
+            color: black;
+            font-family: Arial;
+            border: black solid 2px;
+        }
+
+
+        .caja1 {
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            background: #fff;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            font-size: 30px;
+            color: black;
+            font-family: Arial;
+            border: black solid 2px;
+        }
+
+        .rojo {
+            background: red;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <h3>FORMA 1</h3>
+    <div class="caja1" onclick="funcion(this)">1</div>
+    <div class="caja1" onclick="funcion(this)">2</div>
+    <div class="caja1" onclick="funcion(this)">3</div>
+    <div class="caja1" onclick="funcion(this)">4</div>
+
+
+    <br>
+
+    <h3>FORMA 2</h3>
+    <div class="caja">1</div>
+    <div class="caja">2</div>
+    <div class="caja">3</div>
+    <div class="caja">4</div>
+
+
+
+    <script>
+
+
+
+        function funcion(elemento) {
+
+            elemento.classList.toggle("rojo")
+
+        }
+
+
+
+        let divs = document.getElementsByClassName("caja")
+
+
+        for (let i = 0; i < divs.length; i++) {
+
+            divs[i].addEventListener("click", function () {
+
+                this.classList.toggle("rojo")
+
+            })
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

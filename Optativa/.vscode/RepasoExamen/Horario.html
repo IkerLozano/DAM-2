@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 3</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,
+        th {
+            border: 2px solid green;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <table></table>
+
+    <script>
+
+        let horario = [
+            ["IPPE", "PROY", "IPPE", "AD", "SGE"], //lunes
+            ["DI", "SGE", "AD", "AD", "SGE"], //martes
+            ["DI", "SGE", "AD", "AD", "SASP"],
+            ["RECREO", "RECREO", "RECREO", "RECREO", "RECREO"],
+            ["DWC", "PMDM", "PMDM", "PROY", "DI"],
+            ["DWC", "PMDM", "PMDM", "PSP", "DI"],
+            ["DWC", "PMDM", "PMDM", "PSP", "DI"]
+        ];
+
+
+        let dias = [" ", "lunes", "martes", "miercoles", "jueves", "viernes"]
+
+
+        document.write("<table>")
+
+
+        //DIAS
+        document.write("<tr>")
+
+        for (let i = 0; i < dias.length; i++) {
+            document.write("<th>" + dias[i] + "</th>")
+
+        }
+
+        document.write("</tr>")
+
+
+
+        //ASIGNATURAS
+        let horaInicio = new Date(2007, 3, 1, 15, 45)
+        let horaFinal = new Date(2007, 3, 1, 16, 35)
+
+        for (let i = 0; i < horario.length; i++) {
+
+            document.write("<tr>")
+
+            if (i == 0 || i == 1 || i == 4 || i == 5 || i == 6) {
+                document.write("<td>" + horaInicio.getHours() + ":" + horaInicio.getMinutes() + " - " + horaFinal.getHours() + ":" + horaFinal.getMinutes() + "</td>")
+                horaInicio.setMinutes(horaInicio.getMinutes() + 55)
+                horaFinal.setMinutes(horaFinal.getMinutes() + 55)
+            } else if (i == 2) {
+                document.write("<td>" + horaInicio.getHours() + ":" + horaInicio.getMinutes() + " - " + horaFinal.getHours() + ":" + horaFinal.getMinutes() + "</td>")
+                horaInicio.setMinutes(horaInicio.getMinutes() + 50)
+                horaFinal.setMinutes(horaFinal.getMinutes() + 15)
+            } else if (i == 3) {
+                document.write("<td>" + horaInicio.getHours() + ":" + horaInicio.getMinutes() + " - " + horaFinal.getHours() + ":" + horaFinal.getMinutes() + "</td>")
+                horaInicio.setMinutes(horaInicio.getMinutes() + 15)
+                horaFinal.setMinutes(horaFinal.getMinutes() + 50)
+            }
+
+
+
+
+            for (let j = 0; j < horario[i].length; j++) {
+
+
+                if (i == 3) {
+                    document.write("<td style='background-color: yellow;'>" + horario[i][j] + "</td>");
+                } else {
+                    document.write("<td>" + horario[i][j] + "</td>");
+                }
+
+            }
+
+            document.write("</tr>")
+
+        }
+
+
+
+
+
+
+
+
+
+
+        document.write("</table>")
+
+
+
+
+
+
+
+        document.write("<table>")
+
+
+    </script>
+
+</body>
+
+</html>

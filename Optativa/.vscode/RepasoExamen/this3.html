@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This 3</title>
+
+
+
+
+</head>
+
+<body>
+
+
+    <ul id="lista">
+        <li>Manzana</li>
+        <li>Pera</li>
+        <li>Plátano</li>
+        <li>Naranja</li>
+        <li>Melón</li>
+    </ul>
+
+
+
+
+    <script>
+
+        var lista = document.getElementById("lista")
+        var li = lista.getElementsByTagName("li") //busca los elementos li dentro de el elemto padre lista
+
+
+
+        for (let i = 0; i < li.length; i++) {
+
+            
+            li[i].addEventListener("click", function(elemento){
+
+                this.parentNode.removeChild(this)
+
+            })
+            
+        }
+
+
+    </script>
+
+</body>
+
+</html>

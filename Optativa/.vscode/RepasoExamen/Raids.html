@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raids</title>
+</head>
+
+<body>
+
+    <!--titulo-->
+    <h1>Calculo de RAID</h1>
+
+
+    <!--nivel raid-->
+    <label>Nivel RAID:</label>
+
+    <select id="nivelRAID">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="5">5</option>
+    </select>
+
+
+    <!--num dde discos-->
+    <label>Número de discos:</label>
+
+    <select id="NumDiscos">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+
+
+    <!--tamaño-->
+    <label>Tamaño de los discos:</label>
+
+    <select id="TamañoDiscos">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+
+    <label>TB</label>
+
+
+    <!--boton-->
+    <button id="boton">Calcular</button>
+
+
+    <!--respuesta-->
+    <p id="resp">Tamaño del conjunto: </p>
+
+
+
+
+    <script>
+
+        let nivel = document.getElementById("nivelRAID")
+        let numDiscos = document.getElementById("NumDiscos")
+        let tamañoDiscos = document.getElementById("TamañoDiscos")
+        let resp = document.getElementById("resp")
+
+
+
+        //establecer los discos de cada uno
+        nivel.addEventListener("change", function () {
+
+
+            //si es 0  2 y max los q sean
+            if (nivel.value == "0") {
+
+                numDiscos.innerHTML = ""; //vacio la lista
+
+                let cont = 1
+
+                for (let i = 0; i < 3; i++) {
+
+                    let opcion1 = document.createElement("option")
+                    let texto1 = document.createTextNode(cont + 1)
+                    opcion1.appendChild(texto1)
+                    document.getElementById("NumDiscos").appendChild(opcion1)
+
+                    cont++
+                }
+
+
+
+            //si es 1 min y max 2
+            } else if (nivel.value == "1") {
+
+                numDiscos.innerHTML = ""; //vacio la lista
+
+                let opcion = document.createElement("option")
+                let texto1 = document.createTextNode("2")
+                opcion.appendChild(texto1)
+                document.getElementById("NumDiscos").appendChild(opcion)
+
+
+            //si es 5 min 3 y max los que sean
+            } else if (nivel.value == "5") {
+
+                numDiscos.innerHTML = ""; //vacio la lista
+
+                let cont = 2
+
+                for (let i = 0; i < 3; i++) {
+
+                    let opcion1 = document.createElement("option")
+                    let texto1 = document.createTextNode(cont + 1)
+                    opcion1.appendChild(texto1)
+                    document.getElementById("NumDiscos").appendChild(opcion1)
+
+                    cont++
+                }
+            }
+
+        })
+
+
+
+        //calculo el tamaño
+        document.getElementById("boton").addEventListener("click", function () {
+
+            if (nivel.value == "0") {
+
+                let discos = parseInt(numDiscos.value)
+                let tamaño = parseInt(tamañoDiscos.value)
+
+                let resultado = discos * tamaño
+                resp.innerHTML = "<p>Tamaño del conjunto: " + resultado + "TB</p>"
+
+
+            } else if (nivel.value == "1") {
+
+                let tamaño = parseInt(tamañoDiscos.value)
+                let resultado = tamaño
+                resp.innerHTML = "<p>Tamaño del conjunto: " + resultado + "TB</p>"
+
+
+            } else {
+
+
+                let discos = parseInt(numDiscos.value)
+                let tamaño = parseInt(tamañoDiscos.value)
+
+                let resultado = (discos - 1) * tamaño
+                resp.innerHTML = "<p>Tamaño del conjunto: " + resultado + "TB</p>"
+
+            }
+
+        })
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

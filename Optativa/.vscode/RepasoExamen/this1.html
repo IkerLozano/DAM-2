@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This 1</title>
+</head>
+
+<body>
+
+
+    <h3>FORMA 1</h3>
+    <p onclick="funcion(this)">1</p>
+    <p onclick="funcion(this)">2</p>
+    <p onclick="funcion(this)">3</p>
+
+    <br>
+
+    <h3>FORMA 2</h3>
+    <p class="texto">1</p>
+    <p class="texto">2</p>
+    <p class="texto">3</p>
+
+
+
+    <script>
+
+        //FORMA 1
+        function funcion(elmento) {
+
+            elmento.style.display = "none"
+
+        }
+
+
+
+        //FORMA 2
+        let p = document.getElementsByClassName("texto")
+
+
+
+        for (let i = 0; i < p.length; i++) {
+
+            p[i].addEventListener("click", function () {
+                this.style.display = "none"
+            })
+            
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

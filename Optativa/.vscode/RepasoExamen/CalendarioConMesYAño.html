@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 2</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,
+        th {
+            border: 2px solid green;
+            width: 100px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <tr></tr>
+
+
+
+    </tr>
+    <script>
+
+        let dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "Sabado", "Domingo"]
+
+
+        let mesUsuario = prompt("Dime el mes")
+        let mesUsuarioMayus = mesUsuario.toUpperCase()
+        let anioUsuario = prompt("Dime el año")
+
+        switch (mesUsuarioMayus) {
+        case "ENERO":
+            mesNumero = 0;
+            break;
+        case "FEBRERO":
+            mesNumero = 1;
+            break;
+        case "MARZO":
+            mesNumero = 2;
+            break;
+        case "ABRIL":
+            mesNumero = 3;
+            break;
+        case "MAYO":
+            mesNumero = 4;
+            break;
+        case "JUNIO":
+            mesNumero = 5;
+            break;
+        case "JULIO":
+            mesNumero = 6;
+            break;
+        case "AGOSTO":
+            mesNumero = 7;
+            break;
+        case "SEPTIEMBRE":
+            mesNumero = 8;
+            break;
+        case "OCTUBRE":
+            mesNumero = 9;
+            break;
+        case "NOVIEMBRE":
+            mesNumero = 10;
+            break;
+        case "DICIEMBRE":
+            mesNumero = 11;
+            break;
+        default:
+            console.log("No es un mes")
+            break;
+    }
+
+        /*
+            lo unico que hay que cambiar para que sea del año que diga el user es calcular la
+            "fechaUser" con el "anioUsuario"
+        */
+        let fechaUser = new Date(anioUsuario, mesNumero, 1) //fecha completa con el mes y el año del usr 
+        let anio = fechaUser.getFullYear() //saco el año de la fecha
+        let mes = fechaUser.getMonth() //saco el mes de la fecha
+        let fechaCompletaDia1 = new Date(anio, mes, 1) //fecha completa del dia 1
+        let diaSemana = fechaCompletaDia1.getDay() //dia de semana de esa fecha, me dice 0 que es domigo
+        let fechaCompletaDiaU = new Date(anio, mes + 1, 0) //fecha completa del ultimo dia del mes
+        let ultimoDia = fechaCompletaDiaU.getDate()//saco el ultimo dia del mes, me da 30 que es el ultimo dia
+
+
+
+        //si el dia es 0 (domingo) lo paso  a 7 
+        if (diaSemana == 0) {
+            diaSemana = 7;
+        }
+
+
+
+        document.write("<table>")
+
+        //DIAS DE LA SEMANA
+        document.write("<tr>")
+
+        for (let i = 0; i < dias.length; i++) {
+
+            document.write("<th>" + dias[i] + "</th>")
+
+        }
+
+        document.write("</tr>")
+
+
+
+        let texto = document.write("CALENDARIO DE " + mesUsuarioMayus + " DE " + anioUsuario)
+
+        //COLOCO LOS DIAS DEL MES
+        document.write("<tr>")
+
+
+        //colocar los huecos blancos
+        for (let i = 1; i < diaSemana; i++) {
+
+            document.write("<td>" + " " + "</td>")
+        }
+
+
+        let cont = diaSemana - 1//con esto se cuantas celdas estan vacias
+
+
+        for (let i = 1; i <= ultimoDia; i++) {
+
+
+            document.write("<td>" + i + "</td>");
+
+
+
+            //para saber cuando tengo que hacer una nueva fila
+            cont++
+            if (cont % 7 == 0) {
+                document.write("<tr>")
+
+                document.write("</tr>")
+            }
+
+        }
+
+        document.write("</tr>")
+
+
+        document.write("</table>")
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This 6</title>
+
+
+
+
+</head>
+
+<body>
+
+    <div id="divPadre">
+        <div name="div" ondblclick="funcion(this)">1</div>
+        <div name="div" ondblclick="funcion(this)">2</div>
+        <div name="div" ondblclick="funcion(this)">3</div>
+        <div name="div" ondblclick="funcion(this)">4</div>
+        <div name="div" ondblclick="funcion(this)">5</div>
+        <div name="div" ondblclick="funcion(this)">6</div>
+        <div name="div" ondblclick="funcion(this)">7</div>
+        <div name="div" ondblclick="funcion(this)">8</div>
+        <div name="div" ondblclick="funcion(this)">9</div>
+        <div name="div" ondblclick="funcion(this)">10</div>
+    </div>
+
+
+    <button id=" button" onclick="funcion2()">Mostrar ocultos</button>
+    <button id=" button2" onclick="eliminar()">Eliminar Todos</button>
+
+
+    <script>
+
+
+        function funcion(elemento) {
+
+            elemento.style.display = "none"
+        }
+
+
+
+        let divs = document.getElementsByName("div")
+        function funcion2() {
+
+            for (let i = 0; i < divs.length; i++) {
+
+                if (divs[i].style.display == "none") {
+
+                    divs[i].style.display = "block"
+
+                }
+            }
+
+
+        }
+
+
+
+        let padre = document.getElementById("divPadre")
+
+        function eliminar(elemento) {
+
+
+            padre.remove()
+                
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

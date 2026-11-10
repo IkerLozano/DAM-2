@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 15</title>
+</head>
+<body>
+
+
+
+    <script>
+
+        let numP = prompt("Cuantas palabras quieres meter")
+        let palabras = []
+
+        for (let i = 0; i < numP; i++) {
+
+            let palabra = prompt("Palabra " + (i+1))
+            let palabraM = palabra.toUpperCase()
+
+            palabras.push(palabraM)
+            
+        }
+
+        for (let i = 0; i < palabras.length; i++) {
+
+            palabras.sort()
+            document.write(palabras[i] + " - ")
+            
+        }
+       
+        
+
+    </script>
+    
+</body>
+</html>

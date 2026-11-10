@@ -1,0 +1,51 @@
+QPushButton {
+
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 7px;
+    background: white;
+    color: black;
+
+}
+
+
+QPushButton:hover {
+
+    background: rgb(165, 165, 165);
+
+}
+
+
+#botonSuma{
+
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 7px;
+    background: blue;
+    color: white;
+
+}
+
+
+
+#botonIgual{
+
+    padding: 5px;
+    border:  3px solid black;
+    border-radius: 7px;
+    background: blue;
+    color: white;
+
+}
+
+
+
+#botonCE{
+
+    padding: 5px;
+    border:  3px solid black;
+    border-radius: 7px;
+    background: blue;
+    color: white;
+
+}

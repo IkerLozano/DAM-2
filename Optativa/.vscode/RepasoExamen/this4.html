@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This 4</title>
+
+
+
+
+</head>
+
+<body>
+
+
+
+    <div id="divs">
+        <p onclick="eliminar(this)">1</p>
+        <p onclick="eliminar(this)">2</p>
+        <p onclick="eliminar(this)">3</p>
+        <p onclick="eliminar(this)">4</p>
+    </div>
+
+
+    <button id="boton" onclick="mostrar()">Mostrar todos</button>
+
+
+    <script>
+
+
+        function eliminar(elemento) {
+
+            elemento.style.display = "none"
+
+        }
+
+
+
+        let p = divs.getElementsByTagName("p")
+        function mostrar() {
+
+            for (let i = 0; i < p.length; i++) {
+
+                if (p[i].style.display == "none") {
+
+                    p[i].style.display = "block"
+
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
