@@ -22,6 +22,9 @@ class HomeScreen extends StatelessWidget {
       MenuOptions(ruta: "Card", icono: Icons.list_alt, nombre: "Tarjetas - Cards"),
       MenuOptions(ruta: "Button", icono: Icons.radio_button_on_outlined, nombre: "Botones - Buttons"),
       MenuOptions(ruta: "Practica8", icono: Icons.list, nombre: "Practica 8"),
+      MenuOptions(ruta: "SliderScreen", icono: Icons.slideshow, nombre: "Sliders and Check"),
+      MenuOptions(ruta: "SnackBarScreen", icono: Icons.slideshow, nombre: "SnackBarScreen"),
+      MenuOptions(ruta: "AnimatedScreen", icono: Icons.slideshow, nombre: "AnimatedScreen"),
 
     ];
 

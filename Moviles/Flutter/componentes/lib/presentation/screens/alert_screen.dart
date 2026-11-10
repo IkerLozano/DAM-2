@@ -8,6 +8,7 @@ class AlertScreen extends StatelessWidget {
   //VENTANA EMERGENTE DE LA ALERTA
   void mostrarAlerta(BuildContext context) {
     showDialog(
+      barrierDismissible: false, //para no podr pulsar fuera y cerrar la alerta
       //nos muetsra una nueva ventana
       context: context,
       builder: (context) {
@@ -23,6 +24,15 @@ class AlertScreen extends StatelessWidget {
               FlutterLogo(size: 100), //logo de flutter
             ],
           ),
+
+          //boton para salir de la alerta
+          actions: [
+
+            TextButton(onPressed: () => Navigator.pop(context), child: Text("Cancelar", style: TextStyle(color: Colors.red))),
+            TextButton(onPressed: () => Navigator.pop(context), child: Text("Ok"))
+
+
+          ],
         );
       },
     );

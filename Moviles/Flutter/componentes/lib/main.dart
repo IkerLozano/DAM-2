@@ -1,5 +1,8 @@
 
+import 'package:componentes/presentation/screens/animated_screen.dart';
 import 'package:componentes/presentation/screens/practica8.dart';
+import 'package:componentes/presentation/screens/slider_screen.dart';
+import 'package:componentes/presentation/screens/snack_bar.dart';
 
 import 'presentation/screens.dart'; //desde el archivo screens nos traemos todos los imports
 
@@ -29,6 +32,9 @@ class MyApp extends StatelessWidget {
         "Card"       : (BuildContext context) => CardScreen(),
         "Button"     : (BuildContext context) => BotonesScreen(),
         "Practica8"  : (BuildContext context) => Practica8(),
+        "SliderScreen"  : (BuildContext context) => SliderScreen(),
+        "SnackBarScreen"  : (BuildContext context) => SnackBarScreen(),
+        "AnimatedScreen"  : (BuildContext context) => AnimatedScreen()
       },
 
       //gestiona donde vamos si la ruta no existe, ira a "HomeScreen"
