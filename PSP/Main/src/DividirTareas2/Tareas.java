@@ -1,0 +1,35 @@
+package DividirTareas2;
+
+import java.util.List;
+import java.util.concurrent.Callable;
+
+// Callable<Integer> indica que esta tarea devolverá un número entero
+public class Tareas implements Callable<Integer> {
+
+    private List<Integer> numeros;
+
+
+    //constructor
+    public Tareas(List<Integer> numeros) {
+        this.numeros = numeros;
+
+    }
+
+    // Metodo que ejecutará el ExecutorService cuando lance esta tarea
+    @Override
+    public Integer call() throws Exception {
+
+
+        int sum = 0;
+
+        for (int i = 0; i <numeros.size() ; i++) {
+
+            sum = sum+numeros.get(i);
+
+        }
+
+        return sum;
+
+
+    }
+}
