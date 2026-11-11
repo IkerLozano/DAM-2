@@ -52,7 +52,7 @@ public class Main {
         executor.shutdown();
 
 
-        //recorro y mustro tareas
+        //recorro y muestro tareas
         int mayorGlobal = 0;
 
         for (int i = 0; i < tareas.size() ; i++) {
