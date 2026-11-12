@@ -1,4 +1,4 @@
-package Tema1.Examen.Ej2_ParcductorConsumidor.Ej1_ParcductorConsumidor;
+package Tema1.Examen.Ej2_ProductorConsumidor;
 
 import java.util.LinkedList;
 import java.util.Queue;

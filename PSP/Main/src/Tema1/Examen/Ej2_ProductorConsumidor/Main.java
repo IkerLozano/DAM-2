@@ -1,7 +1,4 @@
-package Tema1.Examen.Ej2_ParcductorConsumidor.Ej1_ParcductorConsumidor;
-
-import java.util.LinkedList;
-import java.util.Queue;
+package Tema1.Examen.Ej2_ProductorConsumidor;
 
 public class Main {
 

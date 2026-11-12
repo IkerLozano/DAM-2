@@ -12,6 +12,9 @@ public class Consumidor implements Runnable {
         this.cola = cola;
     }
 
+
+
+
     @Override
     public void run() {
 

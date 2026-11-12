@@ -1,6 +1,4 @@
-package Tema1.Examen.Ej2_ParcductorConsumidor.Ej1_ParcductorConsumidor;
-
-import java.util.PriorityQueue;
+package Tema1.Examen.Ej2_ProductorConsumidor;
 
 public class Consumidor implements Runnable{
 

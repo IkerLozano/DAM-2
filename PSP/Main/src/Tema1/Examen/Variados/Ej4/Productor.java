@@ -1,17 +1,14 @@
-package Tema1.Examen.Ej2_ParcductorConsumidor.Ej1_ParcductorConsumidor;
+package Tema1.Examen.Variados.Ej4;
 
 import java.util.Random;
 
-public class Productor implements Runnable{
+public class Productor implements  Runnable{
 
-    private ColaTrabajos cola;
-
+    ColaTrabajos cola;
 
     public Productor(ColaTrabajos cola) {
         this.cola = cola;
     }
-
-
 
     @Override
     public void run() {
@@ -20,20 +17,16 @@ public class Productor implements Runnable{
 
         for (int i = 0; i <10 ; i++) {
 
-            int num = random.nextInt(1, 50);
+            int num = random.nextInt(1, 100);
 
             try {
                 cola.meter(num);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-
-
-            try {
                 Thread.sleep(500);
+
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+
 
         }
 
