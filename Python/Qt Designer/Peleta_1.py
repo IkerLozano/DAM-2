@@ -12,7 +12,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
 app = QApplication([])
-app.setStyle("Fusion") #estilo para la ventana, para que una peleta funcione tiene que haber un estilo
+#app.setStyle("Fusion") #estilo para la ventana, para que una peleta funcione tiene que haber un estilo
 
 
 #paleta = QPalette() #cro la paleta
