@@ -1,40 +1,39 @@
 //para los temas generales
 import 'package:flutter/material.dart';
 
-
-
 //lista de colores
-const listaColores = <Color> [
+const listaColores = <Color>[
   Colors.blue,
   Colors.green,
   Colors.red,
   Colors.purple,
   Colors.yellow,
   Colors.deepOrange,
-  Colors.pink
-
+  Colors.pink,
 ];
 
 class AppTheme {
-
   final int coloresSeleccion; //aqui se guarda la posicion del color seleccionado
 
-  AppTheme({
-     this.coloresSeleccion = 2
-    }):assert( coloresSeleccion >= 0, 'El color seleccionado debe ser mayor que 0'),
-      assert( coloresSeleccion < listaColores.length, 'El color seleccionado debe igual o menor que ${listaColores.length}');
-      //esto es para errores personalizados, no es de la app, es un error q alta aqui
+  AppTheme({this.coloresSeleccion = 2})
+    : assert(
+        coloresSeleccion >= 0,
+        'El color seleccionado debe ser mayor que 0',
+      ),
+      assert(
+        coloresSeleccion < listaColores.length,
+        'El color seleccionado debe igual o menor que ${listaColores.length}',
+      );
+  //esto es para errores personalizados, no es de la app, es un error q alta aqui
 
-
-  ThemeData getTheme() => ThemeData( //getTheme --> puede ser el nombre que queramos
+  //tema data
+  ThemeData getTheme() => ThemeData(
+    //getTheme --> puede ser el nombre que queramos
     useMaterial3: true,
     colorSchemeSeed: listaColores[coloresSeleccion],
 
-    appBarTheme: AppBarTheme(
-      centerTitle: true,
-    )
+    appBarTheme: AppBarTheme(centerTitle: true),
   );
-
 
   //Color primario
   static const Color primary = Colors.pink;
@@ -43,46 +42,77 @@ class AppTheme {
   static const Color segundary = Colors.yellow;
 
 
+
+
+
   //Tema light
   static final ThemeData lightTheme = ThemeData.light().copyWith(
-    
-    primaryColor: primary, //color primario, cuando queramos usarlos poner "primary"
+    primaryColor:
+        primary, //color primario, cuando queramos usarlos poner "primary"
     useMaterial3: false,
     appBarTheme: AppBarTheme(
-      backgroundColor: Colors.red, 
-      elevation: 0
+      backgroundColor: Colors.red,
+      elevation: 0,
     ), //este es el estilo de la barra superior
-  
     //color de los iconos en general
     iconTheme: IconThemeData(color: primary),
 
     //color de los iconos dentro de ListTile (leading y trailing)
     listTileTheme: ListTileThemeData(iconColor: primary),
   );
-  
+
+
 
 
 
   //Tema halloween
   static final ThemeData halloweenTheme = ThemeData.dark().copyWith(
-
-    primaryColor: Colors.red, //color primario, cuando queramos usarlos poner "primary"
+    primaryColor:
+        Colors.red, //color primario, cuando queramos usarlos poner "primary"
     useMaterial3: false,
-    appBarTheme: AppBarTheme(
-      backgroundColor: Colors.deepOrange,
-      elevation: 0,
-    ),
-
+    appBarTheme: AppBarTheme(backgroundColor: Colors.deepOrange, elevation: 0),
 
     //color de los iconos en general
     iconTheme: IconThemeData(color: Colors.red),
 
     //color de los iconos dentro de ListTile (leading y trailing)
     listTileTheme: ListTileThemeData(iconColor: Colors.red),
-
-    
   );
 
 
+
+
+
+  //Tema para formulario
+  static final ThemeData temaFormnulario = ThemeData.light().copyWith(
+    primaryColor:
+        primary, //color primario, cuando queramos usarlos poner "primary"
+    useMaterial3: false,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.red,
+      elevation: 0,
+    ), //este es el estilo de la barra superior
+    //para los campos de textos
+    inputDecorationTheme: InputDecorationTheme(
+      floatingLabelStyle: TextStyle(color: Colors.red),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.red),
+        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), topRight: Radius.circular(20))
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), topRight: Radius.circular(20))
+      ),
+    ),
+
+
+
+    //color de los iconos en general
+    iconTheme: IconThemeData(color: primary),
+
+    //color de los iconos dentro de ListTile (leading y trailing)
+    listTileTheme: ListTileThemeData(iconColor: primary),
+  );
+
+  
   
 }

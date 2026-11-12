@@ -1,5 +1,6 @@
 
 import 'package:componentes/presentation/screens/animated_screen.dart';
+import 'package:componentes/presentation/screens/formulario_screen.dart';
 import 'package:componentes/presentation/screens/practica8.dart';
 import 'package:componentes/presentation/screens/slider_screen.dart';
 import 'package:componentes/presentation/screens/snack_bar.dart';
@@ -34,14 +35,16 @@ class MyApp extends StatelessWidget {
         "Practica8"  : (BuildContext context) => Practica8(),
         "SliderScreen"  : (BuildContext context) => SliderScreen(),
         "SnackBarScreen"  : (BuildContext context) => SnackBarScreen(),
-        "AnimatedScreen"  : (BuildContext context) => AnimatedScreen()
+        "AnimatedScreen"  : (BuildContext context) => AnimatedScreen(),
+        "FormularioScreen"  : (BuildContext context) => FormularioScreen()
+
       },
 
       //gestiona donde vamos si la ruta no existe, ira a "HomeScreen"
       onGenerateRoute: (settings) => MaterialPageRoute(builder: (context) => HomeScreen(),),
 
       //llamo al archivo de los temas comunes
-      theme: AppTheme.lightTheme//esto necesita que le pasemos un theme, si le pasamos un color (primary) dara error
+      theme: AppTheme.temaFormnulario//esto necesita que le pasemos un theme, si le pasamos un color (primary) dara error
         //halloweenTheme
         //().getTheme()
 

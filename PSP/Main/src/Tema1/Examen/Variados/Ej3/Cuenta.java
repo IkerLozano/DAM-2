@@ -1,10 +1,12 @@
 package Tema1.Examen.Variados.Ej3;
 
 import java.util.Random;
+import java.util.concurrent.Semaphore;
 
 public class Cuenta {
 
     private static double saldo;
+    private static Semaphore semaphore = new Semaphore(1);
 
     public Cuenta(double saldo) {
         this.saldo = saldo;
@@ -21,40 +23,64 @@ public class Cuenta {
 
 
 
-    public synchronized static void meter(double cantidadIngresar) throws InterruptedException {
+    public static void meter(double cantidadIngresar) throws InterruptedException {
 
-        Random random = new Random();
+        try {
 
-        int num = random.nextInt(100, 501);
+            semaphore.acquire();
 
-        Thread.sleep(num);
+            Random random = new Random();
 
-        System.out.println("----------------------" + Thread.currentThread().getName() + "----------------------");
-        System.out.println("Ingreso: " + cantidadIngresar + "€");
-        System.out.println("Saldo anterior: " + saldo);
+            int num = random.nextInt(100, 501);
 
-        saldo = saldo + cantidadIngresar;
+            Thread.sleep(num);
 
-        System.out.println("Saldo posteior: " + saldo);
+            System.out.println("----------------------" + Thread.currentThread().getName() + "----------------------");
+            System.out.println("Ingreso: " + cantidadIngresar + "€");
+            System.out.println("Saldo anterior: " + saldo);
+
+            saldo = saldo + cantidadIngresar;
+
+            System.out.println("Saldo posteior: " + saldo);
+
+        }finally {
+
+            semaphore.release();
+        }
+
+
 
     }
 
 
 
-    public synchronized static void sacar(double cantidadRtirar) throws InterruptedException {
-        Random random = new Random();
+    public static void sacar(double cantidadRtirar) throws InterruptedException {
 
-        int num = random.nextInt(100, 501);
+        try {
 
-        Thread.sleep(num);
 
-        System.out.println("----------------------" + Thread.currentThread().getName() + "----------------------");
-        System.out.println("Retira: " + cantidadRtirar + "€");
-        System.out.println("Saldo anterior: " + saldo);
+            semaphore.acquire();
 
-        saldo = saldo - cantidadRtirar;
+            Random random = new Random();
 
-        System.out.println("Saldo posteior: " + saldo);
+            int num = random.nextInt(100, 501);
+
+            Thread.sleep(num);
+
+            System.out.println("----------------------" + Thread.currentThread().getName() + "----------------------");
+            System.out.println("Retira: " + cantidadRtirar + "€");
+            System.out.println("Saldo anterior: " + saldo);
+
+            saldo = saldo - cantidadRtirar;
+
+            System.out.println("Saldo posteior: " + saldo);
+
+        }finally {
+
+            semaphore.release();
+        }
+
+
 
 
     }
