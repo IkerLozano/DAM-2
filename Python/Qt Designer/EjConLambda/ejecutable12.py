@@ -30,7 +30,7 @@ app = QApplication([])
 #app.setStyle("Fusion") 
 
 #Poner estilos QSS
-with open(f"Ej12/estilos12.qss", "r") as f :
+with open(f"EjConLambda/estilos12.qss", "r") as f :
             app.setStyleSheet(f.read()) #aplica los estilos a toda la aplicación.
 
 
