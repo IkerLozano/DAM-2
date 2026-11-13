@@ -126,7 +126,7 @@ class miVentana(QMainWindow):
 
 app = QApplication([])
 
-with open("Estilos/estilo3.qss", "r") as f :
+with open("EstilosConID/Ej1/Estilo.qss", "r") as f :
     app.setStyleSheet(f.read())
 
 aplicacion = miVentana()

@@ -12,14 +12,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
     def estilos(self, e):
-        with open(f"Estilos/11/estilo{e+1}.qss", "r") as f :
+        with open(f"Ej11_VariosEstilos/estilo{e+1}.qss", "r") as f :
             app.setStyleSheet(f.read())
     
 
 
 app = QApplication([])
 app.setStyle("Fusion") #estilo para la ventana
-with open(f"Estilos/11/estilo1.qss", "r") as f :
+with open(f"Ej11_VariosEstilos/estilo2.qss", "r") as f :  #para el estilo por defecto
             app.setStyleSheet(f.read())
 
 ventana = MainWindow()
