@@ -35,7 +35,7 @@ class MainWindow(QMainWindow):
 
         # recorro los resultados y los imprimir
         for row in resultado:
-            print(row[0])
+            print(row)
 
 
 

@@ -1,10 +1,14 @@
+from Ej1 import Ui_MainWindow
 import mysql.connector
 from PyQt6.QtWidgets import QMainWindow, QApplication
 
 
-class MainWindow(QMainWindow):
+
+class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
-        super().__init__()
+        super(MainWindow, self).__init__()
+        self.setupUi(self)
+
 
 
         self.setWindowTitle("Conectar BD")
@@ -19,9 +23,17 @@ class MainWindow(QMainWindow):
             )
         except mysql.connector.Error as error:
             print(error)
-            print("error")
 
+        
         self.cargardatos()
+
+
+
+        self.show()
+
+
+
+
 
 
     def cargardatos(self):
@@ -33,9 +45,13 @@ class MainWindow(QMainWindow):
         # Recojo los resultados
         resultado=cursor.fetchall()
 
-        # recorro los resultados y los imprimir
-        for row in resultado:
-            print(row[0])
+        
+        # row[0] es la primera columna, row[1] la segunda, etc.
+        # Es obligatorio convertirlo a texto con str() por si es un número
+        self.lineEdit.setText(str(resultado[0][0]))
+        self.lineEdit_2.setText(str(resultado[0][1]))
+        self.lineEdit_3.setText(str(resultado[0][2]))
+          
 
 
 
