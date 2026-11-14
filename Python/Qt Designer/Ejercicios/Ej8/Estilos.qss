@@ -1,0 +1,30 @@
+QLabel{
+
+    color: blue;
+    font-weight: bold;
+}
+
+
+#lineEdit_2, #lineEdit{
+
+    color: blue;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 2px solid blue;
+}
+
+#pushButton{
+    border-radius: 6px;
+    border: 2px solid red;
+    color: red;
+    padding: 10px;
+
+}
+
+
+#pushButton_2{
+   border-radius: 6px;
+    border: 2px solid green;
+    color: green;
+    padding: 10px;
+}

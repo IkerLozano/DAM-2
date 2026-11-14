@@ -1,0 +1,10 @@
+#pushButton{
+
+    background-color: orange;
+    color: black;
+}
+
+#label_4{
+    background-color: aqua;
+    color: black;
+}
