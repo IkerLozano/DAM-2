@@ -1,0 +1,50 @@
+QPushButton{
+
+    background-color: blue;
+    color: black;
+    text-align: center;
+    border: 3px solid blue;
+    border-radius: 7px;
+    font-weight: bold;
+    font-family: Tahoma;
+    font-size: 12px;
+
+}
+
+QPushButton:hover{
+
+    background-color: red;
+    color: black;
+    text-align: center;
+    border: 3px solid red;
+    border-radius: 7px;
+    font-weight: bold;
+    font-family: Tahoma;
+    font-size: 12px;
+
+}
+
+
+QPushButton:checked{
+
+    background-color: green;
+    color: black;
+    text-align: center;
+    border: 3px solid green;
+    border-radius: 7px;
+    font-weight: bold;
+    font-family: Tahoma;
+    font-size: 12px;
+
+}
+
+
+#label, #label_2, #label_3{
+
+    font-family: Tahoma;
+    font-size: 12px;
+
+}
+
+
+

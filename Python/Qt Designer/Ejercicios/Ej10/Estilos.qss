@@ -1,0 +1,40 @@
+#botonSuma, #botonIgual, #botonCE{
+
+    background-color: blue;
+    color: white;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 7px;
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+
+#texto{
+
+    background-color: white;
+    padding: 10px;
+
+}
+
+
+QPushButton{
+
+    background-color: white;
+    color: black;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 7px;
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+
+QMainWindow{
+
+    background-color: gray;
+
+}
+

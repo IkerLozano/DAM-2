@@ -1,0 +1,5 @@
+QSlider::handle{
+
+    background-image: url("android.png");
+    
+}

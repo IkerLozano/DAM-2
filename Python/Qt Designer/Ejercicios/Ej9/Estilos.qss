@@ -1,0 +1,31 @@
+#pushButton_3, #pushButton_6, #pushButton_5, #pushButton_4{
+
+    background-color: green;
+    color: white;
+    text-align: center;
+
+}
+
+#pushButton_7, #pushButton_8, #pushButton_9, #pushButton_10{
+
+    background-color: red;
+    color: white;
+    text-align: center;
+
+}
+
+
+#label, #label_2, #label_3, #label_4, #label_5{
+
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+QMainWindow{
+
+    background-color: darkgray;
+
+}
