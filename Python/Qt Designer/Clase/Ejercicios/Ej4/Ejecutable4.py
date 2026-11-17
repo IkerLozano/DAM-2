@@ -14,7 +14,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
     def cambiar(self, i):
-        tema = ["Fusion", "Windows", "Windowsvista"]
+        tema = ["Fusion", "Windows", "Windowsvista"] #el de macOS no funciona aqui
         app.setStyle(tema[i])
 
         #segun el valor de la lista(0,1,2) cogera uno de la lista tema(0,1,2)

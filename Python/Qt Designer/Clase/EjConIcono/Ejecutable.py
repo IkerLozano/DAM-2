@@ -18,6 +18,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # Tamaño del icono
         self.pushButton.setIconSize(QSize(40, 40))
+
+        
         self.show()
 
 

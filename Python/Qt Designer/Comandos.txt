@@ -1,0 +1,21 @@
+------- Activar entorno virtual ---------
+
+1. python -m venv App (se añadirá contenido a nuestra carpeta)
+2. cd App (estas carpetas se crean solas)
+3. cd Scripts
+4. .\activate 
+5. pip install PyQt6 (instalar libreria)
+
+
+
+------- Instalar QT Designer ---------
+
+1. pip install PySide6 (instalar Qt Designer)
+2. pyside6-designer (ejecutar Qt Designer) 
+
+
+
+
+------- Convertir el archivo .ui a Python ---------
+
+1. pyuic6 fichero.ui -o fichero.py

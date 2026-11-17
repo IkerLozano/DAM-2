@@ -1,4 +1,4 @@
-from Ejercicio import Ui_MainWindow
+from EjercicioClase import Ui_MainWindow
 from PyQt6.QtWidgets import QMainWindow, QApplication
 
 
@@ -10,8 +10,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
 app = QApplication([])
+
 app.setStyle("Fusion") #estilo para la ventana
-with open("OtroEj/Estilo.qss", "r") as f :
+with open("Estilos.qss", "r") as f :
     app.setStyleSheet(f.read())
 
 ventana = MainWindow()

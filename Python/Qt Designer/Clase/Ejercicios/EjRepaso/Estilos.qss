@@ -47,4 +47,11 @@ QPushButton:checked{
 }
 
 
+/*
+    SELECCIÓN POR TIPO --> todos los widgets de ese tipo (QPushButton)
+    SELECCIÓN POR NOMBRE --> usando el objectName  y un # (tambien se pude idnicar el  tipo de widget y luego el nombre)
+    VARIOS SELECCTORES --> # y el objectName y una  coma para separar
+*/
+
+
 

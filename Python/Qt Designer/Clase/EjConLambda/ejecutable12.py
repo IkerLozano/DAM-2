@@ -11,9 +11,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.show()
 
         
-        self.pushButton.pressed.connect(lambda: self.label_4.setStyleSheet("background-color:red"))
-        self.pushButton_3.pressed.connect(lambda: self.label_4.setStyleSheet("background-color:green"))
-        self.pushButton_2.pressed.connect(lambda: self.label_4.setStyleSheet("background-color:blue"))
+        self.pushButton.pressed.connect(lambda: self.label_4.setStyleSheet("background-color:red;"))
+        self.pushButton_3.pressed.connect(lambda: self.label_4.setStyleSheet("background-color:green;"))
+        self.pushButton_2.pressed.connect(lambda: self.label_4.setStyleSheet("background-color:blue;"))
         
         self.pushButton_6.pressed.connect(lambda: self.label_4.setStyleSheet("font-family: Verdana;"))
         self.pushButton_5.pressed.connect(lambda: self.label_4.setStyleSheet("font-family: Arial;"))

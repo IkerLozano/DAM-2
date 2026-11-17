@@ -1,0 +1,88 @@
+QMainWindow{
+
+    background-color: #f5f5f5;
+
+}
+
+
+#label, #label_3{
+
+    color: #222222;
+
+}
+
+
+#comboBox, #comboBox_2{
+
+    background-color: #f7f3f3;
+    color: #100f0f;
+    padding: 5px;
+    border: 1px solid #aaaaaa;
+
+}
+
+
+#label_2{
+
+    background-color: #ffffff;
+    color: #222222;
+    border-radius: 6px;
+    border: 1px solid #cccccc;
+    padding: 5px;
+
+}
+
+
+#pushButton{
+
+    background-color: #1a73e8;
+    color: #ffffff;
+
+}
+
+
+#pushButton_4{
+
+    background-color: #f9a825;
+    color: #222222;
+    
+}
+
+
+#pushButton_3{
+
+    background-color: #2e7d32;
+    color: #ffffff;
+
+}
+
+
+
+#pushButton_4:hover{
+
+    background-color: #f9a825;
+    color: #222222;
+    font-weight: bold;
+    border-radius: 6px;
+
+}
+
+
+#pushButton_3:checked{
+
+    background-color: #2e7d32;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+
+}
+
+
+#pushButton_3:pressed{
+
+    background-color: #0b2ff7;
+    color: #ea0909;
+    font-weight: bold;
+    border-radius: 6px;
+
+}

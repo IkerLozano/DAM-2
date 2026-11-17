@@ -13,6 +13,7 @@ QPushButton{
     background-color: red;
 }
 
+
 QTextEdit {
 
     border: 5px dotted green;
@@ -37,7 +38,7 @@ QLineEdit {
    /* con el . solo el padre tendra estas propiedades*/
 .QWidget {
 
-    background-color: green;
+    background-color: rgb(241, 76, 76);
 }
 
 /*aplica a solo el boton con ese id*/

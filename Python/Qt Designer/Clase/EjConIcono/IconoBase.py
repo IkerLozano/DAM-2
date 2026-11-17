@@ -10,6 +10,7 @@ icono = estilos.standardIcon(QStyle.StandardPixmap.SP_MessageBoxCritical) #pillo
 boton.setIcon(icono) #coloco el icono dentro del boton
 boton.setIconSize(QSize(40,40)) #tamaño del icono
 boton.show()
+
 app.exec()
 
 

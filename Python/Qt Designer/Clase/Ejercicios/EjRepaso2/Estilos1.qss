@@ -50,3 +50,14 @@ QLabel{
 /*
     selected --> Cuando un elemento está seleccionado,
 */
+
+/*
+    :hover --> Cuando pasas el ratón por encima 
+    :checked --> Cuando está seleccionado, el botón tiene que ser chequeable para que esto funcione 
+    :pressed --> Mientras se mantiene pulsado
+    ::handle --> sirve para seleccionar la parte móvil de un QSlider 
+    :selected --> Cuando un elemento está seleccionado,
+    :focus --> Cuando un widget tiene el foco (selecionarlo por ejemplo)
+
+
+*/
