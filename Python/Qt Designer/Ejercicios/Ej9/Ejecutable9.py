@@ -25,3 +25,5 @@ with open("Estilos.qss", "r") as f :
 
 ventana = MainWindow()
 app.exec()
+
+#para poner el texto centrado es desde las opciones del QtDesigner

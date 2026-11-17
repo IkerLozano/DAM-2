@@ -32,3 +32,6 @@ with open("Estilos.qss", "r") as f :
 
 ventana = MainWindow()
 app.exec()
+
+
+#para que el dial tenga las muescas la opcion se llama "notchesVisible"

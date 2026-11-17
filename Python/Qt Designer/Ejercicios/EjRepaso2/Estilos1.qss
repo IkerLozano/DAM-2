@@ -1,0 +1,52 @@
+QSlider::handle{
+    background-image: url("android.png");
+}
+
+
+
+QMainWindow{
+
+    background-color: rgb(196, 148, 240);
+
+}
+
+
+
+#pushButton{
+
+    background-color: blueviolet;
+    border: 3px solid blueviolet;
+    border-radius: 7px;
+    padding: 7px;
+
+}
+
+
+#pushButton:hover{
+
+    background-color: rgb(24, 2, 44);
+    border: 3px solid rgb(24, 2, 44);
+    border-radius: 7px;
+    padding: 7px;
+
+}
+
+
+
+
+QLabel{
+
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Georgia;
+
+}
+
+
+#comboBox:selected {
+    background-color: red;
+    color: white;
+}
+/*
+    selected --> Cuando un elemento está seleccionado,
+*/

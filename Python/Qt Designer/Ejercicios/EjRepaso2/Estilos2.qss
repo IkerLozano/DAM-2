@@ -1,0 +1,51 @@
+QSlider::handle{
+    background-image: url("arrow.png");
+}
+
+
+
+QMainWindow{
+
+    background-color: rgb(107, 107, 224);
+
+}
+
+
+
+#pushButton{
+
+    background-color: blue;
+    border: 3px solid blue;
+    border-radius: 7px;
+    padding: 7px;
+
+}
+
+
+#pushButton:hover{
+
+    background-color: rgb(5, 5, 77);
+    border: 3px solid rgb(5, 5, 77);
+    border-radius: 7px;
+    padding: 7px;
+
+}
+
+
+QLabel{
+
+    font-size: 10px;
+    font-weight: bold;
+    font-family: Tahoma;
+
+}
+
+
+#comboBox:focus {
+    background-color: red;
+    color: white;
+}
+
+/*
+    focus --> Cuando un widget tiene el foco (selecionarlo por ejemplo)
+*/

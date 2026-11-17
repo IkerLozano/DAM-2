@@ -34,3 +34,6 @@ with open("Estilos.qss", "r") as f :
 
 ventana = MainWindow()
 app.exec()
+
+
+#Si en el lambda quiero poner mas estilos es con ;

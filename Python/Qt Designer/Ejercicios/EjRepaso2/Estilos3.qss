@@ -1,0 +1,40 @@
+QSlider::handle{
+    background-image: url("application-search-result.png");
+}
+
+
+QMainWindow{
+
+    background-color: rgb(86, 226, 86);
+
+}
+
+
+
+#pushButton{
+
+    background-color: green;
+    border: 3px solid green;
+    border-radius: 7px;
+    padding: 7px;
+
+}
+
+
+#pushButton:hover{
+
+    background-color: rgb(11, 72, 11);
+    border: 3px solid rgb(11, 72, 11);
+    border-radius: 7px;
+    padding: 7px;
+
+}
+
+
+QLabel{
+
+    font-size: 8px;
+    font-weight: bold;
+    font-family: 'Lucida Sans Unicode';
+
+}
