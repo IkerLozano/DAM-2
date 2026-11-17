@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
-
 class CustomInputField extends StatelessWidget {
-
-
   final String? hintText;
   final String? labelText;
   final String? helpText;
@@ -11,21 +8,21 @@ class CustomInputField extends StatelessWidget {
   final IconData? suffixIcon;
   final TextInputType? keyboardType;
   final bool obscureText;
+  final Map<String, String> formValues;
+  final String formProperties;
 
   const new({
-    super.key, 
-    this.hintText, 
-    this.labelText, 
-    this.helpText, 
-    this.icon, 
-    this.suffixIcon, 
+    super.key,
+    this.hintText,
+    this.labelText,
+    this.helpText,
+    this.icon,
+    this.suffixIcon,
     this.keyboardType,
-    this.obscureText = false
+    this.obscureText = false,
+    required this.formValues,
+    required this.formProperties,
   });
-
- 
-
-  
 
   @override
   Widget build(BuildContext context) {
@@ -35,16 +32,15 @@ class CustomInputField extends StatelessWidget {
       textCapitalization: .words, //palabra en mayus (no me va)
       keyboardType: keyboardType, //para el tipo de entrada, email, telepfono
       obscureText: obscureText,
-      onChanged: (value) {
-        print(value);
-      },
+      onChanged: (value) => formValues[formProperties] = value,
       validator: (value) {
-        if (value == null) return "Este campo es requerido"; //esto no salta nunca
-        return value.length <3 ? "Minimo de 3 carcateres" : null;
+        if (value == null)
+          return "Este campo es requerido"; //esto no salta nunca
+        return value.length < 3 ? "Minimo de 3 carcateres" : null;
       },
       autovalidateMode: .onUserInteraction, //mensaje inferior para validar
       decoration: InputDecoration(
-        hintText : hintText, //plaheolder 
+        hintText: hintText, //plaheolder
         labelText: labelText, //etiqueta superior al empezar a escribir
         helperText: helpText, //mensaje abajo
         counterText: "Contador", //texto al final
