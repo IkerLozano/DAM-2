@@ -24,6 +24,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.comboBox.currentIndexChanged.connect(self.estilos)
         self.comboBox_2.currentIndexChanged.connect(self.cambiar)
 
+        self.pushButton.setEnabled(False)
+
 
     def estilos(self, e): #'e es el indice de la opcion seleccionada'
         with open(f"Estilos{e+1}.qss", "r") as f : #uno 'e+1' porque los índices del ComboBox empiezan en 0

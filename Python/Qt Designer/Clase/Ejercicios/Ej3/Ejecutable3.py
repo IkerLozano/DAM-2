@@ -10,6 +10,40 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
      
 
+        self.pushButton_4.clicked.connect(self.grabar)
+        self.pushButton.clicked.connect(self.reset)
+        
+        
+        
+
+
+    def grabar(self):
+        self.textEdit_2.append(self.lineEdit.text())
+        self.textEdit_2.append(self.lineEdit_2.text())
+        self.textEdit_2.append(self.textEdit.toPlainText())
+        self.textEdit_2.append(self.comboBox.currentText())
+
+        boton = self.buttonGroup.checkedButton() #Recoge únicamente el RadioButton que está seleccionado,
+        if boton is not None:
+            self.textEdit_2.append(boton.text())
+        else:
+             self.textEdit_2.append("No has selcionado ningun radio button")
+            
+        
+    
+    def reset(self):
+        self.lineEdit.clear()
+        self.lineEdit_2.clear()
+        self.textEdit.clear()
+        self.textEdit_2.clear()
+        self.comboBox.setCurrentIndex(0)
+
+        self.buttonGroup.setExclusive(False) #para que Qt nos deje desmarca la opciondel radio
+        self.boton = self.buttonGroup.checkedButton()
+        if self.boton:
+            self.boton.setChecked(False)
+
+
 
     
     

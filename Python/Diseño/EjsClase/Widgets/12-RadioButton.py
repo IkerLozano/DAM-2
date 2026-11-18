@@ -28,7 +28,7 @@ class miVentana(QMainWindow):
 
 
 
-        self.radio1.clicked.connect(self.mostrar) #clicked →cuando se pulse la opcion
+        self.radio1.clicked.connect(self.mostrar) #clicked → cuando se pulse la opcion
         self.radio2.clicked.connect(self.mostrar)
 
 

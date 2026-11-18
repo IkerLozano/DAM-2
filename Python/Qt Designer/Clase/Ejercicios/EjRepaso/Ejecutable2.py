@@ -63,3 +63,8 @@ with open("Estilos.qss", "r") as f :
 
 ventana = MainWindow()
 app.exec()
+
+
+# WORDWRAP --> Hace que un texto largo se divide automáticamente en varias líneas
+#CHECKABLE (toggleButton) --> dos estados, marcado y desmarcado
+#para que el dial tenga las muescas la opcion se llama "notchesVisible"

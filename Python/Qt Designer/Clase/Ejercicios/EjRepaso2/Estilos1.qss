@@ -58,6 +58,8 @@ QLabel{
     ::handle --> sirve para seleccionar la parte móvil de un QSlider 
     :selected --> Cuando un elemento está seleccionado,
     :focus --> Cuando un widget tiene el foco (selecionarlo por ejemplo)
+    :open --> Se aplica cuando una ComboBox está abierto (con el estilo “Fusión  no se aplica”)
+    :disabled --> aplica estilos a los widgets que están deshabilitados → self.pushButton.setEnabled(False)
 
 
 */
