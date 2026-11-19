@@ -21,6 +21,8 @@ public class ClienteService {
 
     private final ClienteRepositorio clienteRepositorio;
 
+
+/*
     //el loger tiene que se el sf4j
     private static final Logger logger = LoggerFactory.getLogger(ClienteService.class);
 
@@ -28,6 +30,12 @@ public class ClienteService {
     // Optional<Cliente> clienteOptional = clienteRepositorio.findById(id);
     // permitiendo sacar los datos necesarios
     //MIRAR ESTO *****
+*/
+
+
+
+/*
+    //Este metodo sirve para buscar un cliente por su ID y mostrar sus datos y pedidos.
     @Transactional
     public void mostrarDatos(long id){
         logger.trace("entra en el mostrarDatos");
@@ -53,7 +61,13 @@ public class ClienteService {
         logger.trace("Se sale de mostrarDatos");
     }
 
+*/
 
+
+
+
+/*
+    ESTE METODO YA NO SE USA PORQUE TIENE EL PROBLEMA DE N+1
 
     //@Transactional
     public void mostrarTodos() {
@@ -62,7 +76,7 @@ public class ClienteService {
         List<Cliente> clienteList = clienteRepositorio.findAll();
         System.out.println(clienteList);
 
-/*
+
         System.out.println(clienteList.size());
         System.out.println("#".repeat(20));
 
@@ -70,16 +84,18 @@ public class ClienteService {
             System.out.println("Pedidos cliente: " + cliente.getId() + " - " + cliente.getPedidos().size() + " pedidos");
         }
 
- */
+
 
     }
 
+ */
+
+
     public void arreglarN1() {
 
+        //obtengo los clientes y sus pedidos mediante el metodo "findAllConPedidos"
         List<Cliente> clienteList = clienteRepositorio.findAllConPedidos();
         System.out.println(clienteList);
-
-
 
     }
 

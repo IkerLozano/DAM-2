@@ -8,10 +8,8 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Data
+@Data //como si ponemos @gette, @setter, toString(), equals() y hashCode()
 @Entity
-@Getter
-@Setter
 public class Cliente {
 
     @Id
@@ -20,8 +18,21 @@ public class Cliente {
     String nombre;
 
 
-    @OneToMany(fetch = FetchType.EAGER)
-    @JoinColumn(name = "cliente_id") //para que no nos cree la tabla itermedia
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+        /*
+            fetch = FetchType.EAGER --> indica que cuando recuperamos un cliente, Hibernate carga también sus pedidos
+            EAGER: carga los datos relacionados inmediatamente.
+            LAZY: carga los datos relacionados cuando los necesitamos.
+         */
+    @JoinColumn(name = "cliente_id")
+    /*
+        Sirve para indicar que la relación se va a establecer mediante una columna
+        llamada cliente_id en la tabla pedido, de esta manera no nos creara una tabla intermedia
+
+        Como el JoinColumn esta en eta clase, inidcamos que es la clase padre, y por eso
+        la columna "cliente_id" esta en la clase pedido
+     */
+
     private List<Pedido> pedidos;
 
 
@@ -33,4 +44,11 @@ public class Cliente {
                 ", pedidos=" + pedidos +
                 '}';
     }
+    /*
+        Se podria poner el ToStrting.Exclude pero no incluya los pedidos cuando
+        genere el toString() de Cliente, al imprimir un cliente verás su id y su nombre,
+        pero no sus pedido
+
+        De esta manera si que los veremos
+     */
 }

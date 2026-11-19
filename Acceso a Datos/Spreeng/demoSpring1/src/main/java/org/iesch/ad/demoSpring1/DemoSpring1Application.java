@@ -1,5 +1,6 @@
 package org.iesch.ad.demoSpring1;
 
+import jakarta.transaction.Transactional;
 import org.iesch.ad.demoSpring1.modelo.Coche;
 import org.iesch.ad.demoSpring1.modelo.Curso;
 import org.iesch.ad.demoSpring1.modelo.Persona;
@@ -74,6 +75,7 @@ public class DemoSpring1Application implements CommandLineRunner {
 	@Autowired
 	CocheRepositorio cocheRepositorio;
 
+
 		//repo de student
 	@Autowired
 	StudentRepositorio studentRepositorio;
@@ -85,9 +87,12 @@ public class DemoSpring1Application implements CommandLineRunner {
 
 
 
+
+
 	// ==========================================================================
 	//  METODO MAIN  (arranca la aplicacion)
 	// ==========================================================================
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoSpring1Application.class, args);
@@ -99,6 +104,7 @@ public class DemoSpring1Application implements CommandLineRunner {
 	// ==========================================================================
 
 	@Override
+	@Transactional //explicar luego
 	public void run(String... args) throws Exception {
 
 
@@ -406,42 +412,141 @@ public class DemoSpring1Application implements CommandLineRunner {
 
 
 		// ======================================================================
-		//  RELACION ONE TO MANY
+		//  RELACION MANY TO MANY
 		// ======================================================================
 
 /*
-
 		//UNIDIRECCIONAL
 
-		System.out.println("MANY TO MANY --> UNIDIRECCIONAL");
+		System.out.println("MANY TO MANY UNIDIRECCIONAL");
 
+
+		//creo un estudiante
 		Student student = new Student();
 		student.setNombre("Alberto");
 
-
+		//creo 3 cursos
 		Curso curso1 = new Curso();
 		curso1.setNombre("PHP");
+
 		Curso curso2 = new Curso();
 		curso2.setNombre("Spring");
+
 		Curso curso3 = new Curso();
 		curso3.setNombre("Python");
 
 
-		//al estudiante le meto los cursos
+
+
+		//Asociamos los tres cursos al estudiante
 		student.setCursos(Set.of(curso1, curso2, curso3));
 
-		//System.out.println(student);
+		System.out.println(student);
 
 
+
+		//guardo el estudiante
+		//Como tenemos CascadeType.PERSIST, también se guardan los tres cursos y sus relaciones en la tabla intermedia.
+		studentRepositorio.save(student);
+
+
+		// Recuperamos el estudiante y el curso que ya existe en la BD
+		Student student = studentRepositorio.findById(2L).get();
+		Curso curso = cursoRepositorio.findById(5L).get();
+
+		// Mostramos sus cursos
+		System.out.println("CURSOS DEL ESTUDIANTE");
+		System.out.println(student.getCursos());
+
+		// Eliminamos la relacion del estudiante con un curso
+		student.getCursos().removeIf(c -> c.getNombre().equals("PHP"));
+
+		//compruebo si esta matriculado en un curso
+		if (student.getCursos().contains(curso)) {
+			System.out.println("Está matriculado");
+		}
+
+		// Guardamos los cambios
 		studentRepositorio.save(student);
 
 */
 
 
-		//BIIDIRECCIONAL
 
-		System.out.println("MANY TO MANY --> BIIDIRECCIONAL");
+/*
+		//BIDIRECCIONAL
+		System.out.println("MANY TO MANY UNIDIRECCIONAL");
 
+
+		// Creo 2 estudiantes
+		Student student1 = new Student();
+		student1.setNombre("Iker");
+
+		Student student2 = new Student();
+		student2.setNombre("Juanlu");
+
+
+		// Creo 3 cursos
+		Curso curso1 = new Curso();
+		curso1.setNombre("PSP");
+
+		Curso curso2 = new Curso();
+		curso2.setNombre("AD");
+
+		Curso curso3 = new Curso();
+		curso3.setNombre("JS");
+
+
+		// Relaciono los estudiantes con los cursos
+		student1.setCursos(Set.of(curso1, curso2));
+		student2.setCursos(Set.of(curso2, curso3));
+
+		// Relaciono los cursos con los estudiantes
+		curso1.getStudent().add(student1);
+
+		curso2.getStudent().add(student1);
+		curso2.getStudent().add(student2);
+
+		curso3.getStudent().add(student2);
+
+
+		// Guardo los estudiantes en la BBDD
+		studentRepositorio.save(student1);
+		studentRepositorio.save(student2);
+
+		//muestro los estudiantes
+		System.out.println(student1);
+		System.out.println(student2);
+
+
+		//recupero los estudinates y cursos
+		Student student1 = studentRepositorio.findById(3L).get();
+		Student student2 = studentRepositorio.findById(4L).get();
+
+		Curso curso1 = cursoRepositorio.findById(7L).get();
+		Curso curso2 = cursoRepositorio.findById(8L).get();
+		Curso curso3 = cursoRepositorio.findById(9L).get();
+
+
+		//desde student accedo a los cursos
+		System.out.println("CURSOS DE IKER:");
+		System.out.println(student1.getCursos());
+
+		System.out.println("CURSOS DE JUANLU:");
+		System.out.println(student2.getCursos());
+
+
+		//desde cursos accedo a los student
+		System.out.println("ESTUDIANTES DE AD:");
+		System.out.println(curso1.getStudent());
+
+		System.out.println("ESTUDIANTES DE JS:");
+		System.out.println(curso2.getStudent());
+
+		System.out.println("ESTUDIANTES DE PSP:");
+		System.out.println(curso3.getStudent());
+
+*/
 
 
 

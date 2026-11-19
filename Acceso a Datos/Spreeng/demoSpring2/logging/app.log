@@ -1,0 +1,609 @@
+2026-11-19T14:42:32.335+01:00  INFO 16500 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Starting DemoApplication using Java 27.0.1.0.2 with PID 16500 (C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2\target\classes started by Iker in C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2)
+2026-11-19T14:42:32.337+01:00 DEBUG 16500 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-19T14:42:32.337+01:00  INFO 16500 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-19T14:42:32.593+01:00  INFO 16500 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-19T14:42:32.624+01:00  INFO 16500 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2026-11-19T14:42:32.806+01:00  INFO 16500 --- [demoCarga] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-19T14:42:32.852+01:00  INFO 16500 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-19T14:42:33.167+01:00  INFO 16500 --- [demoCarga] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-19T14:42:33.190+01:00  INFO 16500 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-19T14:42:34.275+01:00  WARN 16500 --- [demoCarga] [main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 1045, SQLState: 28000
+2026-11-19T14:42:34.275+01:00  WARN 16500 --- [demoCarga] [main] org.hibernate.orm.jdbc.error             : Access denied for user 'root'@'localhost' (using password: YES)
+2026-11-19T14:42:34.275+01:00  WARN 16500 --- [demoCarga] [main] org.hibernate.orm.jdbc                   : HHH100046: Could not obtain connection to query JDBC database metadata
+
+org.hibernate.exception.AuthException: Unable to obtain isolated JDBC connection [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:87) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:180) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1388) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1468) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1450) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:433) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.iesch.ad.demo.DemoApplication.main(DemoApplication.java:19) ~[classes/:na]
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:149) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	... 36 common frames omitted
+
+2026-11-19T14:42:34.278+01:00 ERROR 16500 --- [demoCarga] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-11-19T14:42:34.279+01:00  WARN 16500 --- [demoCarga] [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-11-19T14:42:34.281+01:00  INFO 16500 --- [demoCarga] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-11-19T14:42:34.289+01:00 ERROR 16500 --- [demoCarga] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:433) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.iesch.ad.demo.DemoApplication.main(DemoApplication.java:19) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:273) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:180) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1388) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1468) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1450) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.10.jar:7.0.10]
+	... 14 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:190) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:86) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:200) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:452) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	... 30 common frames omitted
+
+2026-11-19T14:43:58.906+01:00  INFO 25624 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Starting DemoApplication using Java 27.0.1.0.2 with PID 25624 (C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2\target\classes started by Iker in C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2)
+2026-11-19T14:43:58.907+01:00 DEBUG 25624 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-19T14:43:58.907+01:00  INFO 25624 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-19T14:43:59.118+01:00  INFO 25624 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-19T14:43:59.145+01:00  INFO 25624 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2026-11-19T14:43:59.302+01:00  INFO 25624 --- [demoCarga] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-19T14:43:59.330+01:00  INFO 25624 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-19T14:43:59.572+01:00  INFO 25624 --- [demoCarga] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-19T14:43:59.589+01:00  INFO 25624 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-19T14:43:59.691+01:00  INFO 25624 --- [demoCarga] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4dd2ef54
+2026-11-19T14:43:59.692+01:00  INFO 25624 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-19T14:43:59.728+01:00  WARN 25624 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-11-19T14:43:59.740+01:00  INFO 25624 --- [demoCarga] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/democarga?createDatabaseIfNotExist=True]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: democarga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-19T14:44:00.277+01:00  INFO 25624 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-19T14:44:00.293+01:00  WARN 25624 --- [demoCarga] [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table pedido drop foreign key FK30s8j2ktpay6of18lbyqn3632" via JDBC [Table 'democarga.pedido' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table pedido drop foreign key FK30s8j2ktpay6of18lbyqn3632" via JDBC [Table 'democarga.pedido' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:91) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1455) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:327) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:458) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1452) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:433) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.iesch.ad.demo.DemoApplication.main(DemoApplication.java:19) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'democarga.pedido' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:839) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:687) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:86) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	... 39 common frames omitted
+
+2026-11-19T14:44:00.350+01:00  INFO 25624 --- [demoCarga] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T14:44:00.399+01:00  INFO 25624 --- [demoCarga] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-19T14:44:00.763+01:00  INFO 25624 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Started DemoApplication in 2.09 seconds (process running for 2.315)
+2026-11-19T14:44:00.869+01:00  INFO 25624 --- [demoCarga] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T14:44:00.870+01:00  INFO 25624 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-19T14:44:00.873+01:00  INFO 25624 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-19T14:47:14.296+01:00  INFO 24648 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Starting DemoApplication using Java 27.0.1.0.2 with PID 24648 (C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2\target\classes started by Iker in C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2)
+2026-11-19T14:47:14.297+01:00 DEBUG 24648 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-19T14:47:14.297+01:00  INFO 24648 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-19T14:47:14.507+01:00  INFO 24648 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-19T14:47:14.534+01:00  INFO 24648 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2026-11-19T14:47:14.686+01:00  INFO 24648 --- [demoCarga] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-19T14:47:14.714+01:00  INFO 24648 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-19T14:47:14.963+01:00  INFO 24648 --- [demoCarga] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-19T14:47:14.980+01:00  INFO 24648 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-19T14:47:15.066+01:00  INFO 24648 --- [demoCarga] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5bf4764d
+2026-11-19T14:47:15.067+01:00  INFO 24648 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-19T14:47:15.096+01:00  WARN 24648 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-11-19T14:47:15.106+01:00  INFO 24648 --- [demoCarga] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/democarga?createDatabaseIfNotExist=True]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: democarga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-19T14:47:15.555+01:00  INFO 24648 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-19T14:47:15.569+01:00  WARN 24648 --- [demoCarga] [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table pedido drop foreign key FK30s8j2ktpay6of18lbyqn3632" via JDBC [Table 'democarga.pedido' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table pedido drop foreign key FK30s8j2ktpay6of18lbyqn3632" via JDBC [Table 'democarga.pedido' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:91) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1455) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:327) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:458) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1452) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:433) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.iesch.ad.demo.DemoApplication.main(DemoApplication.java:19) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'democarga.pedido' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:839) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:687) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:86) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	... 39 common frames omitted
+
+2026-11-19T14:47:15.634+01:00  INFO 24648 --- [demoCarga] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T14:47:15.669+01:00  INFO 24648 --- [demoCarga] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-19T14:47:15.988+01:00  INFO 24648 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Started DemoApplication in 1.922 seconds (process running for 2.136)
+2026-11-19T14:47:16.081+01:00  INFO 24648 --- [demoCarga] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T14:47:16.082+01:00  INFO 24648 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-19T14:47:16.085+01:00  INFO 24648 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-19T16:47:37.135+01:00  INFO 14444 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Starting DemoApplication using Java 27.0.1.0.2 with PID 14444 (C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2\target\classes started by Iker in C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2)
+2026-11-19T16:47:37.138+01:00 DEBUG 14444 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-19T16:47:37.139+01:00  INFO 14444 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-19T16:47:37.397+01:00  INFO 14444 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-19T16:47:37.430+01:00  INFO 14444 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2026-11-19T16:47:37.625+01:00  INFO 14444 --- [demoCarga] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-19T16:47:37.673+01:00  INFO 14444 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-19T16:47:37.982+01:00  INFO 14444 --- [demoCarga] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-19T16:47:38.006+01:00  INFO 14444 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-19T16:47:38.122+01:00  INFO 14444 --- [demoCarga] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ddc67d0
+2026-11-19T16:47:38.123+01:00  INFO 14444 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-19T16:47:38.161+01:00  WARN 14444 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-11-19T16:47:38.172+01:00  INFO 14444 --- [demoCarga] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/democarga?createDatabaseIfNotExist=True]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: democarga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-19T16:47:38.709+01:00  INFO 14444 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-19T16:47:38.796+01:00  INFO 14444 --- [demoCarga] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T16:47:38.842+01:00  INFO 14444 --- [demoCarga] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-19T16:47:39.218+01:00  INFO 14444 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Started DemoApplication in 2.38 seconds (process running for 2.669)
+2026-11-19T16:47:39.338+01:00  INFO 14444 --- [demoCarga] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-11-19T16:47:39.345+01:00 ERROR 14444 --- [demoCarga] [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 2
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302) ~[na:na]
+	at java.base/java.util.Objects.checkIndex(Objects.java:365) ~[na:na]
+	at java.base/java.util.ArrayList.get(ArrayList.java:428) ~[na:na]
+	at org.hibernate.collection.spi.PersistentBag.get(PersistentBag.java:585) ~[hibernate-core-7.4.13.Final.jar:7.4.13.Final]
+	at org.iesch.ad.demo.DemoApplication.run(DemoApplication.java:75) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$1(SpringApplication.java:780) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82) ~[spring-core-7.0.10.jar:7.0.10]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-7.0.10.jar:7.0.10]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86) ~[spring-core-7.0.10.jar:7.0.10]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:788) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:779) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$0(SpringApplication.java:764) ~[spring-boot-4.1.2.jar:4.1.2]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:186) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:571) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:153) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:176) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:632) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:764) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.iesch.ad.demo.DemoApplication.main(DemoApplication.java:19) ~[classes/:na]
+
+2026-11-19T16:47:39.349+01:00  INFO 14444 --- [demoCarga] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T16:47:39.350+01:00  INFO 14444 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-19T16:47:39.354+01:00  INFO 14444 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-19T16:48:04.578+01:00  INFO 12292 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Starting DemoApplication using Java 27.0.1.0.2 with PID 12292 (C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2\target\classes started by Iker in C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2)
+2026-11-19T16:48:04.579+01:00 DEBUG 12292 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-19T16:48:04.579+01:00  INFO 12292 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-19T16:48:04.793+01:00  INFO 12292 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-19T16:48:04.820+01:00  INFO 12292 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2026-11-19T16:48:04.978+01:00  INFO 12292 --- [demoCarga] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-19T16:48:05.006+01:00  INFO 12292 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-19T16:48:05.251+01:00  INFO 12292 --- [demoCarga] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-19T16:48:05.268+01:00  INFO 12292 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-19T16:48:05.355+01:00  INFO 12292 --- [demoCarga] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7767bd4e
+2026-11-19T16:48:05.356+01:00  INFO 12292 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-19T16:48:05.384+01:00  WARN 12292 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-11-19T16:48:05.395+01:00  INFO 12292 --- [demoCarga] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/democarga?createDatabaseIfNotExist=True]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: democarga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-19T16:48:05.827+01:00  INFO 12292 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-19T16:48:05.906+01:00  INFO 12292 --- [demoCarga] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T16:48:05.941+01:00  INFO 12292 --- [demoCarga] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-19T16:48:06.258+01:00  INFO 12292 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Started DemoApplication in 1.915 seconds (process running for 2.13)
+2026-11-19T16:48:06.322+01:00  INFO 12292 --- [demoCarga] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T16:48:06.323+01:00  INFO 12292 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-19T16:48:06.326+01:00  INFO 12292 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-19T16:48:45.380+01:00  INFO 2428 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Starting DemoApplication using Java 27.0.1.0.2 with PID 2428 (C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2\target\classes started by Iker in C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2)
+2026-11-19T16:48:45.381+01:00 DEBUG 2428 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-19T16:48:45.382+01:00  INFO 2428 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-19T16:48:45.587+01:00  INFO 2428 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-19T16:48:45.614+01:00  INFO 2428 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2026-11-19T16:48:45.790+01:00  INFO 2428 --- [demoCarga] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-19T16:48:45.820+01:00  INFO 2428 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-19T16:48:46.066+01:00  INFO 2428 --- [demoCarga] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-19T16:48:46.083+01:00  INFO 2428 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-19T16:48:46.170+01:00  INFO 2428 --- [demoCarga] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@795b66d
+2026-11-19T16:48:46.171+01:00  INFO 2428 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-19T16:48:46.199+01:00  WARN 2428 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-11-19T16:48:46.209+01:00  INFO 2428 --- [demoCarga] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/democarga?createDatabaseIfNotExist=True]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: democarga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-19T16:48:46.654+01:00  INFO 2428 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-19T16:48:46.745+01:00  INFO 2428 --- [demoCarga] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T16:48:46.783+01:00  INFO 2428 --- [demoCarga] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-19T16:48:47.101+01:00  INFO 2428 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Started DemoApplication in 1.959 seconds (process running for 2.19)
+2026-11-19T16:48:47.164+01:00  INFO 2428 --- [demoCarga] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T16:48:47.165+01:00  INFO 2428 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-19T16:48:47.168+01:00  INFO 2428 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-19T16:49:05.957+01:00  INFO 19120 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Starting DemoApplication using Java 27.0.1.0.2 with PID 19120 (C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2\target\classes started by Iker in C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2)
+2026-11-19T16:49:05.959+01:00 DEBUG 19120 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-19T16:49:05.959+01:00  INFO 19120 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-19T16:49:06.177+01:00  INFO 19120 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-19T16:49:06.204+01:00  INFO 19120 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2026-11-19T16:49:06.364+01:00  INFO 19120 --- [demoCarga] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-19T16:49:06.392+01:00  INFO 19120 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-19T16:49:06.635+01:00  INFO 19120 --- [demoCarga] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-19T16:49:06.652+01:00  INFO 19120 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-19T16:49:06.748+01:00  INFO 19120 --- [demoCarga] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@573aeab2
+2026-11-19T16:49:06.749+01:00  INFO 19120 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-19T16:49:06.777+01:00  WARN 19120 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-11-19T16:49:06.788+01:00  INFO 19120 --- [demoCarga] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/democarga?createDatabaseIfNotExist=True]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: democarga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-19T16:49:07.224+01:00  INFO 19120 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-19T16:49:07.298+01:00  INFO 19120 --- [demoCarga] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T16:49:07.338+01:00  INFO 19120 --- [demoCarga] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-19T16:49:07.653+01:00  INFO 19120 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Started DemoApplication in 1.936 seconds (process running for 2.153)
+2026-11-19T16:49:07.723+01:00  INFO 19120 --- [demoCarga] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T16:49:07.724+01:00  INFO 19120 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-19T16:49:07.727+01:00  INFO 19120 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-19T16:49:20.809+01:00  INFO 10268 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Starting DemoApplication using Java 27.0.1.0.2 with PID 10268 (C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2\target\classes started by Iker in C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2)
+2026-11-19T16:49:20.810+01:00 DEBUG 10268 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-19T16:49:20.811+01:00  INFO 10268 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-19T16:49:21.022+01:00  INFO 10268 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-19T16:49:21.049+01:00  INFO 10268 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2026-11-19T16:49:21.203+01:00  INFO 10268 --- [demoCarga] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-19T16:49:21.230+01:00  INFO 10268 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-19T16:49:21.477+01:00  INFO 10268 --- [demoCarga] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-19T16:49:21.494+01:00  INFO 10268 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-19T16:49:21.574+01:00  INFO 10268 --- [demoCarga] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@359ceb13
+2026-11-19T16:49:21.575+01:00  INFO 10268 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-19T16:49:21.604+01:00  WARN 10268 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-11-19T16:49:21.614+01:00  INFO 10268 --- [demoCarga] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/democarga?createDatabaseIfNotExist=True]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: democarga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-19T16:49:22.062+01:00  INFO 10268 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-19T16:49:22.139+01:00  INFO 10268 --- [demoCarga] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T16:49:22.174+01:00  INFO 10268 --- [demoCarga] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-19T16:49:22.487+01:00  INFO 10268 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Started DemoApplication in 1.933 seconds (process running for 2.148)
+2026-11-19T16:49:22.551+01:00  INFO 10268 --- [demoCarga] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T16:49:22.552+01:00  INFO 10268 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-19T16:49:22.555+01:00  INFO 10268 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-19T16:50:10.388+01:00  INFO 8656 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Starting DemoApplication using Java 27.0.1.0.2 with PID 8656 (C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2\target\classes started by Iker in C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2)
+2026-11-19T16:50:10.390+01:00 DEBUG 8656 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-19T16:50:10.390+01:00  INFO 8656 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-19T16:50:10.615+01:00  INFO 8656 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-19T16:50:10.642+01:00  INFO 8656 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2026-11-19T16:50:10.800+01:00  INFO 8656 --- [demoCarga] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-19T16:50:10.827+01:00  INFO 8656 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-19T16:50:11.070+01:00  INFO 8656 --- [demoCarga] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-19T16:50:11.087+01:00  INFO 8656 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-19T16:50:11.180+01:00  INFO 8656 --- [demoCarga] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7708b66a
+2026-11-19T16:50:11.181+01:00  INFO 8656 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-19T16:50:11.209+01:00  WARN 8656 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-11-19T16:50:11.219+01:00  INFO 8656 --- [demoCarga] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/democarga?createDatabaseIfNotExist=True]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: democarga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-19T16:50:11.651+01:00  INFO 8656 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-19T16:50:11.722+01:00  INFO 8656 --- [demoCarga] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T16:50:11.764+01:00  INFO 8656 --- [demoCarga] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-19T16:50:12.083+01:00  INFO 8656 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Started DemoApplication in 1.931 seconds (process running for 2.167)
+2026-11-19T16:50:12.152+01:00  INFO 8656 --- [demoCarga] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T16:50:12.153+01:00  INFO 8656 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-19T16:50:12.156+01:00  INFO 8656 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-19T16:56:30.672+01:00  INFO 25152 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Starting DemoApplication using Java 27.0.1.0.2 with PID 25152 (C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2\target\classes started by Iker in C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2)
+2026-11-19T16:56:30.674+01:00 DEBUG 25152 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-19T16:56:30.674+01:00  INFO 25152 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-19T16:56:30.895+01:00  INFO 25152 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-19T16:56:30.923+01:00  INFO 25152 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2026-11-19T16:56:31.083+01:00  INFO 25152 --- [demoCarga] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-19T16:56:31.111+01:00  INFO 25152 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-19T16:56:31.359+01:00  INFO 25152 --- [demoCarga] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-19T16:56:31.376+01:00  INFO 25152 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-19T16:56:31.469+01:00  INFO 25152 --- [demoCarga] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4dd2ef54
+2026-11-19T16:56:31.470+01:00  INFO 25152 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-19T16:56:31.498+01:00  WARN 25152 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-11-19T16:56:31.509+01:00  INFO 25152 --- [demoCarga] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/democarga?createDatabaseIfNotExist=True]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: democarga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-19T16:56:31.949+01:00  INFO 25152 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-19T16:56:32.026+01:00  INFO 25152 --- [demoCarga] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T16:56:32.070+01:00  INFO 25152 --- [demoCarga] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-19T16:56:32.393+01:00  INFO 25152 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Started DemoApplication in 1.968 seconds (process running for 2.186)
+2026-11-19T16:56:32.508+01:00  INFO 25152 --- [demoCarga] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T16:56:32.509+01:00  INFO 25152 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-19T16:56:32.512+01:00  INFO 25152 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-19T17:26:16.099+01:00  INFO 17612 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Starting DemoApplication using Java 27.0.1.0.2 with PID 17612 (C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2\target\classes started by Iker in C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2)
+2026-11-19T17:26:16.100+01:00 DEBUG 17612 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-19T17:26:16.101+01:00  INFO 17612 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-19T17:26:16.312+01:00  INFO 17612 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-19T17:26:16.340+01:00  INFO 17612 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2026-11-19T17:26:16.500+01:00  INFO 17612 --- [demoCarga] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-19T17:26:16.529+01:00  INFO 17612 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-19T17:26:16.773+01:00  INFO 17612 --- [demoCarga] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-19T17:26:16.789+01:00  INFO 17612 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-19T17:26:16.875+01:00  INFO 17612 --- [demoCarga] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7767bd4e
+2026-11-19T17:26:16.876+01:00  INFO 17612 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-19T17:26:16.904+01:00  WARN 17612 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-11-19T17:26:16.915+01:00  INFO 17612 --- [demoCarga] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/democarga?createDatabaseIfNotExist=True]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: democarga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-19T17:26:17.351+01:00  INFO 17612 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-19T17:26:17.430+01:00  INFO 17612 --- [demoCarga] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T17:26:17.465+01:00  INFO 17612 --- [demoCarga] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-19T17:26:17.787+01:00  INFO 17612 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Started DemoApplication in 1.921 seconds (process running for 2.145)
+2026-11-19T17:26:17.791+01:00  INFO 17612 --- [demoCarga] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T17:26:17.792+01:00  INFO 17612 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-19T17:26:17.795+01:00  INFO 17612 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-19T17:26:54.816+01:00  INFO 23708 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Starting DemoApplication using Java 27.0.1.0.2 with PID 23708 (C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2\target\classes started by Iker in C:\Users\Iker\Desktop\Clase\DAM-2\Acceso a datos\Spreeng\demoSpring2)
+2026-11-19T17:26:54.817+01:00 DEBUG 23708 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-19T17:26:54.818+01:00  INFO 23708 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-19T17:26:55.027+01:00  INFO 23708 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-19T17:26:55.053+01:00  INFO 23708 --- [demoCarga] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2026-11-19T17:26:55.212+01:00  INFO 23708 --- [demoCarga] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-19T17:26:55.240+01:00  INFO 23708 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-19T17:26:55.485+01:00  INFO 23708 --- [demoCarga] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-19T17:26:55.502+01:00  INFO 23708 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-19T17:26:55.597+01:00  INFO 23708 --- [demoCarga] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4dd2ef54
+2026-11-19T17:26:55.598+01:00  INFO 23708 --- [demoCarga] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-19T17:26:55.626+01:00  WARN 23708 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-11-19T17:26:55.637+01:00  INFO 23708 --- [demoCarga] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/democarga?createDatabaseIfNotExist=True]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: democarga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-19T17:26:56.074+01:00  INFO 23708 --- [demoCarga] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-19T17:26:56.153+01:00  INFO 23708 --- [demoCarga] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T17:26:56.195+01:00  INFO 23708 --- [demoCarga] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-19T17:26:56.511+01:00  INFO 23708 --- [demoCarga] [main] org.iesch.ad.demo.DemoApplication        : Started DemoApplication in 1.926 seconds (process running for 2.148)
+2026-11-19T17:26:56.615+01:00  INFO 23708 --- [demoCarga] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T17:26:56.616+01:00  INFO 23708 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-19T17:26:56.619+01:00  INFO 23708 --- [demoCarga] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
