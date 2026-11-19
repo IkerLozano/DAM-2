@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Operaciones aritméticas</title>
+</head>
+
+<body>
+  <h1>Calculadora</h1>
+
+  <!--NUMERO 1-->
+  <label for="numero1">Primer número:</label>
+  <select id="numero1" onchange="selecionar()">
+
+  </select>
+
+
+  <!--OPERACION-->
+  <label for="operacion">Operación:</label>
+  <select id="operacion" onchange="selecionar()">
+    <option value="sumar">Suma (+)</option>
+    <option value="restar">Resta (−)</option>
+    <option value="multiplicar">Multiplicación (×)</option>
+    <option value="dividir">División (÷)</option>
+  </select>
+
+
+  <!--NUMERO 2-->
+  <label for="numero2">Segundo número:</label>
+  <select id="numero2" onchange="selecionar()">
+
+  </select>
+
+
+  <!--BOTON CALCULAR-->
+  <button id="calcular">Calcular</button>
+
+
+  <!--RESULTADO-->
+  <h1>Resultado: <span id="resultado">———</span></h1>
+
+
+  <!--HISTORIAL-->
+  <section aria-labelledby="titulo-historial">
+    <h2 id="titulo-historial">Historial de operaciones</h2>
+    <ol id="historial">
+
+    </ol>
+
+
+  </section>
+
+
+  <button id="borrar-historial" type="button">Borrar historial</button>
+
+
+
+
+  <script>
+
+    let num = prompt("Dime un numero")
+
+    //lleno el select del numero 2
+    for (let i = 0; i < num; i++) {
+
+      let nuevoElemento = document.createElement("option")
+      let textoNumero = document.createTextNode(i + 1)
+      nuevoElemento.appendChild(textoNumero)
+      nuevoElemento.value = i + 1
+
+      document.getElementById("numero1").appendChild(nuevoElemento)
+
+
+    }
+
+
+    //lleno el select del numero 2
+    for (let i = 0; i < num; i++) {
+
+      let nuevoElemento2 = document.createElement("option")
+      let textoNumero2 = document.createTextNode(i + 1)
+      nuevoElemento2.appendChild(textoNumero2)
+
+      document.getElementById("numero2").appendChild(nuevoElemento2)
+
+
+    }
+
+
+
+    //operaciones
+    let opcion = document.getElementById("operacion")
+    let resp = document.getElementById("resultado")
+    let num1 = document.getElementById("numero1")
+    let num2 = document.getElementById("numero2")
+
+    let resultado
+    let signo
+
+
+
+    function selecionar() {
+
+      if (opcion.value === "sumar") {
+
+        signo = "+"
+
+        let uno = parseInt(num1.value)
+        let dos = parseInt(num2.value)
+
+        resultado = uno + dos
+        resp.innerHTML = resultado
+
+
+      } else if (opcion.value === "restar") {
+
+        signo = "-"
+
+        let uno = parseInt(num1.value)
+        let dos = parseInt(num2.value)
+
+        resultado = uno - dos
+        resp.innerHTML = resultado
+
+
+      } else if (opcion.value === "multiplicar") {
+
+        signo = "*"
+
+        let uno = parseInt(num1.value)
+        let dos = parseInt(num2.value)
+
+        resultado = uno * dos
+        resp.innerHTML = resultado
+
+
+      } else if (opcion.value == "dividir") {
+
+        signo = "/"
+
+        let uno = parseInt(num1.value)
+        let dos = parseInt(num2.value)
+
+        resultado = uno / dos
+        resp.innerHTML = resultado
+
+
+      }
+    }
+
+
+
+
+    //texto resultado
+    document.getElementById("calcular").addEventListener("click", function () {
+
+
+      let opcionLista = document.createElement("ol")
+      let textoLista = document.createTextNode(num1.value + signo + num2.value + " = " + resultado)
+      opcionLista.appendChild(textoLista)
+
+      document.getElementById("historial").appendChild(opcionLista)
+
+
+    })
+
+
+
+    //borrar
+    let lista = document.getElementById("historial")
+    document.getElementById("borrar-historial").addEventListener("click", function () {
+
+
+      lista.innerHTML = ""
+
+
+    })
+
+
+  </script>
+
+
+
+</body>
+
+</html>

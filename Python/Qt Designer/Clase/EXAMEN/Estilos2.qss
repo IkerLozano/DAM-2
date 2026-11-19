@@ -1,0 +1,75 @@
+
+#checkBox_2, #checkBox{
+
+    font-weight: bold;
+
+}
+
+
+#pushButton_4:pressed{
+
+    background-color: yellow;
+
+}
+
+#comboBox:focus{
+
+    background-color: green;
+
+}
+
+
+/*
+#pushButton_7, #pushButton_8, #pushButton_9, #pushButton_10, #pushButton_11{
+
+    padding: 10px;
+  
+}
+
+/*
+#pushButton:checked, #pushButton_2:checked, #pushButton_3:checked{
+
+    background-color: red;
+  
+}
+
+
+#label_2{
+
+    border: 5px dotted green;
+    border-radius: 7px;
+    font-family: Tahoma;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+}
+
+/*
+#texto{
+
+    background-color: white;
+    padding: 10px;
+
+}
+
+
+QPushButton{
+
+    background-color: white;
+    color: black;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 7px;
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+
+QMainWindow{
+
+    background-color: gray;
+
+}
+*/
