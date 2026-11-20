@@ -54,7 +54,7 @@ public class Persona {
         //Una persona tiene un coche.
         //Un coche pertenece a una persona.
     @OneToOne(cascade = CascadeType.ALL) //lo que hagamos en persona se propaga en coche
-    @JoinColumn(name = "coche_id", referencedColumnName = "id") //indica dnd esta la clave ajena, ledigo que la CA se llame "coche_id"
+    @JoinColumn(name = "coche_id", referencedColumnName = "id") //indica dnd esta la clave ajena, le digo que la CA se llame "coche_id"
             Coche coche;
             /*
                 Es el atributo que permite que una persona tenga asociado un coche,

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crear DIV con JavaScript</title>
+
+    <style>
+        .caja {
+            width: 200px;
+            padding: 20px;
+            margin: 10px;
+            background-color: lightblue;
+            border: 1px solid rgb(9, 255, 0);
+            border-radius: 8px;
+        }
+
+        .alargar {
+            width: 300px;
+            padding: 20px;
+            margin: 10px;
+            background-color: 000;
+            border: 1px solid blue;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- • click: Se activa cuando el usuario hace clic izquierdo sobre el div.
+    • dblclick: Se activa con doble clic.
+    • mouseover: Se activa cuando el puntero del ratón entra en el área del div.
+    • mouseout: Se activa cuando el puntero del ratón sale del área del div. 
+    
+    -->
+
+
+
+    <h1>Crear elementos DIV</h1>
+
+    <button id="crear">Crear DIV</button>
+    <button id="contar">Contar</button>
+
+    <div id="contenedor">
+
+    </div>
+
+
+
+    <script>
+
+
+        let cont = 0
+        document.getElementById("crear").addEventListener("click", function () {
+
+            cont++
+
+            let nuevoDiv = document.createElement("div")
+            let textoPrueba = document.createTextNode("Soy el DIV numero " + cont)
+            nuevoDiv.appendChild(textoPrueba)
+            //nuevoDiv.ondblclick = borrar()
+
+
+            nuevoDiv.classList.add("caja")
+
+            document.getElementById("contenedor").appendChild(nuevoDiv)
+
+
+
+            //para alargar
+            function cambiar1() {
+                this.classList.add('alargar');
+            }
+
+            let elementosHijo = document.getElementsByClassName("caja")
+            for (var i = 0; i < elementosHijo.length; i++) {
+                elementosHijo[i].addEventListener('mouseover', cambiar1);
+            };
+
+
+            //para volver a su forma original
+            function cambiar2() {
+                this.classList.remove('alargar');
+            }
+
+            for (var i = 0; i < elementosHijo.length; i++) {
+                elementosHijo[i].addEventListener('mouseout', cambiar2);
+            };
+
+
+        })
+
+
+
+
+        document.getElementById("contar").addEventListener("click", function () {
+
+            let miDiv = document.getElementById("contenedor")
+            let hijos = miDiv.getElementsByTagName("div")
+            let num = hijos.length
+
+            alert("Hay " + num + " elementos <div>")
+
+        })
+
+
+
+        //eliminar
+        var cajas = document.getElementsByClassName('caja');
+
+        function borrar() {
+
+            for (var i = 0; i < cajas.length; i++) {
+                cajas[i].remove
+            };
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
