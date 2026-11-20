@@ -94,8 +94,8 @@ public class ClienteService {
     public void arreglarN1() {
 
         //obtengo los clientes y sus pedidos mediante el metodo "findAllConPedidos"
-        List<Cliente> clienteList = clienteRepositorio.findAllConPedidos();
-        System.out.println(clienteList);
+        //List<Cliente> clienteList = clienteRepositorio.findAllConPedidos();
+        //System.out.println(clienteList);
 
     }
 

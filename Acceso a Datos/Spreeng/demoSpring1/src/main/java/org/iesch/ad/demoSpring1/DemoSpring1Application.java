@@ -1,14 +1,8 @@
 package org.iesch.ad.demoSpring1;
 
 import jakarta.transaction.Transactional;
-import org.iesch.ad.demoSpring1.modelo.Coche;
-import org.iesch.ad.demoSpring1.modelo.Curso;
-import org.iesch.ad.demoSpring1.modelo.Persona;
-import org.iesch.ad.demoSpring1.modelo.Student;
-import org.iesch.ad.demoSpring1.repositorio.CocheRepositorio;
-import org.iesch.ad.demoSpring1.repositorio.CursoRepositorio;
-import org.iesch.ad.demoSpring1.repositorio.PersonaRepositorio;
-import org.iesch.ad.demoSpring1.repositorio.StudentRepositorio;
+import org.iesch.ad.demoSpring1.modelo.*;
+import org.iesch.ad.demoSpring1.repositorio.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -85,6 +79,13 @@ public class DemoSpring1Application implements CommandLineRunner {
 	@Autowired
 	CursoRepositorio cursoRepositorio;
 
+
+
+	@Autowired
+    DepartamentoRepositorio departamentoRepositorio;
+
+	@Autowired
+	EmpleadoRepositorio empleadoRepositorio;
 
 
 
@@ -548,7 +549,123 @@ public class DemoSpring1Application implements CommandLineRunner {
 
 */
 
+		// ======================================================================
+		//  RELACIÓN MANY TO ONE
+		// ======================================================================
+
+
+/*
+		//UNIDIRECCIONAL
+		System.out.println("MANY TO ONE UNIDIRECCIONAL");
+
+
+		//creo un departamento
+		Departamento departamento = new Departamento();
+		departamento.setNombre("Informática");
+
+		departamentoRepositorio.save(departamento);
+
+
+		//Creo 3 empleados
+		Empleado e1 = new Empleado();
+		e1.setNombre("Juan");
+		e1.setSalario(1800.0);
+		e1.setDepartamento(departamento);
+
+		Empleado e2 = new Empleado();
+		e2.setNombre("Ana");
+		e2.setSalario(2000.0);
+		e2.setDepartamento(departamento);
+
+		Empleado e3 = new Empleado();
+		e3.setNombre("Pedro");
+		e3.setSalario(1900.0);
+		e3.setDepartamento(departamento);
+
+		//Guardo los empleados
+		empleadoRepositorio.save(e1);
+		empleadoRepositorio.save(e2);
+		empleadoRepositorio.save(e3);
+
+
+		//consultos los departamentos desde los empleados
+		List<Empleado> empleados = empleadoRepositorio.findAll();
+
+		for (Empleado e : empleados){
+
+			System.out.println(e.getNombre());
+			System.out.println("--> " + e.getDepartamento().getNombre());
+		}
+
+*/
+
+
+
+		//BIDIRECCIONAL
+		System.out.println("MANY TO ONE BIDIRECCIONAL");
+
+		//creo un departamento
+		Departamento d1 = new Departamento();
+		d1.setNombre("Matematicas");
+
+		Departamento d2 = new Departamento();
+		d2.setNombre("Lengua");
+
+		departamentoRepositorio.save(d1);
+		departamentoRepositorio.save(d2);
+
+
+		//Creo 3 empleados
+		Empleado e1 = new Empleado();
+		e1.setNombre("Andres");
+		e1.setSalario(2000.0);
+		e1.setDepartamento(d1);
+
+		Empleado e2 = new Empleado();
+		e2.setNombre("Carlos");
+		e2.setSalario(1800.0);
+		e2.setDepartamento(d2);
+
+		Empleado e3 = new Empleado();
+		e3.setNombre("Hector");
+		e3.setSalario(1800.0);
+		e3.setDepartamento(d2);
+
+		//Guardo los empleados
+		empleadoRepositorio.save(e1);
+		empleadoRepositorio.save(e2);
+		empleadoRepositorio.save(e3);
+
+
+
+
+		//desde los empelados consuto los departamentos (como  antes)
+		System.out.println("-----desde los empelados consuto los departamentos-----");
+
+		List<Empleado> empleados = empleadoRepositorio.findAll();
+
+		for (Empleado e : empleados) {
+			System.out.println(e.getNombre());
+			System.out.println("--> " + e.getDepartamento().getNombre());
+		}
+
+
+		//desde los departamentos consulto lo empleados
+		System.out.println("-----desde los departamentos consulto lo empleados---");
+
+		List<Departamento> departamentos = departamentoRepositorio.findAll();
+
+		for (Departamento d : departamentos) {
+			System.out.println("Departamento: " + d.getNombre());
+
+			for (Empleado e : d.getEmpleados()) {
+				System.out.println("Empleado: " + e.getNombre());
+			}
+		}
+
 
 
 	}
+
+
 }

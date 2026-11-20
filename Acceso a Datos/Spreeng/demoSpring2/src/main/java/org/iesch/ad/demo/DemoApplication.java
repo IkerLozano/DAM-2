@@ -4,6 +4,7 @@ import org.iesch.ad.demo.Servicios.ClienteService;
 import org.iesch.ad.demo.modelo.Cliente;
 import org.iesch.ad.demo.modelo.Pedido;
 import org.iesch.ad.demo.repositorios.ClienteRepositorio;
+import org.iesch.ad.demo.repositorios.PedidoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -25,6 +26,11 @@ public class DemoApplication implements CommandLineRunner {
 
 	@Autowired
 	ClienteRepositorio clienteRepositorio;
+
+	@Autowired
+	PedidoRepositorio pedidoRepositorio;
+
+
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -82,8 +88,73 @@ public class DemoApplication implements CommandLineRunner {
 */
 
 
+
+
+
+
 		//BIDIRECCIONAL
 		System.out.println("MANY TO MANY BIDIRECCIONAL");
+
+		//creo 2 clientes
+		Cliente c1 = new Cliente();
+		c1.setNombre("Andres");
+
+		Cliente c2 = new Cliente();
+		c2.setNombre("Carlos");
+
+		clienteRepositorio.save(c1);
+		clienteRepositorio.save(c2);
+
+
+		//creo 3 pedidos
+		Pedido p1 = new Pedido();
+		p1.setFecha(LocalDateTime.now());
+		p1.setResumen("Pedido de matematicas");
+		p1.setCliente(c1);
+
+		Pedido p2 = new Pedido();
+		p2.setFecha(LocalDateTime.now());
+		p2.setResumen("Pedido de lengua");
+		p2.setCliente(c1);
+
+		Pedido p3 = new Pedido();
+		p3.setFecha(LocalDateTime.now());
+		p3.setResumen("Pedido de historia");
+		p3.setCliente(c2);
+
+		pedidoRepositorio.save(p1);
+		pedidoRepositorio.save(p2);
+		pedidoRepositorio.save(p3);
+
+
+		// CONSULTAR CLIENTES Y SUS PEDIDOS (esto ya lo poniahacer en la unidireccionalidad)
+		System.out.println("CLIENTES Y SUS PEDIDOS");
+
+		List<Cliente> clientes = clienteRepositorio.findAll();
+
+		for (Cliente c : clientes) {
+			System.out.println("----------------Cliente: " + c.getNombre() + "----------------");
+
+			for (Pedido p : c.getPedidos()) {
+				System.out.println("Pedido: " + p.getResumen());
+			}
+		}
+
+
+		// CONSULTAR PEDIDOS Y SUS CLIENTES
+		System.out.println("PEDIDOS Y SUS CLIENTES");
+
+		List<Pedido> pedidos = pedidoRepositorio.findAll();
+
+		for (Pedido p : pedidos) {
+			System.out.println("Pedido: " + p.getResumen());
+			System.out.println(" --> Cliente: " + p.getCliente().getNombre());
+		}
+
+
+
+
+
 
 	}
 }
