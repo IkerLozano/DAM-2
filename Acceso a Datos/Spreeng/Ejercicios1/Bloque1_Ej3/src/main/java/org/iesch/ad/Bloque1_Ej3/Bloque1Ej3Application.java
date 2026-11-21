@@ -70,5 +70,24 @@ public class Bloque1Ej3Application implements CommandLineRunner {
 
 		}
 
+
+		//BIDIRECCIONAL
+		System.out.println("BIDIRECCIONAL");
+
+		//voy a usar los mismo datos que con la unidireccionalidad
+
+		//recupero todos los pedidos
+		List<Pedido> pedidos = pedidoRepo.findAll();
+
+		for (Pedido p : pedidos){
+
+			System.out.println("-----Pedido de " + p.getNombre() + "-------");
+			System.out.println(p.getDireccion().getCalle());
+			System.out.println(p.getDireccion().getCiudad());
+			System.out.println(p.getDireccion().getCP());
+
+
+		}
+
 	}
 }
