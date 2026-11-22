@@ -34,6 +34,7 @@ public class Bloque1Ej3Application implements CommandLineRunner {
 
 
 		//UNIDIRECCIONAL
+		System.out.println("UNIDIRECCIONAL");	//UNIDIRECCIONAL
 		System.out.println("UNIDIRECCIONAL");
 
 
