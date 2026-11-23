@@ -1,14 +1,10 @@
 package org.iesch.ad.Bloque2_Ej3.Modelo;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -26,4 +22,8 @@ public class Asignatura {
     private String nombre;
     private String profesor;
     private int horas;
+
+    @ManyToMany(mappedBy = "asignaturas", fetch = FetchType.EAGER)
+    @ToString.Exclude
+    List<Estudiante> estudiantes;
 }
