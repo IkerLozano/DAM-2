@@ -24,7 +24,7 @@ public class SocioService {
 
     public Socio altaSocio(String nombre, String email, String bio, LocalDate fecha) {
 
-        //creo el socio
+               //creo el socio
         Socio s1 = Socio.builder().nombre(nombre).email(email).build();
 
         //creo el perfil
@@ -40,12 +40,13 @@ public class SocioService {
 
 
     public List<Socio> listarSocios() {
+        //este metodo no lista los perfiles si no hay un socio
 
         List<Socio> socios = socioRepo.findAll();
 
         for (Socio s : socios){
 
-            System.out.println(s);
+            System.out.println("--> " + s + "| " + s.getPerfil());
         }
 
         return socios;
@@ -53,6 +54,12 @@ public class SocioService {
 
 
     public void borrarSocio(long idSocio) {
+        /*
+            Si intentamos borrar directamente el socio, la base de datos nos deja porque todavía existe un
+            perfil que lo referencia, por la clave ajena
+
+            Por eso hay que desvincularlos primero.
+         */
 
         Optional<Socio> socioBorrar = socioRepo.findById(idSocio);
 
@@ -64,6 +71,7 @@ public class SocioService {
             Perfil perfil = socioYaBorrado.getPerfil();
 
             if (perfil != null) {
+
                 // Desvinculamos el perfil del socio
                 perfil.setSocio(null);
                 socioYaBorrado.setPerfil(null);
@@ -71,6 +79,7 @@ public class SocioService {
                 // Guardamos el perfil sin socio
                 perfilRepo.save(perfil);
             }
+
             // Borramos el socio
             socioRepo.delete(socioYaBorrado);
 
