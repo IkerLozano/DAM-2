@@ -26,7 +26,7 @@ public class Cliente {
     String telefono;
 
     //un cliente pude tener varios oches
-    @OneToMany(mappedBy = "cliente_id")
+    @OneToMany(mappedBy = "cliente")
     @ToString.Exclude
     List<Coche> coches;
 

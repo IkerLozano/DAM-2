@@ -1,8 +1,13 @@
 package org.iesch.ad.Bloque3_Ej1.Servicios;
 
 
+import org.iesch.ad.Bloque3_Ej1.DTO.ClienteProyeccion;
 import org.iesch.ad.Bloque3_Ej1.Modelo.Cliente;
 import org.iesch.ad.Bloque3_Ej1.Modelo.Coche;
+import org.iesch.ad.Bloque3_Ej1.Repositorios.ClienteRepo;
+import org.iesch.ad.Bloque3_Ej1.Repositorios.CocheRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -13,32 +18,39 @@ import java.util.Optional;
 public class CocheServicio {
 
 
+    @Autowired
+    CocheRepo cocheRepo;
+
+
+    @Autowired
+    ClienteRepo clienteRepo;
+
     public List<Cliente> clientesPorColor(String color) {
 
-        return null;
+        return clienteRepo.findByCochesColor(color);
 
     }
 
     public List<Cliente> clientesPorPrecioMayorQue(BigDecimal precio) {
 
-        return  null;
+        return  clienteRepo.findByCochesPrecioGreaterThan(precio);
     }
 
-    public List<Cliente> clientesConMasCoches() {
+    public List<String> clientesConMasCoches() {
 
-        return  null;
+        return clienteRepo.clienteConMasCoches();
 
     }
 
     public List<Coche> cochesConMenosRevisiones() {
 
-        return null;
+        return cocheRepo.cochesRevisiones();
 
     }
 
-    public List<Coche> revisionesPorCoche() {
+    public List<String> revisionesPorCoche() {
 
-        return null;
+        return cocheRepo.cocheYmatricula();
 
     }
 

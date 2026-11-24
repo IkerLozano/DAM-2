@@ -29,7 +29,7 @@ public class Revision {
 
     //muchas reviciones pertenecen a un coche
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "coche_id")
-    Coche coche_id;
+    @JoinColumn(name = "coche_id", referencedColumnName = "matricula")
+    Coche coche;
 
 }

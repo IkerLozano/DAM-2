@@ -27,11 +27,11 @@ public class Coche {
     //muchos oches tienen un dueño
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "cliente_id", referencedColumnName = "id")
-    Cliente cliente_id;
+    Cliente cliente;
 
 
     //un coche puede tener varias revisiones
-    @OneToMany(mappedBy = "coche_id")
+    @OneToMany(mappedBy = "coche")
     List<Revision> revisiones;
 
 }
