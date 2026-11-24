@@ -8,19 +8,33 @@ class Pagina1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     backgroundColor: Colors.lightBlue,
-     body: Column(
-      children: [
-        Center(child: Text(context.watch<ContadorProvider>().contador.toString(), 
-                      style: TextStyle(fontSize: 120),),),
-        ElevatedButton(
-          onPressed: () {
-            //aqui vamos a acceder al provider y llamar a la funcion incrementar
-            context.read<ContadorProvider>().incrementar();
-        }, 
-        child: Text("Incrementar"))
-      ],
-     ),
+      backgroundColor: Colors.lightBlue,
+      body: Column(
+        children: [
+          Center(
+            child: Text(
+              context.watch<ContadorProvider>().contador.toString(),
+              style: TextStyle(fontSize: 120),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              //aqui vamos a acceder al provider y llamar a la funcion incrementar
+              context.read<ContadorProvider>().incrementar();
+            },
+
+            child: Text("Incrementar"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              //aqui vamos a acceder al provider y llamar a la funcion incrementar
+              context.read<ContadorProvider>().decrementar();
+            },
+
+            child: Text("Decrementar"),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -3,7 +3,9 @@ package org.iesch.ad.Bloque3_Ej1.Repositorios;
 
 import org.iesch.ad.Bloque3_Ej1.DTO.ClienteProyeccion;
 import org.iesch.ad.Bloque3_Ej1.Modelo.Cliente;
+import org.iesch.ad.Bloque3_Ej1.Modelo.Coche;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.NativeQuery;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -40,5 +42,8 @@ public interface ClienteRepo extends JpaRepository<Cliente, Long> {
     List<ClienteProyeccion> clienteConMasCoches();
     */
 
+
+    //Ej6 -- por hacer
+    //@Query("SELECT p from Cliente p where p.coches.matricula = ")
 
 }

@@ -21,5 +21,12 @@ class ContadorProvider extends ChangeNotifier {
 
     }
 
+    void decrementar(){
+
+      _contador--;
+      notifyListeners(); //para notificar que ha habido un cambio
+
+    }
+
 
 }
