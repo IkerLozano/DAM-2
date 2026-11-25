@@ -25,11 +25,29 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             print(error)
 
 
+        # Creo el cursor
+        cursor = self.con.cursor() 
+        sql="SELECT * FROM capitales"
+        # Ejecuto la consulta con el cursor
+        cursor.execute(sql)
+        # Recojo los resultados
+        self.resultado=cursor.fetchall()
+
+
+        #para que salga la opcion1 por defecto
+        self.lineEdit.setText(str(self.resultado[0][0]))
+        self.lineEdit_2.setText(str(self.resultado[0][1]))
+        self.lineEdit_3.setText(str(self.resultado[0][2]))
+
+
+        #funcionalidad de los botones
         self.pushButton.pressed.connect(self.boton1)
         self.pushButton_4.pressed.connect(self.boton2)
+        self.pushButton_3.pressed.connect(self.boton3)
+        self.pushButton_2.pressed.connect(self.boton4)
 
         
-        #self.cargardatos()
+        #inicializo los contadores
         self.cont1 = 0
         self.cont2 = 1
         self.cont3 = 2
@@ -39,39 +57,51 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
 
+    #funciones
 
     def boton1(self):
-        # Creo el cursor
-        cursor = self.con.cursor() 
-        sql="SELECT * FROM capitales"
-        # Ejecuto la consulta con el cursor
-        cursor.execute(sql)
-        # Recojo los resultados
-        resultado=cursor.fetchall()
+  
+        self.lineEdit.setText(str(self.resultado[0][0]))
+        self.lineEdit_2.setText(str(self.resultado[0][1]))
+        self.lineEdit_3.setText(str(self.resultado[0][2]))
 
-        
-        self.lineEdit.setText(str(resultado[0][0]))
-        self.lineEdit_2.setText(str(resultado[0][1]))
-        self.lineEdit_3.setText(str(resultado[0][2]))
 
 
         
     def boton2(self):
-            # Creo el cursor
-            cursor = self.con.cursor() 
-            sql="SELECT * FROM capitales"
-            # Ejecuto la consulta con el cursor
-            cursor.execute(sql)
-            # Recojo los resultados
-            resultado=cursor.fetchall()
-    
-            
-            self.lineEdit.setText(str(resultado[self.cont1][0]))
-            self.lineEdit_2.setText(str(resultado[self.cont1][1]))
-            self.lineEdit_3.setText(str(resultado[self.cont1][2]))
-           #self.cont1 = self.cont3 - 1
-           #self.cont2 = self.cont3 - 1
-           #self.cont3 = self.cont3 - 1
+
+        if(self.cont1 > 0):
+            self.lineEdit.setText(str(self.resultado[self.cont1][0]))
+            self.lineEdit_2.setText(str(self.resultado[self.cont1][1]))
+            self.lineEdit_3.setText(str(self.resultado[self.cont1][2]))
+            self.cont1 = self.cont3 - 1
+            self.cont2 = self.cont3 - 1
+            self.cont3 = self.cont3 - 1
+
+
+
+
+    def boton3(self):
+        tamanio = len(self.resultado)-1
+
+        if(self.cont1 < tamanio):
+            self.lineEdit.setText(str(self.resultado[self.cont1][0]))
+            self.lineEdit_2.setText(str(self.resultado[self.cont1][1]))
+            self.lineEdit_3.setText(str(self.resultado[self.cont1][2]))
+            self.cont1 = self.cont3 + 1
+            self.cont2 = self.cont3 + 1
+            self.cont3 = self.cont3 + 1
+
+
+
+
+    def boton4(self):
+
+        tamanio = len(self.resultado)-1
+
+        self.lineEdit.setText(str(self.resultado[tamanio][0]))
+        self.lineEdit_2.setText(str(self.resultado[tamanio][1]))
+        self.lineEdit_3.setText(str(self.resultado[tamanio][2]))
 
 
     

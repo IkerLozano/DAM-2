@@ -58,7 +58,7 @@ public interface ClienteRepo extends JpaRepository<Cliente, Long> {
     @Query("SELECT p.nombre, p.nif, p.direccion, p.ciudad, p.telefono, SIZE(p.coches) AS NumCoches, SUM(c.precio) AS TotalGastado FROM Cliente p JOIN p.coches c JOIN c.revisiones r WHERE r.codigo = :codigo")
     Optional<String> clientePorCodigoFinal(@Param("codigo") String codigo);
     /*
-    hay que hacer desde coche
+    consulta de hecproll
     @Query("SELECT c.nombre, c.ciudad, c.direccion, c.nif, c.telefono, SIZE(c.coches), SUM(co2.precio) FROM Coche co JOIN co.revisiones rev JOIN co.cliente c JOIN c.coches co2 WHERE rev.codigo = :codigo")
      */
 
