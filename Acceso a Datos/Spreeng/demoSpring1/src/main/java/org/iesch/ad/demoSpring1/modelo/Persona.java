@@ -21,8 +21,9 @@ public class Persona {
 
 
     @Id //inidca el id para ls bbdd
-            @GeneratedValue(strategy = GenerationType.IDENTITY) //autonumerico
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //autonumerico
     Long id;
+
     //@Column() para indicarle la configuracion del dato(unique...)
     String nombre;
     String apellidos;

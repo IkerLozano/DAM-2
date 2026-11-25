@@ -1,13 +1,11 @@
 package org.iesch.ad.Bloque3_Ej1.Servicios;
 
 
-import org.iesch.ad.Bloque3_Ej1.DTO.ClienteProyeccion;
 import org.iesch.ad.Bloque3_Ej1.Modelo.Cliente;
 import org.iesch.ad.Bloque3_Ej1.Modelo.Coche;
 import org.iesch.ad.Bloque3_Ej1.Repositorios.ClienteRepo;
 import org.iesch.ad.Bloque3_Ej1.Repositorios.CocheRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -56,18 +54,19 @@ public class CocheServicio {
 
     public Optional<Cliente> clientePorMatricula(String matricula) {
 
-        return null;
+        return clienteRepo.clienteDeCoche(matricula);
     }
 
     public Optional<Cliente> clientePorCodigoRevision(String codigo) {
 
-        return null;
+        return clienteRepo.clientePorCodigo(codigo);
 
     }
 
-    public Optional<Object> resumenPorCodigoRevision(String codigo) {
+    public Optional<String> resumenPorCodigoRevision(String codigo) {
 
-        return null;
+        return clienteRepo.clientePorCodigoFinal(codigo);
+
 
     }
 }
