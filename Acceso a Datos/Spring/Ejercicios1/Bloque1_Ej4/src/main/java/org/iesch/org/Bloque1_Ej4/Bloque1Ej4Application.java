@@ -121,7 +121,6 @@ public class Bloque1Ej4Application implements CommandLineRunner {
 
 		//desde la habitacion accedo a las reservas
 		List<Habitacion> habitacions = habitacionRepo.findAll();
-		List<Reserva> reservaList = reservaRepo.findAll();
 
 		for (Habitacion h : habitacions){ //Recorre todas las habitaciones, en cada vuelta h es una habitacion diferente
 
