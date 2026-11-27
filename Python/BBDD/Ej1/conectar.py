@@ -34,7 +34,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
 
-
+    
+    
 
     def cargardatos(self):
         # Creo el cursor

@@ -1,5 +1,5 @@
 import mysql.connector
-from PyQt6.QtWidgets import QMainWindow, QApplication, QVBoxLayout, QHBoxLayout, QTableWidget, QTableWidgetItem, QWidget
+from PyQt6.QtWidgets import QMainWindow, QApplication, QVBoxLayout, QHBoxLayout, QTableWidget, QTableWidgetItem,QLabel, QWidget, QComboBox
 
 
 
@@ -22,15 +22,28 @@ class MainWindow(QMainWindow):
             print(error)
 
 
-        self.contenedor = QVBoxLayout()
         self.tabla = QTableWidget()
-        self.contenedor.addWidget(self.tabla)
+        self.label = QLabel("Selecciona una autonomia")
+        self.combo = QComboBox()
+
+
+        #pongo los widgets en la pantalla
+        self.contenedor = QHBoxLayout()
+        self.contenedorP = QVBoxLayout()
+        
+        self.contenedor.addWidget(self.label)
+        self.contenedor.addWidget(self.combo)
+
+        self.contenedorP.addLayout(self.contenedor)
+        self.contenedorP.addWidget(self.tabla)
+        
         widget = QWidget()
-        widget.setLayout(self.contenedor)
+        widget.setLayout(self.contenedorP)
         self.setCentralWidget(widget)
 
         
         self.cargardatos()
+        self.combo.currentIndexChanged.connect(self.cambiarDatos)
 
 
 
@@ -39,14 +52,29 @@ class MainWindow(QMainWindow):
 
 
 
-
-
     def cargardatos(self):
+            # Creo el cursor
+            cursor = self.con.cursor() 
+            sql="SELECT Autonomía FROM capitales "
+            # Ejecuto la consulta con el cursor
+            cursor.execute(sql)
+            #columnas = [desc[0] for desc in cursor.description] #esto es igual siempre que hagamos una tabla, esto pone los tirulos de la tabla
+            # Recojo los resultados
+            self.resultado=cursor.fetchall()
+
+            self.combo.addItems(desc[0] for desc in self.resultado) #mete todos los resultados de la consulta en combo
+
+            self.combo.setCurrentIndex(0)
+            self.cambiarDatos() #esto es para que nos muestre datos por defecto
+
+
+
+    def cambiarDatos(self):
         # Creo el cursor
         cursor = self.con.cursor() 
-        sql="SELECT * FROM capitales"
+        sql="SELECT * FROM capitales WHERE Autonomía = %s"
         # Ejecuto la consulta con el cursor
-        cursor.execute(sql)
+        cursor.execute(sql,(self.combo.currentText(),))
         columnas = [desc[0] for desc in cursor.description] #esto es igual siempre que hagamos una tabla
         # Recojo los resultados
         self.resultado=cursor.fetchall()
@@ -60,7 +88,7 @@ class MainWindow(QMainWindow):
                 texto = "" if valor is None else str(valor)
                 item = QTableWidgetItem(texto)
                 self.tabla.setItem(fila,col,item)
-        
+
 
     
           
